@@ -1,17 +1,18 @@
+package parser;
 import java.io.File;
 import java.io.IOException;
+import java.security.cert.Extension;
 import java.util.Vector;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-
-public class ExcelParser 
+public class ExcelParser implements IParser 
 {
 	
 	/**
-	 * 3ά����
+	 * 3维数组
 	 * [
 	 * 		sheetIndex:[
 	 * 			colIndex[
@@ -20,32 +21,26 @@ public class ExcelParser
 	 * 		 ]
 	 *  ]
 	 * */
-	private static Vector<Vector<Vector<String>>> gSheetValueList;
-	
-	/**
-	 * ���ڴ�����
-	 * */
-	private static boolean gIsParseing = false;
-	
+	private Vector<Vector<Vector<String>>> gSheetValueList;
+
 	public ExcelParser()
 	{
 		gSheetValueList = new Vector<>();
 	}
 	
 	/**
-	 * ��ʼת��excel����λ����
+	 * 解析Excel文件
 	 * */
-	private static void parser(File file)
+	public void parse(File file)
 	{
 		Workbook book = null;
 		try {
 			book = Workbook.getWorkbook(file);
 		} catch (BiffException | IOException e) {
 			e.printStackTrace();
-			gIsParseing = false;
 			return;
 		}
-		// ��õ�һ�����������
+		
 		Sheet[] sheets = book.getSheets();
 		Sheet sheet = null;
 		for(int i=0; i<sheets.length; i++)
@@ -56,7 +51,7 @@ public class ExcelParser
 			}
 			catch(NullPointerException nullE)
 			{
-				//��sheet��ݲ���ȷ
+				//sheet数据不正确
 //				nullE.printStackTrace();
 				continue;
 			}
@@ -88,25 +83,21 @@ public class ExcelParser
 				book.close();
 			}
 		}
-		gIsParseing = false;
 	}
 	
 	/**
-	 * ��ȡExcelת�������ά���
+	 * 获取Excel的格子数据列表,返回的是一个三维数组
 	 * */
-	public static Vector<Vector<Vector<String>>> getSheetValueList(File file)
+	public Vector<Vector<Vector<String>>> getSheetValueList(File file)
 	{
-		gIsParseing = true;
 		gSheetValueList = new Vector<>();
-		parser(file);
+		parse(file);
 		return gSheetValueList;
 	}
-	
-	/**
-	 * �Ƿ����ڴ���
-	 * */
-	public static boolean isParsing()
+
+	public String get_type()
 	{
-		return gIsParseing;
+		return "excel";
 	}
+	
 }

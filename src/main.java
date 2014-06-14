@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Component;
+
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;

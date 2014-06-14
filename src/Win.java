@@ -3,11 +3,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.Vector;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -18,11 +13,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class Win implements ActionListener 
 {
 	
-	/**
-	 * 选择的文件列表
-	 * */
-	private File[] gWatingList;
-	    
 	final JLabel label = new JLabel("");
 	
 	/**
@@ -30,20 +20,10 @@ public class Win implements ActionListener
 	 * */
 	private JFileChooser fileChooser = new JFileChooser();
 	
-	/**
-	 * excel解析器
-	 * */
-	private static ExcelParser excelParser;
-	
-	/**
-	 * 剩余未解析文件数量
-	 * */
-	private int oddFileCount;
-	
 	
 	public Component createComponents() 
 	{
-        JButton button = new JButton("ѡ��excel");
+        JButton button = new JButton("选择Excel或者json");
         button.setMnemonic(KeyEvent.VK_I);
         button.addActionListener(this);
         label.setLabelFor(button);
@@ -77,6 +57,8 @@ public class Win implements ActionListener
 			        "Excel", "xls", "xlsm", "xlsx");
 
 		fileChooser.setFileFilter(filter);
+		filter = new FileNameExtensionFilter("JSON", "json");
+		fileChooser.addChoosableFileFilter(filter);
 		fileChooser.setMultiSelectionEnabled(true);
 	}
 
@@ -86,46 +68,6 @@ public class Win implements ActionListener
     public void actionPerformed(ActionEvent e) 
     {
     	fileChooser.showOpenDialog(label);
-    	gWatingList = fileChooser.getSelectedFiles();
-    	oddFileCount = gWatingList!=null?gWatingList.length:0;
-    	if(oddFileCount>0)
-    	{
-    		final Timer timer = new Timer();
-    		timer.schedule(new TimerTask() {
-				
-				@Override
-				public void run() 
-				{
-					if(oddFileCount<1)
-					{
-						timer.cancel();
-					}
-					parse();
-				}
-			}, 0, 2000);//立即执行,每两秒触发一次
-    	}
-    }
-    
-    /**
-     * 解析excel并生成json
-     * */
-    private void parse()
-    {
-    	if(excelParser == null)
-    	{
-    		excelParser = new ExcelParser();
-    	}
-    	if(ExcelParser.isParsing())
-    	{
-    		return;
-    	}
-    	if(oddFileCount>0)
-    	{
-    		File file = gWatingList[oddFileCount-1];
-    		Vector<Vector<Vector<String>>> valueList = ExcelParser.getSheetValueList(file);;
-    		ListToJson json = new ListToJson(valueList);
-    		System.out.println(new Date().toGMTString()+"   "+oddFileCount);
-    	}
-    	oddFileCount--;
+    	ParserUtil.parse(fileChooser.getSelectedFiles());
     }
 }

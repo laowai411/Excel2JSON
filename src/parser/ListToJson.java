@@ -1,6 +1,7 @@
+package parser;
 import java.util.Vector;
 
-public class ListToJson 
+public class ListToJson implements IListToFile
 {
 	
 	/**
