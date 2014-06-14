@@ -147,15 +147,17 @@ public class JSONParser implements IParser {
 		{
 			try {
 				Object childObj = jsonArray.get(i);
-//				if(childObj instanceof JSONObject)
-//				{
-//					
-//				}
-//				else if(childObj instanceof JSONArray)
-//				{
-//					
-//				}
-//				else 
+				if(childObj instanceof JSONObject)
+				{
+					HashMap map = new HashMap<>();
+					decodeObject(map, i, (JSONObject) childObj);
+					childArray[i] = map;
+				}
+				else if(childObj instanceof JSONArray)
+				{
+					childArray[i] = itratorArry((JSONArray) childObj);
+				}
+				else 
 				if(childObj instanceof Integer)
 				{
 					childArray[i] = childObj;
@@ -169,6 +171,40 @@ public class JSONParser implements IParser {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	@SuppressWarnings({ "rawtypes" })
+	private Object[] itratorArry(JSONArray jsonArray) {
+		Object[] childArray = new Object[jsonArray.length()];
+		for(int i=0; i<jsonArray.length(); i++)
+		{
+			try {
+				Object childObj = jsonArray.get(i);
+				if(childObj instanceof JSONObject)
+				{
+					HashMap map = new HashMap<>();
+					decodeObject(map, i, (JSONObject) childObj);
+					childArray[i] = map;
+				}
+				else if(childObj instanceof JSONArray)
+				{
+					childArray[i] = itratorArry((JSONArray) childObj);
+				}
+				else 
+				if(childObj instanceof Integer)
+				{
+					childArray[i] = childObj;
+				}
+				else if(childObj instanceof String)
+				{
+					childArray[i] = childObj;
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return childArray;
 	}
 	
 	/**

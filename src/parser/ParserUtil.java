@@ -78,7 +78,7 @@ public class ParserUtil {
                 public void run() {
                     if (oddFileCount < 1) {
                         timer.cancel();
-                        JOptionPane.showMessageDialog(null, "转换完成!");
+                        JOptionPane.showMessageDialog(null, "转换结束!");
                         return;
                     }
                     parseFile();

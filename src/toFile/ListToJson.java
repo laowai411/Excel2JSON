@@ -8,6 +8,8 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.swing.JOptionPane;
+
 public class ListToJson implements IListToFile {
 
     /**
@@ -84,7 +86,14 @@ public class ListToJson implements IListToFile {
                 result = result.substring(0, result.length()-1);
                 result = result.concat("},"+getJSONFormatStr());
             }
-            result = result.substring(0, result.lastIndexOf(",")).concat(getJSONFormatStr());
+            try
+            {
+            	result = result.substring(0, result.lastIndexOf(",")).concat(getJSONFormatStr());
+            }
+            catch(Exception e)
+            {
+            	JOptionPane.showMessageDialog(null, "不受支持的Excel单元格格式!");
+            }
             result = result.concat("}");
         }
         return result;

@@ -65,6 +65,9 @@ public class ListToExcel implements IListToFile {
 
 	@SuppressWarnings("rawtypes")
 	private void writeRow(WritableSheet sheet, HashMap data) {
+		if (data == null) {
+			return;
+		}
 		attNameMap = new HashMap<>();
 		Object[] keys = data.keySet().toArray();
 		for (int rowIndex = 0; rowIndex < keys.length; rowIndex++) {
@@ -82,8 +85,9 @@ public class ListToExcel implements IListToFile {
 						attNameMap.put(attName, label);
 					}
 					Object att = colMap.get(attNames[colIndex]);
-					label = new Label(((Cell) attNameMap.get(attName)).getColumn(), rowIndex + 2,
-							getCellStr(att));
+					label = new Label(
+							((Cell) attNameMap.get(attName)).getColumn(),
+							rowIndex + 2, getCellStr(att));
 					sheet.addCell(label);
 				}
 			} catch (WriteException ex) {
@@ -136,12 +140,27 @@ public class ListToExcel implements IListToFile {
 		str += "{";
 		Object[] keys = map.keySet().toArray();
 		for (int i = 0; i < keys.length; i++) {
-			str += "\"" + keys[i].toString() + "\":";
+			if(keys[i] instanceof Integer)
+			{
+				
+			}
+			else
+			{
+				str += "\"" + keys[i].toString() + "\":";
+			}
 			Object o = map.get(keys[i]);
 			if (o instanceof Object[]) {
 				str = convertArray((Object[]) o, str);
 			} else if (o instanceof HashMap) {
-				str = convertHashMap((HashMap) o, str);
+				Object tempKey = ((HashMap)o).keySet().toArray()[0];
+				if(((HashMap)o ).size() == 1 && tempKey instanceof Integer && Integer.parseInt((String) tempKey) == 0)
+				{
+					str += "\""+tempKey.toString()+"\""+((HashMap)o).get(tempKey).toString();
+				}
+				else
+				{
+					str = convertHashMap((HashMap) o, str);
+				}
 			} else if (o instanceof Integer) {
 				str = convertInt((int) o, str);
 			} else if (o instanceof String) {
