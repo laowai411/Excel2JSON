@@ -1,6 +1,6 @@
 package parser;
 import java.io.File;
-import java.util.Vector;
+import java.util.HashMap;
 
 
 public interface IParser 
@@ -9,5 +9,6 @@ public interface IParser
 	
 	public void parse(File file);
 	
-	public Vector<Vector<Vector<String>>> getSheetValueList(File file);
+	@SuppressWarnings("rawtypes")
+	public HashMap getData(File file);
 }
