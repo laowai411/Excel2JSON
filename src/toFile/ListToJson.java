@@ -80,6 +80,11 @@ public class ListToJson implements IListToFile {
                     }
                     else
                     {
+                    	if(((Object)colList.get(rowIndex)) instanceof Number)
+                    	{
+                    		System.out.println(colList.get(rowIndex)+"  "+colList.get(rowIndex) instanceof String);
+                    	}
+//                    	System.out.println(colList.get(rowIndex)+"  "+colList.get(rowIndex) instanceof Integer);
                     	result = result.concat("\""+keyList.get(colIndex)+"\":"+colList.get(rowIndex)+",");
                     }
                 }

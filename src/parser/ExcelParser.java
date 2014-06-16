@@ -2,6 +2,7 @@ package parser;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Vector;
 import jxl.Cell;
@@ -77,9 +78,7 @@ public class ExcelParser implements IParser {
                         if (sheet.getRow(rowIndex) != null && sheet.getColumn(colIndex) != null) {
                             Cell c = sheet.getCell(colIndex, rowIndex);
                             if (c != null) {
-                                if (c != null) {
-                                    cellList.add(rowIndex, c.getContents());
-                                }
+                                cellList.add(rowIndex, c.getContents());
                             }
                         }
                     }

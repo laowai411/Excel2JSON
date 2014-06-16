@@ -1,5 +1,6 @@
 
 import java.awt.Desktop;
+import java.awt.event.MouseEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -58,35 +59,38 @@ public class Window extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        gRadioGroup = new javax.swing.ButtonGroup();
+        gTxtFileDr = new javax.swing.JTextField();
+        gBtnSelect = new javax.swing.JButton();
+        btnCreatJson = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        buttonGroup1.add(jRadioButton1);
-        buttonGroup1.add(jRadioButton2);
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        gRadioNoFromat = new javax.swing.JRadioButton();
+        gRadioGroup.add(jRadioButton1);
+        gRadioGroup.add(gRadioNoFromat);
+        btnCreateExcel = new javax.swing.JButton();
+        btnHelp = new javax.swing.JButton();
+        btnWatchExcel = new javax.swing.JButton();
+        btnWatchJson = new javax.swing.JButton();
+        Global.registerJButton(btnCreateExcel);
+        Global.registerJButton(gBtnSelect);
+        Global.registerJButton(btnCreatJson);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField2.setToolTipText("Excel或JSON目录");
+        gTxtFileDr.setToolTipText("Excel或JSON目录");
 
-        jButton1.setText("选择");
-        jButton1.setActionCommand("btnSelect");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        gBtnSelect.setText("选择");
+        gBtnSelect.setActionCommand("btnSelect");
+        gBtnSelect.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickSelectHandler(evt);
             }
         });
 
-        jButton2.setText("生成JSON");
-        jButton2.setActionCommand("btnCreateJSON");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCreatJson.setText("生成JSON");
+        btnCreatJson.setActionCommand("btnCreateJSON");
+        btnCreatJson.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickCreateJSONHandler(evt);
             }
@@ -103,33 +107,33 @@ public class Window extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton2.setText("输出非格式化JSON");
-        jRadioButton2.setActionCommand("jsonFormat");
+        gRadioNoFromat.setText("输出非格式化JSON");
+        gRadioNoFromat.setActionCommand("jsonFormat");
 
-        jButton3.setText("生成Excel");
-        jButton3.setActionCommand("btnCreateExcel");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCreateExcel.setText("生成Excel");
+        btnCreateExcel.setActionCommand("btnCreateExcel");
+        btnCreateExcel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickCreateExcelHandler(evt);
             }
         });
 
-        jButton4.setText("帮助");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnHelp.setText("帮助");
+        btnHelp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickHelpHandler(evt);
             }
         });
 
-        jButton5.setText("查看Excel模版");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnWatchExcel.setText("查看Excel模版");
+        btnWatchExcel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickWatchExcelHandler(evt);
             }
         });
 
-        jButton6.setText("查看JSON模版");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnWatchJson.setText("查看JSON模版");
+        btnWatchJson.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickWatchJSONHandler(evt);
             }
@@ -143,34 +147,34 @@ public class Window extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gTxtFileDr, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(gBtnSelect)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jRadioButton2)
+                        .addComponent(gRadioNoFromat)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5))
+                        .addComponent(btnWatchExcel))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton1)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addComponent(btnCreatJson)
                                 .addGap(98, 98, 98)
-                                .addComponent(jButton3)))
+                                .addComponent(btnCreateExcel)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton4)
+                        .addComponent(btnHelp)
                         .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton6)
+                        .addComponent(btnWatchJson)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -178,23 +182,23 @@ public class Window extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(gTxtFileDr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(gBtnSelect)
                     .addComponent(jLabel1))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jButton5))
+                    .addComponent(gRadioNoFromat)
+                    .addComponent(btnWatchExcel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton1)
                 .addGap(10, 10, 10)
-                .addComponent(jButton6)
+                .addComponent(btnWatchJson)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(btnCreatJson, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCreateExcel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(btnHelp)
                 .addGap(17, 17, 17))
         );
 
@@ -219,11 +223,15 @@ public class Window extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
+    /**
+     * 点击了生成json按钮
+     * */
     private void onClickCreateJSONHandler(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickCreateJSONHandler
         // TODO add your handling code here:
     	saveConfig();
         if(selecteDir != null)
         {
+        	Global.setWindowEnable(false);
             ParserUtil.parse(selecteDir.listFiles(), ExtensionConst.EXCEL_TYPE);
         }
     }//GEN-LAST:event_onClickCreateJSONHandler
@@ -320,7 +328,7 @@ public class Window extends javax.swing.JFrame {
      * */
     private void updateViewConfig()
     {
-    	this.jTextField2.setText(Global.file_path);
+    	this.gTxtFileDr.setText(Global.file_path);
     	this.jRadioButton1.setSelected(Global.export_json_format);
     	this.selecteDir = new File(Global.file_path);
     }
@@ -334,10 +342,13 @@ public class Window extends javax.swing.JFrame {
     	saveConfig();
         if(selecteDir != null)
         {
+        	Global.setWindowEnable(false);
+        	
             ParserUtil.parse(selecteDir.listFiles(), ExtensionConst.JSON_TYPE);
         }
     }//GEN-LAST:event_onClickCreateExcelHandler
 
+    
     /**
      * 点击了帮助按钮
      * */
@@ -406,16 +417,16 @@ public class Window extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.ButtonGroup gRadioGroup;
+    private javax.swing.JButton gBtnSelect;
+    private javax.swing.JButton btnCreatJson;
+    private javax.swing.JButton btnCreateExcel;
+    private javax.swing.JButton btnHelp;
+    private javax.swing.JButton btnWatchExcel;
+    private javax.swing.JButton btnWatchJson;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JRadioButton gRadioNoFromat;
+    private javax.swing.JTextField gTxtFileDr;
     // End of variables declaration//GEN-END:variables
 }

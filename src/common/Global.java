@@ -1,5 +1,10 @@
 package common;
 
+import java.util.HashMap;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
 /**
  * app配置
  * */
@@ -15,4 +20,26 @@ public class Global
 	public static String file_path = "";
 	
     public static boolean export_json_format = true;
+    
+    /**
+     * 是否正在转换
+     * */
+    public static boolean isParsing;
+    
+    
+    private static HashMap buttonMap = new HashMap<>();
+    
+    public static void registerJButton(JButton btn)
+    {
+    	buttonMap.put(btn, btn);
+    }
+    
+    public static void setWindowEnable(boolean enable)
+    {
+    	Object[] keys = buttonMap.keySet().toArray();
+    	for(int i=0; i<keys.length; i++)
+    	{
+    		((JButton)buttonMap.get(keys[i])).setEnabled(enable);
+    	}
+    }
 }

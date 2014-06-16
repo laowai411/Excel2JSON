@@ -13,6 +13,7 @@ import toFile.ListToExcel;
 import toFile.ListToJson;
 
 import common.ExtensionConst;
+import common.Global;
 
 public class ParserUtil {
 
@@ -26,11 +27,6 @@ public class ParserUtil {
      *
      */
     private static HashMap<String, IListToFile> toFileList = new HashMap<>();
-    /**
-     * 是否正在解析
-     *
-     */
-    private static boolean gIsparsing = false;
     /**
      * 等待解析的文件列表
      *
@@ -65,7 +61,7 @@ public class ParserUtil {
     }
 
     public static void parse() {
-        if (gIsparsing == true) {
+        if (Global.isParsing == true) {
             return;
         }
         oddFileCount = waittingList == null ? 0 : waittingList.size();
@@ -79,6 +75,7 @@ public class ParserUtil {
                     if (oddFileCount < 1) {
                         timer.cancel();
                         JOptionPane.showMessageDialog(null, "转换结束!");
+                        Global.setWindowEnable(true);
                         return;
                     }
                     parseFile();
@@ -93,19 +90,19 @@ public class ParserUtil {
      */
     @SuppressWarnings({ "rawtypes" })
 	private static void parseFile() {
-        if (gIsparsing == true) {
+        if (Global.isParsing == true) {
             return;
         }
         if (oddFileCount > 0) {
             File file = (File) waittingList.get(oddFileCount-1);
             IParser parser = get_parser(file);
-            gIsparsing = true;
+            Global.isParsing = true;
             HashMap data = parser.getData(file);;
             IListToFile toFile = get_toFile(file);
             toFile.writeFile(data);
         }
         oddFileCount--;
-        gIsparsing = false;
+        Global.isParsing = false;
     }
 
     /**
