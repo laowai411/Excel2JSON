@@ -130,7 +130,11 @@ public class ListToExcel implements IListToFile {
 			}
 			str += ",";
 		}
-		str = str.substring(0, str.lastIndexOf(","));
+		int searchIndex = str.lastIndexOf(",");
+		if(searchIndex > -1)
+		{
+			str = str.substring(0, str.lastIndexOf(","));
+		}
 		str += "]";
 		return str;
 	}
@@ -168,7 +172,11 @@ public class ListToExcel implements IListToFile {
 			}
 			str += ",";
 		}
-		str = str.substring(0, str.lastIndexOf(","));
+		int searchIndex = str.lastIndexOf(",");
+		if(searchIndex > -1)
+		{
+			str = str.substring(0, str.lastIndexOf(","));
+		}
 		str += "}";
 		return str;
 	}

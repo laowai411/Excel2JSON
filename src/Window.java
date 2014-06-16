@@ -1,6 +1,5 @@
 
 import java.awt.Desktop;
-import java.awt.event.MouseEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

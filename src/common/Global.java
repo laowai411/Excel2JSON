@@ -3,7 +3,6 @@ package common;
 import java.util.HashMap;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 
 /**
  * app配置
@@ -27,9 +26,11 @@ public class Global
     public static boolean isParsing;
     
     
-    private static HashMap buttonMap = new HashMap<>();
+    @SuppressWarnings("rawtypes")
+	private static HashMap buttonMap = new HashMap<>();
     
-    public static void registerJButton(JButton btn)
+    @SuppressWarnings("unchecked")
+	public static void registerJButton(JButton btn)
     {
     	buttonMap.put(btn, btn);
     }

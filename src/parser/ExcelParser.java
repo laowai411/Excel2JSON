@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Vector;
+
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -16,7 +16,8 @@ public class ExcelParser implements IParser {
      * 3维数组 [ sheetIndex:[ colIndex[ rowIndex string ] ] ]
 	 *
      */
-    private Vector<Vector<Vector<String>>> gSheetValueList;
+    @SuppressWarnings("rawtypes")
+	private ArrayList gSheetValueList;
     /**
      * 生成json名, 使用Sheet名字
          *
@@ -40,14 +41,15 @@ public class ExcelParser implements IParser {
 	private HashMap data;
 
     public ExcelParser() {
-        gSheetValueList = new Vector<>();
+        gSheetValueList = new ArrayList<>();
     }
 
     /**
      * 解析Excel文件
 	 *
      */
-    public void parse(File file) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public void parse(File file) {
         Workbook book = null;
         try {
             book = Workbook.getWorkbook(file);
@@ -65,20 +67,20 @@ public class ExcelParser implements IParser {
 //				nullE.printStackTrace();
                 continue;
             }
-            Vector<Vector<String>> valueList = new Vector<Vector<String>>();
+            ArrayList valueList = new ArrayList<>();
             gSheetValueList.add(i, valueList);
             if (sheet != null) {
                 sheetName = file.getParent() + "\\" + sheet.getName();
                 col = sheet.getColumns();
                 for (int colIndex = 0; colIndex < col; colIndex++) {
-                    Vector<String> cellList = new Vector<>();
+                    ArrayList cellList = new ArrayList<>();
                     valueList.add(colIndex, cellList);
                     row = sheet.getRows();
                     for (int rowIndex = 0; rowIndex < row; rowIndex++) {
                         if (sheet.getRow(rowIndex) != null && sheet.getColumn(colIndex) != null) {
                             Cell c = sheet.getCell(colIndex, rowIndex);
                             if (c != null) {
-                                cellList.add(rowIndex, c.getContents());
+                                cellList.add(rowIndex, c);
                             }
                         }
                     }
@@ -94,7 +96,7 @@ public class ExcelParser implements IParser {
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	public HashMap getData(File file) {
-        gSheetValueList = new Vector<>();
+        gSheetValueList = new ArrayList<>();
         parse(file);
         data = new HashMap();
         data.put("name", sheetName);
