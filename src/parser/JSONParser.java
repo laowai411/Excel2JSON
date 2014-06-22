@@ -9,11 +9,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import common.LogUtil;
 public class JSONParser implements IParser {
 
 	/**
@@ -42,7 +41,9 @@ public class JSONParser implements IParser {
 	public void parse(File file) {
 		data = new HashMap<String, Serializable>();
 		this.file = file;
+		LogUtil.log(file.getName()+" 开始解析");
 		readJsonFile(file);
+		dataStr = clearMultiDoc(dataStr);
 		decodeJsonStr();
 	}
 
@@ -50,17 +51,23 @@ public class JSONParser implements IParser {
 	 * 将json字符串转化
 	 * 
 	 */
-	@SuppressWarnings("rawtypes")
 	private void decodeJsonStr() {
+		jsonData = new HashMap<>();
 		try {
 			JSONObject jsonObj = new JSONObject(dataStr);
-			jsonData = new HashMap();
 			decodeJsonData(jsonData, jsonObj);
 		} catch (JSONException ex) {
-			// 格式错误
-			JOptionPane.showMessageDialog(null, file.getName() + "格式错误!\n  "
-					+ ex.getMessage());
+			try {
+				JSONArray jsonArr = new JSONArray(dataStr);
+				decodeJsonArray(jsonData, jsonArr);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				LogUtil.log(file.getName()+" 格式不符合!");
+			}
+//			JOptionPane.showMessageDialog(null, file.getName() + "格式错误!\n  "
+//					+ ex.getMessage());
 		}
+		
 	}
 
 	/**
@@ -91,6 +98,37 @@ public class JSONParser implements IParser {
 			} catch (JSONException ex) {
 				Logger.getLogger(JSONParser.class.getName()).log(Level.SEVERE,
 						null, ex);
+			}
+		}
+		return map;
+	}
+	
+	/**
+	 * 解析Json数据并保存
+	 * 
+	 */
+	@SuppressWarnings({ "rawtypes" })
+	private HashMap decodeJsonArray(HashMap map, JSONArray json) {
+		for(int i=0; i<json.length(); i++)
+		{
+			try {
+				Object o = json.get(i);
+				if (o instanceof JSONObject) {
+					decodeObject(map, i, (JSONObject)o);
+				} else if(o instanceof JSONArray)
+				{
+					decodeArray(map, i, (JSONArray) o);
+				}
+				else if(o instanceof Integer)
+				{
+					decodeSimple(map, i, (int)o);
+				}
+				else if (o instanceof String) {
+					decodeSimple(map, i, (String) o);
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 		return map;
@@ -228,7 +266,8 @@ public class JSONParser implements IParser {
 			String tempString = null;
 			// 一次读入一行，直到读入null为文件结束
 			while ((tempString = reader.readLine()) != null) {
-				// 显示行号
+				tempString = clearSingleDoc(tempString);
+				tempString = clearMultiDoc(tempString);
 				dataStr = dataStr.concat(tempString);
 			}
 			reader.close();
@@ -242,6 +281,29 @@ public class JSONParser implements IParser {
 				}
 			}
 		}
+	}
+	
+	private String clearSingleDoc(String str)
+	{
+		int start = str.indexOf("//");
+		if(start > -1)
+		{
+			str = str.substring(0, start);
+		}
+		return str;
+	}
+	
+	private String clearMultiDoc(String str)
+	{
+		int start = str.indexOf("/*");
+		int end = str.indexOf("*/");
+		while(start > -1 && end > -1 && start < end)
+		{
+			str = str.substring(0, start) + str.substring(end+2);
+			start = str.indexOf("/*");
+			end = str.indexOf("*/");
+		}
+		return str;
 	}
 
 	@Override

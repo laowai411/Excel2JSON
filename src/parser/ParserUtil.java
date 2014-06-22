@@ -14,6 +14,7 @@ import toFile.ListToJson;
 
 import common.ExtensionConst;
 import common.Global;
+import common.LogUtil;
 
 public class ParserUtil {
 
@@ -75,6 +76,7 @@ public class ParserUtil {
                     if (oddFileCount < 1) {
                         timer.cancel();
                         JOptionPane.showMessageDialog(null, "转换结束!");
+                        LogUtil.log("转换结束!");
                         Global.setWindowEnable(true);
                         return;
                     }
@@ -103,6 +105,7 @@ public class ParserUtil {
         }
         oddFileCount--;
         Global.isParsing = false;
+        LogUtil.log("剩余"+oddFileCount+"个文件");
     }
 
     /**

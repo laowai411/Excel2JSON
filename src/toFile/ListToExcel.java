@@ -71,7 +71,7 @@ public class ListToExcel implements IListToFile {
 		attNameMap = new HashMap<>();
 		Object[] keys = data.keySet().toArray();
 		for (int rowIndex = 0; rowIndex < keys.length; rowIndex++) {
-			Label label = new Label(0, rowIndex + 2, (String) keys[rowIndex]);
+			Label label = new Label(0, (int)(rowIndex + 2), keys[rowIndex].toString());
 			try {
 				sheet.addCell(label);
 				HashMap colMap = (HashMap) data.get(keys[rowIndex]);
