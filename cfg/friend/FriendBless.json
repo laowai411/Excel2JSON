@@ -1,0 +1,23 @@
+﻿{
+	"blessLevel":[10,20,30],//可以祝福的等级
+	"blessExperience":[1000,2000,3000],//对应等级 祝福时可获得的经验
+	"bottleGetExperience":[1000,2000,3000],//对应等级 祝福时 仙瓶获得的经验
+	"oneKeyAddTimes":[10,20,30],//一键征友的次数，到达该等级 加一次
+    "oneKeyAddTQ":1000,         //一键添加增加的铜钱数量
+    "friendRecommendCount":12,  //好友推荐一次的人数
+    "friendRecommendBoy":5,   //好友推荐的男性数量
+    "friendRecommendGirl":7, //好友推荐的女性数量
+    "friendRecommendLevel":5, //多少级以内的进入推荐列表
+	"friendRecommendTimes":0,//日常好友推荐要求等级
+	"friendRecommendDays":10,//日常好友推荐要求开服前多少天 
+    "friendRecommendLevelLmt":14,//最早可以使用好友推荐的等级
+	"blessTimes":3,//升级时最多可祝福次数
+	"todayExpLmt":300000, //每天祝福别人加经验的上限
+	"getBottleLevel":34,//可领取仙瓶等级
+	"bottleOpenLevel":14,//仙瓶开启等级
+	"singleTip":"你的好友<font color = '#fe00e3'><u><a href='event:myText'>[0]</a></u></font>已升到[1]级，快点发去你的祝福吧！越快发送祝福，可获得越多的经验奖励。",
+	"multiTip1":"你的好友们都取得了长足的进步，快去祝贺他们吧！",
+	"multiTip2":"越快发送祝福，能获得越多经验奖励",
+	"bottleTip":"通过祝福好友可对经验仙瓶进行经验填充！<font color='#ffff00'>（建议添加更多</font><font color='#00ff00'><u><a href='event:myText'>好友</a></u></font><font color='#ffff00'>）</font>",
+	"sendMsgRandom":0.1
+}

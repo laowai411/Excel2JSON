@@ -1,0 +1,6 @@
+[
+	{
+		"produceActivityIcon":"specialActivityIcon",//活动图标名称，问程序
+		"MarryActivity":0//1：是，0：不是(切记一定要改)
+	}
+]

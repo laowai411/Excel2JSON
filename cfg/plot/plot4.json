@@ -1,0 +1,237 @@
+[	
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 4,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+		{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 4,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 4,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 4,
+		"countDownSetting":1000,
+		"data":{//1播放动画,
+					//"layer":"role",/*默认为（不配置该属性）添加到场景中；"role":人物层*/
+				//	"objId":0,/**玩家id，layer为role时需配置*/
+					"relative":"role",/**动画相对位置："map","role","stage"*/
+					"depth":0,/**0：下面；在地图里的深度，1才会响应点击事件*/
+					"x":0,
+					"y":0,
+					"skinName":"HalfBlackBg",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12,
+				    "depth":0
+				} 
+    },	 
+{ 
+	"className":"taskPlot.filters.UpdatePlayerFilter",
+        "plotId": 4,
+        "commonState":"updatePlayer", 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":1,
+					"x":2201,
+					"y":2302,
+					"action":1
+				}
+	},
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 4,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1013,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610883193,
+					"x":230,
+					"y":-30,
+					"hp":100,
+					"objName":"赤血妖姬"
+				}
+    },
+	{
+	    "className":"taskPlot.filters.QuitChangeFilter",
+        "plotId": 4, 
+		"data":{//4：震屏 
+				}
+	}, 
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 4,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "赤血妖姬",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_3.png",
+       		"talkStr": "哎呦，这是那冒出来的小娃，快叫本尊女王大人…~"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 4, 
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "本尊女娃大人，你的名字好烂好长耶，既然被你发现了"
+        }
+    },
+	{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 4,
+         "data":
+        {
+		"action":"hide"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+		{
+	    "className":"taskPlot.filters.UseSkillFilter",
+        "plotId": 4, 
+  		"countDownSetting":1000,
+		"data":{//4：震屏 
+					"0":
+					{
+						"fromObjId":0,
+						"toObjId":[1013],
+						"skillType":1000,
+						"skillLv":1,
+						"hp":-100,
+						"die":1,
+						"end":1,//是否结束
+						"repel": 0    //被击飞
+					},
+					"1":
+					{
+						"fromObjId":0,
+						"toObjId":[1013],
+						"skillType":2001,
+						"skillLv":1,
+						"hp":-100,
+						"die":1,
+						"end":1,//是否结束
+						"repel": 0    //被击飞
+					},
+					"2":
+					{
+						"fromObjId":0,
+						"toObjId":[1013],
+						"skillType":1001,
+						"skillLv":1,
+						"hp":-100,
+						"die":1,
+						"end":1,//是否结束
+						"repel": 0    //被击飞
+					},
+					"3":
+					{
+						"fromObjId":0,
+						"toObjId":[1013],
+						"skillType":3001,
+						"skillLv":1,
+						"hp":-100,
+						"die":1,
+						"end":1,//是否结束
+						"repel": 0    //被击飞
+					}
+				}
+	}, 
+	    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 4,
+		"data":{//1播放动画,
+				//	"layer":"role",/*默认为（不配置该属性）添加到场景中；"role":人物层*/
+				//	"objId":0,/**玩家id，layer为role时需配置*/
+					"relative":"role",/**动画相对位置："map","role","stage"*/
+					"depth":0,/**0：下面；在地图里的深度，1才会响应点击事件*/
+					"skinName":"HalfBlackBg",
+					"type":"swf"
+				}
+ 
+    },
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 4, 
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "居然是第二元神，这赤血妖姬还是有些本事嘛。什么…………………"
+        }
+    },
+	{ 
+	"className":"taskPlot.filters.UpdatePlayerFilter",
+        "plotId": 4,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"isSync":1,/*默认为0，1表示和服务端同步*/
+					"objId":0,
+					"direction":1,
+					"x":2199,
+					"y":2323,
+					"action":1
+				}
+	},	 
+     {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 4,
+		"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 4,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+		{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 4,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 4,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	}
+	]
+    
+    

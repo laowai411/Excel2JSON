@@ -1,0 +1,155 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 44,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 44,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 44,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.UpdatePlayerFilter",
+        "plotId": 44,
+		"commonState":"updatePlayer", 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"x":7076,
+					"y":4280,
+					"direction":8,
+					"action":1
+				} 
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 44,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1071,
+				"type":1611202561,
+				"gender":1,
+				"direction":1,
+				"action":1,
+				"clothes":1611006102,
+				"x":154,
+				"y":-36,
+				"hp":100,
+				"objName":""
+		} 
+ 
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 44,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "云霓真人",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6.png",
+        	"talkStr": "<font color='#ff0000'>@player@</font>你跑那么快干嘛，又把老娘给一个人丢在幻界里，害得我连灵兽都来不及带出来。"
+    	}
+    },
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 44,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+			"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "这个……我的小姑奶奶也，都说了让你不要跟着了，我又不是逛公园。"
+        }
+    },
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 44,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "云霓真人",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6.png",
+        	"talkStr": "我不管，你给我找去，这也是对你好，对你日后修炼提升实力有莫大的帮助哦。~~~"
+    	}
+    },	
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 44,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+			"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "苍天啊，大地啊……来个男人把这姑奶奶收了吧！！！！！"
+        }
+    },
+     {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 44,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1071
+		} 
+ 
+    },
+
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 44,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 44,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},    
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 44,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 44,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+]

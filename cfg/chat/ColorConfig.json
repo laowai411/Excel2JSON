@@ -1,0 +1,147 @@
+﻿[
+  {//1蜀山2昆仑3蓬莱，
+      "value": "#00ff00",
+      "id": "camp-1"
+  },
+  {
+      "value": "#00aeef",
+      "id": "camp-2"
+  },
+  {
+      "value": "#ff7008",
+      "id": "camp-3"
+  },
+  {//0世界1阵营2入帮3帮派4队伍5招募6附近7喇叭8传闻9系统10私聊11战况 14仙道会 17比武  聊天内容颜色
+      "value": "#FFFFFF",//"#2EEBDB",
+      "id": "channel-0"
+  },
+  {
+      "value": "#EFEB8A",
+      "id": "channel-1"
+  },
+  {
+      "value": "#00FF00",
+      "id": "channel-2"
+  },
+  {
+      "value": "#01F6FF",//"#B3EF00",
+      "id": "channel-3"
+  },
+  {
+      "value": "#FE9CCB",
+      "id": "channel-4"
+  },
+  {
+      "value": "#2EEBDB",
+      "id": "channel-5"
+  },
+  {
+      "value": "#FDFA01",//"#FEFEFE",
+      "id": "channel-6"
+  },
+  {
+      "value": "#FFBA00",
+      "id": "channel-7"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "channel-8"
+  },
+  {
+      "value": "#FE4C4C",//"#FFFFFF",
+      "id": "channel-9"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "channel-11"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "channel-14"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "channel-17"
+  },
+  {//0世界1阵营2入帮3帮派4队伍5招募6附近7喇叭8传闻9系统10私聊11战况 14仙道会 17比武   频道字体颜色
+      "value": "#FFFFFF",//"#2EEBDB",
+      "id": "title-0"
+  },
+  {
+      "value": "#EFEB8A",
+      "id": "title-1"
+  },
+  {
+      "value": "#00FF00",
+      "id": "title-2"
+  },
+  {
+      "value": "#01F6FF",//"#B3EF00",
+      "id": "title-3"
+  },
+  {
+      "value": "#FE9CCB",
+      "id": "title-4"
+  },
+  {
+      "value": "#2EEBDB",
+      "id": "title-5"
+  },
+  {
+      "value": "#FDFA01",//"#FEFEFE",
+      "id": "title-6"
+  },
+  {
+      "value": "#FFBA00",
+      "id": "title-7"
+  },
+  {
+      "value": "#FEE400",
+      "id": "title-8"
+  },
+  {
+      "value": "#FE4C4C",//"#FE0000",
+      "id": "title-9"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "title-11"
+  },
+  {
+      "value": "#FEE400",
+      "id": "title-14"
+  },
+  {
+      "value": "#FEFEFE",
+      "id": "title-17"
+  },
+  {//1男2女
+      "value": "#82AFE7",
+      "id": "sex-1"
+  },
+  {
+      "value": "#FF00A8",
+      "id": "sex-2"
+  },
+  {//1副本名2高亮文本统一颜色3怪物名4寻路5打开面板
+      "value": "#00FF00",
+      "id": "item-1"
+  },
+  {
+      "value": "#FFFF00",
+      "id": "item-2"
+  },
+  {
+      "value": "#FF0000",
+      "id": "item-3"
+  },
+  {
+      "value": "#00ff00",
+      "id": "item-4"
+  },
+  {
+      "value": "#00ff00",
+      "id": "item-5"
+  }
+
+]

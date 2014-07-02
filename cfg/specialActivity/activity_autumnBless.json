@@ -1,0 +1,32 @@
+{/*祝福分页*/
+	"title":"重阳好礼，祝福三折",
+	"desc":"活动期间，古剑祝福中<font color='#ffff00'>元神祝福、富甲祝福、任务祝福、副本祝福</font>一律三折！",
+	"goodsDesc":"珍稀特卖物品预览",
+	"goods":
+	[
+		{
+			"type":806027270,
+			"count":1,
+			"bind":1,
+			"level":1
+		},
+		{
+			"type":806027272,
+			"count":1,
+			"bind":1,
+			"level":1
+		},
+		{
+			"type":806027278,
+			"count":1,
+			"bind":1,
+			"level":1
+		},
+		{
+			"type":806027280,
+			"count":1,
+			"bind":1,
+			"level":1
+		}
+	]
+}

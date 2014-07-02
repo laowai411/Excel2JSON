@@ -1,0 +1,263 @@
+[
+		
+		{
+			"id":"1",/*Boss Id*/
+		    "name":"九幽麒麟",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic1.jpg",  /* 图的地址链接 */
+		    "paceSta":"麒麟潭", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033003", /* 所在地图 NPC ID */
+            "level":"35", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+            "bossState":"九幽麒麟——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[30,40,50,60,70], /*世界等级区间 ，根据这个来显示BOSS图片 */
+            "levelNeedNum":[100,100,100,100], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		          {
+				 "itemId": "269619204",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378328",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"2",/*Boss Id*/
+		    "name":"焚日朱雀",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic2.jpg",  /* 图的地址链接 */
+		    "paceSta":"朱雀峰", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033001", /* 所在地图 NPC ID */
+                    "level":"35", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+                    "bossState":"焚日朱雀——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[30,40,50,60,70], /* 世界等级区间 ，根据这个来显示BOSS图片 */
+			"levelNeedNum":[100,100,100,100], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		       {
+				 "itemId": "269619204",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378328",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"3",/*Boss Id*/
+		    "name":"紫霄雷魔",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic3.jpg",  /* 图的地址链接 */
+		    "paceSta":"紫雷巅", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033002", /* 所在地图 NPC ID */
+                    "level":"35", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+                    "bossState":"紫霄雷魔——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[30,40,50,60,70], /* 世界等级区间 ，根据这个来显示BOSS图片 */
+			"levelNeedNum":[100,100,100,100], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		       {
+				 "itemId": "269619204",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378328",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"4",/*Boss Id*/
+		    "name":"青鳞蛛后",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic4.jpg",  /* 图的地址链接 */
+		    "paceSta":"千蛛崖", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033007", /* 所在地图 NPC ID */
+            "level":"50", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+            "bossState":"青鳞蛛后——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[60,70], /*世界等级区间 ，根据这个来显示BOSS图片 */
+            "levelNeedNum":[50], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		          {
+				 "itemId": "269619205",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378329",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"5",/*Boss Id*/
+		    "name":"紫幽魔蝠",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic5.jpg",  /* 图的地址链接 */
+		    "paceSta":"紫蝠窟", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033005", /* 所在地图 NPC ID */
+                    "level":"50", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+                    "bossState":"紫幽魔蝠——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[60,70], /* 世界等级区间 ，根据这个来显示BOSS图片 */
+			"levelNeedNum":[50], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		       {
+				 "itemId": "269619205",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378329",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"6",/*Boss Id*/
+		    "name":"燎炎龙王",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic6.jpg",  /* 图的地址链接 */
+		    "paceSta":"炎龙渊", /* 所在地图名称 */
+		    "mapId":"203", /* 所在地图 ID */
+		    "npcId":"0_20033006", /* 所在地图 NPC ID */
+            "level":"50", /* 参与等级 */
+		    "downState":"每天15:00、20:00", /* 掉落简介 */
+            "bossState":"燎炎龙王——通天岭神兽，拥有通天之力，非人力所能抗衡", /* BOSS简介 */
+		    "bossLevel":[60,70], /* 世界等级区间 ，根据这个来显示BOSS图片 */
+			"levelNeedNum":[50], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		       {
+				 "itemId": "269619205",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378329",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		},
+		{
+			"id":"7",/*Boss Id*/
+		    "name":"荒古boss",/*名字 */
+		    "src":"skin/ui/image/dialy/bossPic6.jpg",  /* 图的地址链接 */
+		    "paceSta":"荒古禁地", /* 所在地图名称 */
+		    "mapId":"503", /* 所在地图 ID */
+		    "npcId":"0_50033001", /* 所在地图 NPC ID */
+            "level":"25", /* 参与等级 */
+		    "downState":"每天00:00-23:59", /* 掉落简介 */
+            "bossState":"25级以上玩家可参与的击杀boss活动，击杀boss的玩家有机会获得蓝色法宝碎片<br><font color='#00ff00'>注：荒古boss每逢整点将随机降临在荒古禁地，请仔细寻找。</font>", /* BOSS简介 */
+		    "bossLevel":[25], /* 世界等级区间 ，根据这个来显示BOSS图片 */
+			"levelNeedNum":[50], /*世界等级区所需要的人数 */
+		    "bossLevelPicArr":/* 进化BOSS 图*/
+		    [
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png",
+		       "skin/ui/image/dialy/F_60042000.png",
+		       "skin/ui/image/dialy/F_60041002.png"
+		    ], 
+		    "goods": /* 掉落物品*/
+                    [
+		       {
+				 "itemId": "538247171",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "537464833",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "537595905",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "537858049",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538509313",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+		    ]
+
+		}
+]

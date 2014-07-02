@@ -1,0 +1,219 @@
+﻿{
+"levelLimit":26,//新手等级判断，需要有职业id才能显示
+"openMc":{
+	"1":"EquipTargetOpenMc1",
+	"2":"EquipTargetOpenMc2",
+	"3":"EquipTargetOpenMc3"
+},
+"grayBg":{
+	"1":"LeftBg1",
+	"2":"LeftBg2",
+	"3":"LeftBg3"
+},
+"equipSuit":"集齐全套13件战衣可提升1115战斗力！",
+"1"://1武圣2剑仙3法尊
+	{
+		"1":  //上衣
+		{
+			"taskId":70032,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_2",//人形中对应完成的图片
+			"partIcon":"icon_1_2",//单个部件对应图片
+			"tip":1     //0、1、2 分别是 我要变强、我要声望、我要修为
+		},
+		"2"://1--9分别对应位置从左到右;1:2:  头盔
+		{
+			"taskId":70031,
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_1",//人形中对应完成的图片
+			"partIcon":"icon_1_1",//单个部件对应图片
+			"tip":2
+		},
+		
+		"3":  //腰带
+		{
+			"taskId":70033,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_3",//人形中对应完成的图片
+			"partIcon":"icon_1_3",//单个部件对应图片
+			"tip":0
+		},
+		"4":  //护腕
+		{
+			"taskId":70034,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_4",//人形中对应完成的图片
+			"partIcon":"icon_1_4",//单个部件对应图片
+			"tip":0
+		},
+		"5":  //裤子
+		{
+			"taskId":70035,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_5",//人形中对应完成的图片
+			"partIcon":"icon_1_5",//单个部件对应图片
+			"tip":1
+		},
+		"6":  //鞋子
+		{
+			"taskId":70036,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_6",//人形中对应完成的图片
+			"partIcon":"icon_1_6",//单个部件对应图片
+			"tip":2
+		},
+		"7":  //护符1
+		{
+			"taskId":70037,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_7",//人形中对应完成的图片
+			"partIcon":"icon_1_7",//单个部件对应图片
+			"tip":1
+		},
+		"8":  //护符2
+		{
+			"taskId":70038,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_1_8",//人形中对应完成的图片
+			"partIcon":"icon_1_7",//单个部件对应图片
+			"tip":1
+		}
+	},
+	
+"2":{
+		
+		"1":  //上衣
+		{
+			"taskId":70042,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_2",//人形中对应完成的图片
+			"partIcon":"icon_2_2",//单个部件对应图片
+			"tip":1
+		},
+		"2"://1--9分别对应位置从左到右;1:2:  头盔
+		{
+			"taskId":70041,
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_1",//人形中对应完成的图片
+			"partIcon":"icon_2_1",//单个部件对应图片
+			"tip":2
+		},
+		"3":  //腰带
+		{
+			"taskId":70043,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_3",//人形中对应完成的图片
+			"partIcon":"icon_2_3",//单个部件对应图片
+			"tip":0
+		},
+		"4":  //护腕
+		{
+			"taskId":70044,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_4",//人形中对应完成的图片
+			"partIcon":"icon_2_4",//单个部件对应图片
+			"tip":0
+		},
+		"5":  //裤子
+		{
+			"taskId":70045,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_5",//人形中对应完成的图片
+			"partIcon":"icon_2_5",//单个部件对应图片
+			"tip":0
+		},
+		"6":  //鞋子
+		{
+			"taskId":70046,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_6",//人形中对应完成的图片
+			"partIcon":"icon_2_6",//单个部件对应图片
+			"tip":0
+		},
+		"7":  //护符1
+		{
+			"taskId":70047,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_7",//人形中对应完成的图片
+			"partIcon":"icon_2_7",//单个部件对应图片
+			"tip":0
+		},
+		"8":  //护符2
+		{
+			"taskId":70048,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_2_8",//人形中对应完成的图片
+			"partIcon":"icon_2_7",//单个部件对应图片
+			"tip":0
+		}
+	},
+
+	"3":{
+		
+		"1":  //上衣
+		{
+			"taskId":70052,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_2",//人形中对应完成的图片
+			"partIcon":"icon_3_2",//单个部件对应图片
+			"tip":0
+		},
+		"2"://1--9分别对应位置从左到右;1:2:  头盔
+		{
+			"taskId":70051,
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_1",//人形中对应完成的图片
+			"partIcon":"icon_3_1",//单个部件对应图片
+			"tip":1
+		},
+		"3":  //腰带
+		{
+			"taskId":70053,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_3",//人形中对应完成的图片
+			"partIcon":"icon_3_3",//单个部件对应图片
+			"tip":2
+		},
+		"4":  //护腕
+		{
+			"taskId":70054,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_4",//人形中对应完成的图片
+			"partIcon":"icon_3_4",//单个部件对应图片
+			"tip":0
+		},
+		"5":  //裤子
+		{
+			"taskId":70055,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_5",//人形中对应完成的图片
+			"partIcon":"icon_3_5",//单个部件对应图片
+			"tip":0
+		},
+		"6":  //鞋子
+		{
+			"taskId":70056,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_6",//人形中对应完成的图片
+			"partIcon":"icon_3_6",//单个部件对应图片
+			"tip":0
+		},
+		"7":  //护符1
+		{
+			"taskId":70057,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_7",//人形中对应完成的图片
+			"partIcon":"icon_3_7",//单个部件对应图片
+			"tip":0
+		},
+		"8":  //护符2
+		{
+			"taskId":70058,//1--9分别对应位置从左到右;1:2:
+			"saintGrayIcon":"",//人形中对应灰色图片
+			"saintLightIcon":"part_3_8",//人形中对应完成的图片
+			"partIcon":"icon_3_7",//单个部件对应图片
+			"tip":0
+		}
+	}
+}
+	

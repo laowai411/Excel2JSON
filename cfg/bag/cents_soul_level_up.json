@@ -1,0 +1,11 @@
+[
+    {"value": 150, "level": 0},
+    {"value": 350, "level": 10},
+    {"value": 995, "level": 20},
+    {"value": 1820, "level": 30},
+    {"value": 2600, "level": 40},
+    {"value": 19656, "level": 50},
+    {"value": 60112, "level": 60},
+    {"value": 120000, "level": 70},
+    {"value": 500000, "level": 80}
+]

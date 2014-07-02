@@ -1,0 +1,64 @@
+{
+	"renewalLink":"http://pay.wan.360.cn/vippay.html",//续费
+	"vipActiveLink":"http://gjqx.wan.360.cn/list/13-1",//点击跳转红钻活动链接
+	"rewardNames"://奖励名字
+	{
+		"0":"红钻年费专属奖励",
+		"1":"红钻lv1专属奖励",
+		"2":"红钻lv2专属奖励",
+		"3":"红钻lv3专属奖励",
+		"4":"红钻lv4专属奖励",
+		"5":"红钻lv5专属奖励"
+	},
+	"rewards":
+	[
+		//奖励物品 0 :表示年
+		[
+			{"type":540676098,"count":4,"bind":1,"level":0},
+			{"type":540545028,"count":3,"bind":1,"level":0},
+			{"type":540938242,"count":4,"bind":1,"level":0},
+			{"type":539295746,"count":3,"bind":1,"level":0}
+		
+
+		],
+		//1
+		[
+			{"type":536944642,"count":1,"bind":1,"level":1},
+			{"type":537464835,"count":2,"bind":1,"level":1},
+			{"type":539033603,"count":1,"bind":1,"level":1},
+			{"type":538509314,"count":5,"bind":1,"level":1}
+		],
+		//2
+		[
+			{"type":536944642,"count":1,"bind":1,"level":2},
+			{"type":537464836,"count":1,"bind":1,"level":2},
+			{"type":539033603,"count":1,"bind":1,"level":2},
+			{"type":538509314,"count":6,"bind":1,"level":2}
+		],
+		//3
+		[
+			
+			{"type":537464837,"count":1,"bind":1,"level":3},
+			{"type":539033603,"count":1,"bind":1,"level":3},
+			{"type":539295746,"count":1,"bind":1,"level":3},
+			{"type":538509314,"count":7,"bind":1,"level":3}
+		],
+		//4
+		[
+			{"type":540676098,"count":1,"bind":1,"level":4},
+			{"type":537464837,"count":2,"bind":1,"level":4},
+			{"type":539824130,"count":2,"bind":1,"level":4},
+			{"type":538509314,"count":8,"bind":1,"level":4}
+		],
+		//5
+		[
+			{"type":537464838,"count":1,"bind":1,"level":5},
+			{"type":540938243,"count":2,"bind":1,"level":5},
+			{"type":541396995,"count":1,"bind":1,"level":5},
+			{"type":541331458,"count":2,"bind":1,"level":5}
+			
+		]
+	]
+
+
+}

@@ -1,0 +1,2343 @@
+﻿[
+	{
+		"achievemnetType":0,
+		"pageName":"成就总揽",//分页名字
+		"achievementList"://成就列表
+		[
+			{
+				"achievementId":0,
+				"isSeries":0,
+				"parameterType":2,
+				"parameter":1,
+				
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"个人成就",
+						"desc":"",
+						"count":25,
+						"reward":
+						{
+								"item":
+								{
+									"itemType":0,//类型,0代表不存在道具
+									"level":0,
+									"count":0//获得数量
+								},
+								"titleId":0,//称号id
+								"money":0//获得绑定元宝数量
+						}
+					}				
+				]
+			},
+			{
+				"achievementId":1,
+				"isSeries":0,
+				"parameterType":2,
+				"parameter":2,
+				
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+                        "index":0,
+					    "name":"任务成就",//成就名称
+				    	"desc":"",//成就描述
+						"count":31,//完成数，或者属性到达值等
+						"reward":
+						{
+								"item":
+								{
+									"itemType":0,
+									"level":0,
+									"count":0
+								},
+								"titleId":0,
+								"money":0
+						}
+					}				
+				]
+			},
+			{
+				"achievementId":2,
+				"isSeries":0,
+				"parameterType":2,
+				"parameter":3,
+				
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+						"index":0,
+						"name":"神装成就",//成就名称
+						"desc":"",//成就描述
+						"count":44,//完成数，或者属性到达值等
+						"reward":
+						{
+								"item":
+								{
+									"itemType":0,
+									"level":0,
+									"count":0
+								},
+								"titleId":0,
+								"money":0
+						}
+					}				
+				]
+			},
+			{
+				"achievementId":3,
+				"isSeries":0,
+				"parameterType":2,
+				"parameter":4,
+				
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+						"index":0,
+						"name":"试炼成就",//成就名称
+						"desc":"",//成就描述
+						"count":27,//完成数，或者属性到达值等
+						"reward":
+						{
+								"item":
+								{
+									"itemType":0,
+									"level":0,
+									"count":0
+								},
+								"titleId":0,
+								"money":0
+						}
+					}				
+				]
+			},
+			{
+				"achievementId":4,
+				"isSeries":0,
+				"parameterType":2,
+				"parameter":5,
+				
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+						"index":0,
+						"name":"社会成就",//成就名称
+						"desc":"",//成就描述
+						"count":18,//完成数，或者属性到达值等
+						"reward":
+						{
+								"item":
+								{
+									"itemType":0,
+									"level":0,
+									"count":0
+								},
+								"titleId":0,
+								"money":0
+						}
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"achievemnetType":1,
+		"pageName":"个人成就",
+		"achievementList"://成就列表
+		[
+/*升级成就*/		
+			{
+				"achievementId":0,
+				"isSeries":1,
+				"parameterType":3,
+				"parameter":1004,  //PROPERTY_LEVEL
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"初出茅庐",
+						"desc":"人物等级达到30级",
+						"count":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"古剑新秀",
+						"desc":"人物等级达到40级",
+						"count":40,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1003,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"声名鹊起",
+						"desc":"人物等级达到50级",
+						"count":50,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+						"index":3,
+						"name":"远近驰名",
+						"desc":"人物等级达到60级",
+						"count":60,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1004,
+								"money":0
+						}
+					},	
+					{
+						"index":4,
+						"name":"展露锋芒",
+						"desc":"人物等级达到70级",
+						"count":70,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},	
+					{
+						"index":5,
+						"name":"名扬天下",
+						"desc":"人物等级达到80级",
+						"count":80,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}					
+				]
+			},   //升级成就
+			
+/*人物战力*/	
+              {
+				"achievementId":1,
+				"isSeries":1,
+				"parameterType":3,
+				"parameter":25, 
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"战力十足（1）",
+						"desc":"初出茅庐，战力冲破1000",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"战力十足（2）",
+						"desc":"小有成就，战力冲破2800",
+						"count":2800,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1015,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"战力十足（3）",
+						"desc":"名气渐露，战力冲破4500",
+						"count":4500,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+						"index":3,
+						"name":"战力十足（4）",
+						"desc":"崭露头角，战力冲破8000",
+						"count":8000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},	
+					{
+						"index":4,
+						"name":"战力十足（5）",
+						"desc":"浑然天成，战力冲破15000",
+						"count":15000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},	
+					{
+						"index":5,
+						"name":"战力十足（6）",
+						"desc":"逍遥仙界，战力达到20000",
+						"count":20000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1062,
+								"money":0
+						}
+					},
+					{
+						"index":6,
+						"name":"战力十足（7）",
+						"desc":"逍遥仙界，战力达到25000",
+						"count":25000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+						}
+					},
+					{
+						"index":7,
+						"name":"战力十足（8）",
+						"desc":"逍遥仙界，战力达到30000",
+						"count":30000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":15
+						}
+					},
+					{
+						"index":8,
+						"name":"战力十足（9）",
+						"desc":"逍遥仙界，战力达到40000",
+						"count":40000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":18
+						}
+					},
+					{
+						"index":9,
+						"name":"战力十足（10）",
+						"desc":"逍遥仙界，战力达到50000",
+						"count":50000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1063,
+								"money":0
+						}
+					}						
+				]
+			},  //人物战力
+
+/* 功法成就*/	
+              {
+				"achievementId":2,
+				"isSeries":1,
+				"parameterType":5,
+				"parameter":22, 
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"九转金身（1）",
+						"desc":"功法[筑基境]圆满",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"九转金身（2）",
+						"desc":"功法[元婴境]圆满",
+						"count":2,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"九转金身（3）",
+						"desc":"功法[化神境]圆满",
+						"count":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1016,
+								"money":0
+						}
+					},	
+					{
+						"index":3,
+						"name":"九转金身（4）",
+						"desc":"功法[紫霄境]圆满",
+						"count":4,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},	
+					{
+						"index":4,
+						"name":"九转金身（5）",
+						"desc":"功法[烈阳境]圆满",
+						"count":5,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},	
+					{
+						"index":5,
+						"name":"九转金身（6）",
+						"desc":"功法[曜日境]圆满",
+						"count":6,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1017,
+								"money":0
+						}
+					},
+					{
+						"index":6,
+						"name":"九转金身（7）",
+						"desc":"功法[炼神境]圆满",
+						"count":7,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":13
+						}
+					},	
+					{
+						"index":7,
+						"name":"九转金身（8）",
+						"desc":"功法[混元境]圆满",
+						"count":8,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":15
+						}
+					},
+					{
+						"index":8,
+						"name":"九转金身（9）",
+						"desc":"功法[元始境]圆满",
+						"count":9,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1018,
+								"money":0
+						}
+					}						
+				]
+			}     //元神成就
+			
+						
+		]
+	},
+
+/*任务成就板块*/
+	
+	{
+		"achievemnetType":2,
+		"pageName":"任务成就",
+		"achievementList":
+		[
+/*主线任务*/
+			{
+				"achievementId":0,
+				"isSeries":0,
+				"parameterType":1,
+				"parameter":10,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					    "index":0,
+						"name":"平步青云",
+						"desc":"完成青云门所有主线任务",
+						"count":1,
+						"missionId":10037,
+						"reward":
+						{
+								"item":{},
+								"titleId":1002,
+								"money":0
+						}
+					}
+					
+				]
+			},		
+		
+		
+/*封魔任务*/
+			{
+				"achievementId":1,
+				"isSeries":1,
+				"parameterType":1,
+				"parameter":33,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"封魔卫道（1）",
+						"desc":"完成60环封魔任务",
+						"count":60,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"封魔卫道（2）",
+						"desc":"完成200环封魔任务",
+						"count":200,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1019,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"封魔卫道（3）",
+						"desc":"完成800环封魔任务",
+						"count":800,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"封魔卫道（4）",
+						"desc":"完成1000环封魔任务",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"封魔卫道（5）",
+						"desc":"完成1800环封魔任务",
+						"count":1800,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},
+					{
+						"index":5,
+						"name":"封魔卫道（6）",
+						"desc":"完成3300环封魔任务",
+						"count":3300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":13
+						}
+					},
+					{
+						"index":6,
+						"name":"封魔卫道（7）",
+						"desc":"完成4500环封魔任务",
+						"count":4500,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":15
+						}
+					}
+				]
+			},	//封魔任务
+
+/*皇榜任务*/
+			{
+				"achievementId":2,
+				"isSeries":1,
+				"parameterType":1,
+				"parameter":35,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"皇家骑士团（1）",
+						"desc":"完成15次皇榜任务",
+						"count":15,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"皇家骑士团（2）",
+						"desc":"完成100次皇榜任务",
+						"count":100,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1020,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"皇家骑士团（3）",
+						"desc":"完成300次皇榜任务",
+						"count":300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"皇家骑士团（4）",
+						"desc":"完成700次皇榜任务",
+						"count":700,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"皇家骑士团（5）",
+						"desc":"完成1200次皇榜任务",
+						"count":1200,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1021,
+								"money":0
+						}
+					},
+					{
+						"index":5,
+						"name":"皇家骑士团（6）",
+						"desc":"完成1500次皇榜任务",
+						"count":1500,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			},		//皇榜任务		
+	
+/*斩妖任务*/
+			{
+				"achievementId":3,
+				"isSeries":1,
+				"parameterType":1,
+				"parameter":31,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"斩妖济世（1）",
+						"desc":"完成斩妖任务11次",
+						"count":11,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"斩妖济世（2）",
+						"desc":"完成斩妖任务60次",
+						"count":60,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1022,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"斩妖济世（3）",
+						"desc":"完成斩妖任务200次",
+						"count":200,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"斩妖济世（4）",
+						"desc":"完成斩妖任务550次",
+						"count":550,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"斩妖济世（5）",
+						"desc":"完成斩妖任务1000次",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},
+					{
+						"index":5,
+						"name":"斩妖济世（6）",
+						"desc":"完成斩妖任务1800次",
+						"count":1800,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1023,
+								"money":0
+						}
+					}
+				]
+			}, // 斩妖任务 
+	
+/*仙盟任务*/
+			{
+				"achievementId":4,
+				"isSeries":1,
+				"parameterType":1,
+				"parameter":32,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"仙盟任务（1）",
+						"desc":"完成1次仙盟日常任务",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"仙盟任务（2）",
+						"desc":"完成30次仙盟日常任务",
+						"count":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"仙盟任务（3）",
+						"desc":"完成100次仙盟日常任务",
+						"count":100,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":3,
+						"name":"仙盟任务（4）",
+						"desc":"完成300次仙盟日常任务",
+						"count":300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},
+					{
+						"index":4,
+						"name":"仙盟任务（5）",
+						"desc":"完成500次仙盟日常任务",
+						"count":500,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1024,
+								"money":0
+						}
+					}					
+				]
+			},  //仙盟任务
+
+/*护送任务*/
+			{
+				"achievementId":5,
+				"isSeries":1,
+				"parameterType":1,
+				"parameter":34,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"女神眷顾（1）",
+						"desc":"累计成功护送女神20次",
+						"count":20,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1025,
+								"money":0
+						}
+					},
+					{
+						"index":1,
+						"name":"女神眷顾（2）",
+						"desc":"累计成功护送女神130次",
+						"count":130,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":2,
+						"name":"女神眷顾（3）",
+						"desc":"累计成功护送女神200次",
+						"count":200,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"女神眷顾（4）",
+						"desc":"累计成功护送女神350次",
+						"count":350,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"女神眷顾（5）",
+						"desc":"累计成功护送女神460次",
+						"count":460,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},
+					{
+						"index":5,
+						"name":"女神眷顾（6）",
+						"desc":"累计成功护送女神600次",
+						"count":600,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1026,
+								"money":0
+						}
+					}
+				]
+			}		//护送任务						
+			
+		]
+	},
+
+	
+	
+/*神装板块*/
+	{
+		"achievemnetType":3,
+		"pageName":"神装成就",
+		"achievementList"://成就列表
+		[
+		
+/*法宝成就*/
+			{
+				"achievementId":0,
+				"isSeries":1,
+				"parameterType":6,
+				"parameter":1,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"法宝在手（1）",
+						"desc":"装备一件绿色法宝",
+						"count":1,
+						"level":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"法宝在手（2）",
+						"desc":"装备一件蓝色法宝",
+						"count":1,
+						"level":2,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"法宝在手（3）",
+						"desc":"装备一件紫色法宝",
+						"count":1,
+                        "level":3,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1031,
+								"money":0
+						}
+					},
+					{
+						"index":3,
+						"name":"法宝在手（4）",
+						"desc":"装备一件橙色法宝",
+						"count":1,
+                        "level":4,							
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			},
+/*紫色套装成就*/
+			{
+				"achievementId":1,
+				"isSeries":1,
+				"parameterType":10,
+				"parameter":3,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"紫气东来(1)",
+						"desc":"装备13件30级的紫色套装",
+						"count":13,
+                        "level":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"紫气东来(2)",
+						"desc":"装备13件40级的紫色套装",
+						"count":13,
+						"level":40,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1032,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"紫气东来(3)",
+						"desc":"装备13件50级的紫色套装",
+						"count":13,
+                        "level":50,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"紫气东来(4)",
+						"desc":"装备13件60级的紫色套装",
+						"count":13,
+                        "level":60,							
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"紫气东来(5)",
+						"desc":"装备13件70级的紫色套装",
+						"count":13,	
+                        "level":70,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1033,
+								"money":0
+						}
+					}
+				]
+			},		
+/*橙色套装成就*/
+			{
+				"achievementId":2,
+				"isSeries":1,
+				"parameterType":10,
+				"parameter":4,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"橙胜追击（1）",
+						"desc":"装备13件一星橙色装套",
+						"count":13,
+                        "level":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1034,
+								"money":0
+						}
+					},
+					{
+						"index":1,
+						"name":"橙胜追击（2）",
+						"desc":"装备13件两仪橙色装套",
+						"count":13,
+						"level":40,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":2,
+						"name":"橙胜追击（3）",
+						"desc":"装备13件三才橙色装套",
+						"count":13,
+                        "level":50,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"橙胜追击（4）",
+						"desc":"装备13件四象橙色装套",
+						"count":13,
+                        "level":60,							
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"橙胜追击（5）",
+						"desc":"装备13件五行橙色装套",
+						"count":13,	
+                        "level":70,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1035,
+								"money":0
+						}
+					}
+				]
+			},		
+/*全身强化成就*/
+			{
+				"achievementId":3,
+				"isSeries":1,
+				"parameterType":10,
+				"parameter":20,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"神兵护体（1）",
+						"desc":"身穿13件强化+3的装备",
+						"count":13,
+                        "level":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"神兵护体（2）",
+						"desc":"身穿13件强化+4的装备",
+						"count":13,
+						"level":4,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1036,
+								"money":0
+						}
+					},
+					{
+						"index":2,
+						"name":"神兵护体（3）",
+						"desc":"身穿13件强化+5的装备",
+						"count":13,
+                        "level":5,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":3,
+						"name":"神兵护体（4）",
+						"desc":"身穿13件强化+6的装备",
+						"count":13,
+                        "level":6,							
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"神兵护体（5）",
+						"desc":"身穿13件强化+7的装备",
+						"count":13,	
+                        "level":7,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1037,
+								"money":0
+						}
+					},
+					{
+						"index":5,
+						"name":"神兵护体（6）",
+						"desc":"身穿13件强化+8的装备",
+						"count":13,	
+                        "level":8,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},
+					{
+						"index":6,
+						"name":"神兵护体（7）",
+						"desc":"身穿13件强化+9的装备",
+						"count":13,	
+                        "level":9,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":13
+						}
+					},
+					{
+						"index":7,
+						"name":"神兵护体（8）",
+						"desc":"身穿13件强化+10的装备",
+						"count":13,	
+                        "level":10,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":15
+						}
+					},
+					{
+						"index":8,
+						"name":"神兵护体（9）",
+						"desc":"身穿13件强化+11的装备",
+						"count":13,	
+                        "level":11,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":18
+						}
+					},	
+					{
+						"index":9,
+						"name":"神兵护体（10）",
+						"desc":"身穿13件强化+12的装备",
+						"count":13,	
+                        "level":12,						
+						"reward":
+						{
+								"item":	{},
+								"titleId":1038,
+								"money":0
+						}
+					}				
+				]
+			},
+/*时装武器成就*/
+			{
+				"achievementId":4,
+				"isSeries":1,
+				"parameterType":6,
+				"parameter":4,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"时尚达人（1）",
+						"desc":"衣柜中拥有1件时装武器",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"时尚达人（2）",
+						"desc":"衣柜中拥有3件时装武器",
+						"count":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1039,
+								"money":0
+						}
+					},
+					{
+					  "index":2,
+						"name":"时尚达人（3）",
+						"desc":"衣柜中拥有10件时装武器",
+						"count":10,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					}
+					
+				]
+			},
+/*时装上衣成就*/
+			{
+				"achievementId":5,
+				"isSeries":1,
+				"parameterType":6,
+				"parameter":3,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"衣着亮丽（1）",
+						"desc":"衣柜中拥有1件时装上衣",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"衣着亮丽（2）",
+						"desc":"衣柜中拥有3件时装上衣",
+						"count":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1040,
+								"money":0
+						}
+					},
+					{
+					  "index":2,
+						"name":"衣着亮丽（3）",
+						"desc":"衣柜中拥有10件时装上衣",
+						"count":10,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					}
+					
+				]
+			},
+/*镶嵌成就*/
+			{
+				"achievementId":6,
+				"isSeries":1,
+				"parameterType":6,
+				"parameter":21,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"流光溢彩（1）",
+						"desc":"累计镶嵌24颗1级以上宝石",
+						"count":24,
+                        "level":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"流光溢彩（2）",
+						"desc":"累计镶嵌24颗2级以上宝石",
+						"count":24,
+                        "level":2,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+					  "index":2,
+						"name":"流光溢彩（3）",
+						"desc":"累计镶嵌24颗3级以上宝石",
+						"count":24,
+                        "level":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1041,
+								"money":0
+						}
+					},
+					{
+					  "index":3,
+						"name":"流光溢彩（4）",
+						"desc":"累计镶嵌24颗4级以上宝石",
+						"count":24,
+                        "level":4,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+					  "index":4,
+						"name":"流光溢彩（5）",
+						"desc":"累计镶嵌24颗5级以上宝石",
+						"count":24,
+                        "level":5,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					},					
+					{
+					  "index":5,
+						"name":"流光溢彩（6）",
+						"desc":"累计镶嵌24颗6级以上宝石",
+						"count":24,
+                        "level":6,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":13
+						}
+					},
+					{
+					  "index":6,
+						"name":"流光溢彩（7）",
+						"desc":"累计镶嵌24颗7级以上宝石",
+						"count":24,
+                        "level":7,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":15
+						}
+					},					
+					{
+					  "index":7,
+						"name":"流光溢彩（8）",
+						"desc":"累计镶嵌24颗8级以上宝石",
+						"count":24,
+                        "level":8,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":18
+						}
+					},
+					{
+					  "index":8,
+						"name":"流光溢彩（9）",
+						"desc":"累计镶嵌24颗9级以上宝石",
+						"count":24,
+                        "level":9,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1042,
+								"money":0
+						}
+					}					
+				]
+			},
+/*累计洗炼成就*/
+			{
+				"achievementId":7,
+				"isSeries":1,
+				"parameterType":6,
+				"parameter":20,  
+
+				"achievementConditionList":
+				[	
+					{
+					  "index":0,
+						"name":"洗新练旧（1）",
+						"desc":"装备拥有40条白色以上的洗练属性",
+						"count":40,
+                        "level":0,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"洗新练旧（2）",
+						"desc":"装备拥有40条绿色以上的洗练属性",
+						"count":40,
+                        "level":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+					  "index":2,
+						"name":"洗新练旧（3）",
+						"desc":"装备拥有40条蓝色以上的洗练属性",
+						"count":40,
+                        "level":2,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1043,
+								"money":10
+						}
+					},
+					{
+					  "index":3,
+						"name":"洗新练旧（4）",
+						"desc":"装备拥有40条紫色以上的洗练属性",
+						"count":40,
+                        "level":3,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+					  "index":4,
+						"name":"洗新练旧（5）",
+						"desc":"装备拥有40条橙色以上的洗练属性",
+						"count":40,
+                        "level":4,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			}
+		]
+	},
+
+
+/*试炼成就板块*/	
+	
+	{
+		"achievemnetType":4,
+		"pageName":"试炼成就",
+		"achievementList"://成就列表
+		[
+			
+/*爬塔副本*/
+			{
+				"achievementId":0,
+				"isSeries":1,
+				"parameterType":11,
+				"parameter":2,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"秘境小兵（1）",
+						"desc":"通关子夜殿",
+						"count":1,
+						"missionId":701,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"秘境小兵（2）",
+						"desc":"通关辰星殿",
+						"count":1,
+						"missionId":718,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"秘境小兵（3）",
+						"desc":"通关申月殿",
+						"count":1,
+						"missionId":735,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":3,
+						"name":"秘境小兵（4）",
+						"desc":"通关圣阳殿",
+						"count":1,
+						"missionId":752,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}						
+				]
+			},   //爬塔副本
+			
+/*塔防副本*/
+			{
+				"achievementId":1,
+				"isSeries":1,
+				"parameterType":11,
+				"parameter":3,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"界外飞仙（1）",
+						"desc":"通关无量佛界副本",
+						"count":1,
+						"missionId":414,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1052,
+								"money":0
+						}
+					},
+					{
+						"index":1,
+						"name":"秘境神兵（2）",
+						"desc":"通关幻元灵界副本",
+						"count":1,
+						"missionId":413,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":2,
+						"name":"秘境神兵（3）",
+						"desc":"通关冥火妖界副本",
+						"count":1,
+						"missionId":415,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+					  "index":3,
+						"name":"秘境神兵（4）",
+						"desc":"通关玄曜天界副本",
+						"count":1,
+						"missionId":416,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					}					
+				]
+			},   //塔防副本
+					
+/*普通副本*/
+			{
+				"achievementId":2,
+				"isSeries":0,
+				"parameterType":11,
+				"parameter":1,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"古剑奇侠",
+						"desc":"成功挑战3次古剑奇侠副本",
+						"count":3,
+						"missionId":403,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"千佛圣殿",
+						"desc":"成功挑战千佛圣殿副本",
+						"count":1,
+						"missionId":404,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1054,
+								"money":0
+						}
+					},	
+					{
+					  "index":2,
+						"name":"须臾幻境",
+						"desc":"成功挑战须臾幻境副本",
+						"count":1,
+						"missionId":405,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+					  "index":3,
+						"name":"香雪林海",
+						"desc":"成功挑战香雪林海副本",
+						"count":1,
+						"missionId":406,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+					  "index":4,
+						"name":"冰焰龙渊",
+						"desc":"成功挑战冰焰龙渊副本",
+						"count":1,
+						"missionId":407,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}					
+				]
+			},  //普通副本
+
+/*封神战场杀人*/
+			{
+				"achievementId":3,
+				"isSeries":0,
+				"parameterType":6,
+				"parameter":501,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"封神无双（1）",
+						"desc":"封神战场中累计杀1个玩家",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"封神无双（2）",
+						"desc":"封神战场中累计杀1000个玩家",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1044,
+								"money":0
+						}
+					},	
+					{
+					  "index":2,
+						"name":"封神无双（3）",
+						"desc":"封神战场中累计杀5000个玩家",
+						"count":5000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+					  "index":3,
+						"name":"封神无双（4）",
+						"desc":"封神战场中累计杀10000个玩家",
+						"count":10000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1045,
+								"money":0
+						}
+					}					
+				]
+			},  //封神战场杀人			
+			
+/*击杀世界boss*/
+			{
+				"achievementId":4,
+				"isSeries":0,
+				"parameterType":8,
+				"parameter":1,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"神鬼莫近（1）",
+						"desc":"参与击败任意世界boss累计1次",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"神鬼莫近（2）",
+						"desc":"参与击败任意世界boss累计达60次",
+						"count":60,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1046,
+								"money":0
+						}
+					},	
+					{
+					  "index":2,
+						"name":"神鬼莫近（3）",
+						"desc":"参与击败任意世界boss累计达300次",
+						"count":300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+					  "index":3,
+						"name":"神鬼莫近（4）",
+						"desc":"参与击败任意世界boss累计1000次",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+					  "index":4,
+						"name":"神鬼莫近（5）",
+						"desc":"参与击败任意世界boss累计3000次",
+						"count":3000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1047,
+								"money":0
+						}
+					}					
+				]
+			},  //击杀世界boss	
+
+/*屠魔殿*/
+			{
+				"achievementId":5,
+				"isSeries":0,
+				"parameterType":12,
+				"parameter":419,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"屠魔圣手（1）",
+						"desc":"成功坚守屠魔殿第30波",
+						"count":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"屠魔圣手（2）",
+						"desc":"成功坚守屠魔殿第50波",
+						"count":50,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},	
+					{
+					  "index":2,
+						"name":"屠魔圣手（3）",
+						"desc":"成功坚守屠魔殿第70波",
+						"count":70,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},	
+					{
+					  "index":3,
+						"name":"屠魔圣手（4）",
+						"desc":"成功坚守屠魔殿第90波",
+						"count":90,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+					  "index":4,
+						"name":"屠魔圣手（5）",
+						"desc":"成功坚守屠魔殿第100波",
+						"count":100,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1053,
+								"money":0
+						}
+					}					
+				]
+			}  //屠魔殿				
+		]
+	},
+
+	
+/*社会成就板块*/	
+	{
+		"achievemnetType":5,
+		"pageName":"社会成就",
+		"achievementList"://成就列表
+		[
+
+			{
+				"achievementId":0,
+				"isSeries":1,
+				"parameterType":5,
+				"parameter":1,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"好友满满（1）",
+						"desc":"拥有5个好友",
+						"count":5,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"好友满满（2）",
+						"desc":"拥有20个好友",
+						"count":20,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"好友满满（3）",
+						"desc":"拥有50个好友",
+						"count":50,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":3,
+						"name":"好友满满（4）",
+						"desc":"拥有100个好友",
+						"count":100,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1055,
+								"money":0
+						}
+					},
+					{
+						"index":4,
+						"name":"好友满满（5）",
+						"desc":"拥有200个好友",
+						"count":200,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			},  // 好友成就
+			
+/*财富成就*/		
+		{
+				"achievementId":1,
+				"isSeries":1,
+				"parameterType":7,
+				"parameter":2,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"富可敌国（1）",
+						"desc":"拥有20W铜钱",
+						"count":200000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"富可敌国（2）",
+						"desc":"拥有50W铜钱",
+						"count":500000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"富可敌国（3）",
+						"desc":"拥有100W铜钱",
+						"count":1000000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1056,
+								"money":0
+						}
+					},
+					{
+						"index":3,
+						"name":"富可敌国（4）",
+						"desc":"拥有200W铜钱",
+						"count":2000000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"富可敌国（5）",
+						"desc":"拥有500W铜钱",
+						"count":5000000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			},   //财富成就
+
+/*打劫护送*/		
+		{
+				"achievementId":2,
+				"isSeries":1,
+				"parameterType":5,
+				"parameter":23,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"盗亦有道（1）",
+						"desc":"成功劫财劫色5次",
+						"count":5,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+						"index":1,
+						"name":"盗亦有道（2）",
+						"desc":"成功劫财劫色30次",
+						"count":30,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+						"index":2,
+						"name":"盗亦有道（3）",
+						"desc":"成功劫财劫色100次",
+						"count":100,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1060,
+								"money":0
+						}
+					},
+					{
+						"index":3,
+						"name":"盗亦有道（4）",
+						"desc":"成功劫财劫色300次",
+						"count":300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":8
+						}
+					},
+					{
+						"index":4,
+						"name":"盗亦有道（5）",
+						"desc":"成功劫财劫色1000次",
+						"count":1000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":10
+						}
+					}
+				]
+			},   //打劫护送
+			
+/* 钓鱼*/		
+		{
+				"achievementId":3,
+				"isSeries":0,
+				"parameterType":5,
+				"parameter":24,  
+
+				//完成条件
+				"achievementConditionList":
+				[
+					{
+					  "index":0,
+						"name":"姜太公(1)",
+						"desc":"在轩辕城进行1次钓鱼",
+						"count":1,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":3
+						}
+					},
+					{
+					  "index":1,
+						"name":"姜太公(2)",
+						"desc":"累计在轩辕城垂钓300次",
+						"count":300,
+						"reward":
+						{
+								"item":	{},
+								"titleId":0,
+								"money":5
+						}
+					},
+					{
+					  "index":2,
+						"name":"姜太公(3)",
+						"desc":"在轩辕城进行5000次钓鱼",
+						"count":5000,
+						"reward":
+						{
+								"item":	{},
+								"titleId":1061,
+								"money":0
+						}
+					}
+				]
+			}  //钓鱼
+			
+		]
+	},
+
+
+	{
+		"achievemnetType":6,
+		"pageName":"成就回顾",
+		"achievementList"://成就列表
+		[
+			
+		]
+	}		
+	
+]

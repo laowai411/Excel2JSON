@@ -1,0 +1,105 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 38,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 38,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 38,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+         "plotId": 38,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1046,
+					"type":1611202561,
+					"gender":1,
+					"direction":3,
+					"action":1,
+					"clothes":1610883125,
+					"x":-100,
+					"y":0,
+					"hp":100,
+					"objName":"慕容紫依"
+				}
+    },
+	{
+         "plotId": 38,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+            "countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "慕容紫依",
+        	"talkStr": "打来打去都是这些冷冰冰的死物，这种东西我家想要多少就有多少！<font color='#ff0000'>@player@</font>，我们还是去其他地方玩吧~",
+        	"headSrc": "skin/npc/image/image_6006006e.png"
+        }
+    },
+	{
+         "plotId": 38,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"countTime": 10000,
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "……好，走吧。（钱好像不够用了……算了，千金难买美人一笑啊！）",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 38,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },         
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 38,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	}, 
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 38,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 38,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

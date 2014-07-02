@@ -1,0 +1,157 @@
+[
+ {
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 17,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 17,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 17,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	   {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 17,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":
+        {
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "天神法衣？难道是传说中天机老人的霸天战甲、云翎剑仙的飞仙道袍、弈仙神女的琼瑶霓裳"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 17,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":
+        {
+        	"speakerName": "何仙姑",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060066.png",
+        	"talkStr": "哎呦，你知道的还不少嘛。如果你能机缘下得到，你日后的实力定是质的飞跃。加油，加油，加油。"
+        }
+    },   
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 17, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+    },	
+		{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 17, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1046,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1610940443,
+					"x":170,
+					"y":-500,
+					"hp":100,
+					"objName":""
+				}
+ 
+    },
+	    {
+    	"className":"taskPlot.filters.ObjFallDownFilter", 
+        "plotId": 17, 
+		"data":{//3：下落;5：角色移动
+					"objId":1046,
+					"startPicPt":{"x":220,"y":-500},
+					"destPicPt":{"x":170,"y":100},
+					"speed":300,
+					"ghostShadow":1,
+					"fallEffect":"T_9527_0000",
+					"shake":1
+				}
+  
+    },
+	    {
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 17,
+         "mouseSetting":"stage",
+        	"countDownSetting":10000,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":200,
+					"y":70,
+					"skinName":"GuideClickGetTarget",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				} 
+    },
+	{
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 17,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetTarget",
+					"type":"swf"
+				}
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 17,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 17,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},   
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 17,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 17,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

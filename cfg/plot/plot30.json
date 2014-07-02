@@ -1,0 +1,127 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 30,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 30,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 30,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 30,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "啸月玄帝",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_7.png",
+        	"talkStr": "妲己？你竟然被解封了？看来青丘狐族那群老不死还是不死心啊 ！"
+        }
+    },
+	{
+         "plotId": 30,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+            "countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "妲己",
+        	"talkStr": "唷~小狼崽子倒是长大了，姐姐我不过是沉睡了几年，你就敢欺压到我狐岐山来了。",
+        	"headSrc": "skin/npc/image/image_60060085.png"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 30,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "啸月玄帝",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_7.png",
+        	"talkStr": "哼，你以为你还是当年封神之战所向披靡的妲己吗？如今我有五彩石在手，妲己你还是带着你那群狐狸精乖乖归顺我银月狼族之下吧！"
+        }
+    },
+		{
+         "plotId": 30,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+            "countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "妲己",
+        	"talkStr": "是吗？那就让姐姐陪你好好玩一玩~",
+        	"headSrc": "skin/npc/image/image_60060085.png"
+        }
+    },
+	{
+        "plotId": 30,
+        "className":"taskPlot.filters.DialogContentFilter", 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "……（好像帮哪边都很奇怪的样子……）",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 30,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },   
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 30,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	}, 
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 30,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 30,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

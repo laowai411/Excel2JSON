@@ -1,0 +1,76 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 29,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 29,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 29,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 29,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "幻界界王",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060058.png",
+        	"talkStr": "轩辕剑主果然实力非凡，连这无量佛界都无法阻止你前进的脚步。摧毁妖星拯救世界的重任托付与你，他果然没有选错人……"
+        }
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 29,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 29,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},    
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 29,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 29,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

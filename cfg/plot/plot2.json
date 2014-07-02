@@ -1,0 +1,127 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 2,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 2,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 2,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+ 	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 2,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "熊猫大师",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060046.png",
+        	"talkStr": "修复九天神州结界，须先以五彩石激活诸个<font color='#00aeef'>无极封印阵</font>，方可启动轩辕剑封印妖星，从而修补结界。可惜五彩石早已失踪……"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 2,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "五彩石早已失踪？这可如何是好……"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 2,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "熊猫大师",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060046.png",
+        	"talkStr": "你可愿以轩辕剑暂代<font color='#00aeef'>五彩神石</font>镇守阵眼，直至你寻回五彩神石激活无极封印阵？"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 2,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+       	 	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "我自然愿意，只是这轩辕剑尚未完全修复……"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 2,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "熊猫大师",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060046.png",
+        	"talkStr": "放心，你每激活一个无极阵，轩辕剑也会恢复一分。你要好生利用五彩石修补封印阵！"
+        }
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 2,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 2,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 2,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},    
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 2,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	} 
+]

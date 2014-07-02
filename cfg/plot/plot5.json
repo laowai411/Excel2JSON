@@ -1,0 +1,403 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 5,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+		
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 5,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 5,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+    	{
+    "className":"taskPlot.filters.UpdatePlayerFilter",/**更新玩家自己的位置信息*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					"isSync":1,/*默认为0，1表示和服务端同步*/
+					"objId":0,/**自己：0*/
+					"direction":5,/**方向*/
+					"x":2633,/**变更的位置x*/
+					"y":2177,/**变更的位置y*/
+					"action":1/**动作*/
+				}
+    },
+/*	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":5,
+					"action":1
+				} 
+    },*/
+	
+    
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 5,
+         "data":
+        {
+		"action":"hide"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 5, 
+		"data":{//1播放动画,
+					"relative":"map",//"map","role","stage"
+					"x":3000,
+					"y":1930,
+					"skinName":"FlowerUpLight",
+					"type":"swf",
+					"playTimes":1,/**动画播放次数*/
+					"frameRate":15/**动画播放帧频*/
+				} 
+        
+    },
+	/* {
+        "className":"taskPlot.filters.DelayPlotFilter",
+        "plotId":5,
+        	"countDownSetting":1000,
+		"data":{//1播放动画,
+				} 
+    },*/
+	{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 5,
+         "data":
+        {
+		"action":"show"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1009,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1610940482,
+					"x":-190,
+					"y":130,
+					"hp":100,
+					"objName":"鸿蒙之光"
+				} 
+    },
+		{ 
+	    "className":"taskPlot.filters.ObjFallDownFilter",  /**物体下落*/
+        "plotId": 5,  /**剧情id*/
+				"data":{//3：下落;5：角色移动
+							"objId":1009,
+							"startPicPt":{"x":-190,"y":216},
+							"destPicPt":{"x":-190,"y":131},
+							"speed":15,
+							"ghostShadow":1,
+							"shake":1
+						}    
+  },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 5,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "这…….这难道就是玄武灵脉？浮屠宝塔为什么也受到感应了..浮屠神技？"
+        }
+    },
+      {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 5,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1009
+		} 
+ 
+    },
+ 
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 5, 
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"x":-190,
+					"y":111,
+					"skinName":"T_2007_0000",
+					"type":"",
+					"loopEnd":"remove",//播放结束后移除还是stop，remove | stop,type不等于"swf"时需要配置
+					"loopFrame":1,//1,type不等于"swf"时需要配置
+					"loopTimes":1,//循环次数,type不等于"swf"时需要配置
+					"renderRate":3,//渲染频率3,type不等于"swf"时需要配置
+					"totalFrames":9//总帧数,type不等于"swf"时需要配置
+				} 
+        
+    },
+	 {
+        "className":"taskPlot.filters.DelayPlotFilter",
+        "plotId":5,
+        	"countDownSetting":2000,
+		"data":{//1播放动画,
+				} 
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1065,
+					"type":1611202561,
+					"gender":1,
+					"direction":2,
+					"action":1,
+					"clothes":1610879093,
+					"x":-370,
+					"y":-300,
+					"hp":100,
+					"objName":"千年木精"
+				}
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1066,
+					"type":1611202561,
+					"gender":1,
+					"direction":4,
+					"action":1,
+					"clothes":1610879093,
+					"x":250,
+					"y":-335,
+					"hp":100,
+					"objName":"千年木精"
+				}
+    },
+		{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1067,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879093,
+					"x":350,
+					"y":-115,
+					"hp":100,
+					"objName":"千年木精"
+				}
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 5,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1068,
+					"type":1611202561,
+					"gender":1,
+					"direction":6,
+					"action":1,
+					"clothes":1610879093,
+					"x":300,
+					"y":285,
+					"hp":100,
+					"objName":"千年木精"
+				}
+    },
+
+	  {
+    "className":"taskPlot.filters.ObjMoveFilter",  /**物体移动*/
+      "plotId": 5, /**剧情id*/
+			"countDownSetting":1000,/**设置自动倒计时时间 ms*/
+			"data":{
+					"objId":1065,/**物体id*/
+					"startPicPt":{"x":-370,"y":-300},/**物体下落前位置*/
+					"destPicPt":{"x":-72,"y":-72},/**物体下落目标位置*/
+					"speed":800,/**物体下落速度*/
+					"ghostShadow":1,/**物体下落是否有拖影：0 否，1 是*/
+					"shake":0/**物体下落是否需要震屏：0 否， 1 是*/
+				}
+	},
+	{
+    "className":"taskPlot.filters.ObjMoveFilter",  /**物体移动*/
+      "plotId": 5, /**剧情id*/
+			"countDownSetting":1000,/**设置自动倒计时时间 ms*/
+			"data":{
+					"objId":1066,/**物体id*/
+					"startPicPt":{"x":250,"y":-335},/**物体下落前位置*/
+					"destPicPt":{"x":50,"y":-135},/**物体下落目标位置*/
+					"speed":800,/**物体下落速度*/
+					"ghostShadow":1,/**物体下落是否有拖影：0 否，1 是*/
+					"shake":0/**物体下落是否需要震屏：0 否， 1 是*/
+				}
+	},
+		{
+    "className":"taskPlot.filters.ObjMoveFilter",  /**物体移动*/
+      "plotId": 5, /**剧情id*/
+			"countDownSetting":1000,/**设置自动倒计时时间 ms*/
+			"data":{
+					"objId":1067,/**物体id*/
+					"startPicPt":{"x":350,"y":-115},/**物体下落前位置*/
+					"destPicPt":{"x":150,"y":-15},/**物体下落目标位置*/
+					"speed":800,/**物体下落速度*/
+					"ghostShadow":1,/**物体下落是否有拖影：0 否，1 是*/
+					"shake":0/**物体下落是否需要震屏：0 否， 1 是*/
+				}
+	},
+	{
+    "className":"taskPlot.filters.ObjMoveFilter",  /**物体移动*/
+      "plotId": 5, /**剧情id*/
+			"countDownSetting":1000,/**设置自动倒计时时间 ms*/
+			"data":{
+					"objId":1068,/**物体id*/
+					"startPicPt":{"x":300,"y":285},/**物体下落前位置*/
+					"destPicPt":{"x":100,"y":85},/**物体下落目标位置*/
+					"speed":800,/**物体下落速度*/
+					"ghostShadow":1,/**物体下落是否有拖影：0 否，1 是*/
+					"shake":0/**物体下落是否需要震屏：0 否， 1 是*/
+				}
+	},
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 5,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "千年木精",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006011e.png",
+       		"talkStr": "玄武灵脉被吸收，赤血妖姬要发疯的，孩儿们快杀了他，要不我们死定了翘辫子啦。"
+        }
+    }, 
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 5,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "宝塔镇河妖…不看我宝塔镇树妖，区区小妖也敢在我面前得瑟。"
+        }
+    },
+	    {
+        "className":"taskPlot.filters.CallNpcFilter",/**召唤npc*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					 "index":5/**需要召唤的npc Index，和服务端配置对应*/
+				}
+ 
+    },
+	 {
+        "className":"taskPlot.filters.CallNpcFilter",/**召唤npc*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					 "index":6/**需要召唤的npc Index，和服务端配置对应*/
+				}
+ 
+    },
+	 {
+        "className":"taskPlot.filters.CallNpcFilter",/**召唤npc*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					 "index":7/**需要召唤的npc Index，和服务端配置对应*/
+				}
+ 
+    },
+	 {
+        "className":"taskPlot.filters.CallNpcFilter",/**召唤npc*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					 "index":8/**需要召唤的npc Index，和服务端配置对应*/
+				}
+ 
+    },
+	 {
+        "className":"taskPlot.filters.CallNpcFilter",/**召唤npc*/
+        "plotId": 5,/**剧情id*/
+				"data":{
+					 "index":9/**需要召唤的npc Index，和服务端配置对应*/
+				}
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 5,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },    
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 5,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 5,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 5,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	,
+	{
+        "className":"taskPlot.filters.LearnQteSkillFilter",
+        "plotId": 5,         
+		"data":{//1播放动画,
+					"0":
+					{
+					"qteType":1//qte类型时qte的type
+					},
+					"1":
+					{
+					"qteType":4000//qte类型时qte的type
+					},
+					"2":
+					{
+					"qteType":4006//qte类型时qte的type
+					},
+					"3":
+					{
+					"qteType":4012//qte类型时qte的type
+					}
+				} 
+    }
+    ]

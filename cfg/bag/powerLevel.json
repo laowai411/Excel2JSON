@@ -1,0 +1,257 @@
+[
+    {"icon": "", "power": 500, "title": "一星凡仙", "powerLevel": 1},
+    {"icon": "", "power": 700, "title": "二星凡仙", "powerLevel": 2},
+    {"icon": "", "power": 900, "title": "三星凡仙", "powerLevel": 3},
+    {
+        "icon": "",
+        "power": 1600,
+        "title": "四星凡仙",
+        "powerLevel": 4
+    },
+    {
+        "icon": "",
+        "power": 2500,
+        "title": "五星凡仙",
+        "powerLevel": 5
+    },
+    {
+        "icon": "",
+        "power": 3600,
+        "title": "六星凡仙",
+        "powerLevel": 6
+    },
+    {
+        "icon": "",
+        "power": 4900,
+        "title": "七星凡仙",
+        "powerLevel": 7
+    },
+    {
+        "icon": "",
+        "power": 6400,
+        "title": "八星凡仙",
+        "powerLevel": 8
+    },
+    {
+        "icon": "",
+        "power": 8100,
+        "title": "九星凡仙",
+        "powerLevel": 9
+    },
+    {
+        "icon": "PowerIconGreen1",
+        "power": 12000,
+        "title": "一星地仙",
+        "powerLevel": 10
+    },
+    {
+        "icon": "PowerIconGreen2",
+        "power": 14520,
+        "title": "二星地仙",
+        "powerLevel": 11
+    },
+    {
+        "icon": "PowerIconGreen3",
+        "power": 17280,
+        "title": "三星地仙",
+        "powerLevel": 12
+    },
+    {
+        "icon": "PowerIconGreen4",
+        "power": 20280,
+        "title": "四星地仙",
+        "powerLevel": 13
+    },
+    {
+        "icon": "PowerIconGreen5",
+        "power": 23520,
+        "title": "五星地仙",
+        "powerLevel": 14
+    },
+    {
+        "icon": "PowerIconGreen6",
+        "power": 27000,
+        "title": "六星地仙",
+        "powerLevel": 15
+    },
+    {
+        "icon": "PowerIconGreen7",
+        "power": 30720,
+        "title": "七星地仙",
+        "powerLevel": 16
+    },
+    {
+        "icon": "PowerIconGreen8",
+        "power": 34680,
+        "title": "八星地仙",
+        "powerLevel": 17
+    },
+    {
+        "icon": "PowerIconGreen9",
+        "power": 38880,
+        "title": "九星地仙",
+        "powerLevel": 18
+    },
+    {
+        "icon": "PowerIconBlue1",
+        "power": 50540,
+        "title": "一星天仙",
+        "powerLevel": 19
+    },
+    {
+        "icon": "PowerIconBlue2",
+        "power": 56000,
+        "title": "二星天仙",
+        "powerLevel": 20
+    },
+    {
+        "icon": "PowerIconBlue3",
+        "power": 61740,
+        "title": "三星天仙",
+        "powerLevel": 21
+    },
+    {
+        "icon": "PowerIconBlue4",
+        "power": 67760,
+        "title": "四星天仙",
+        "powerLevel": 22
+    },
+    {
+        "icon": "PowerIconBlue5",
+        "power": 74060,
+        "title": "五星天仙",
+        "powerLevel": 23
+    },
+    {
+        "icon": "PowerIconBlue6",
+        "power": 80640,
+        "title": "六星天仙",
+        "powerLevel": 24
+    },
+    {
+        "icon": "PowerIconBlue7",
+        "power": 87500,
+        "title": "七星天仙",
+        "powerLevel": 25
+    },
+    {
+        "icon": "PowerIconBlue8",
+        "power": 94640,
+        "title": "八星天仙",
+        "powerLevel": 26
+    },
+    {
+        "icon": "PowerIconBlue9",
+        "power": 102060,
+        "title": "九星天仙",
+        "powerLevel": 27
+    },
+    {
+        "icon": "PowerIconPurple1",
+        "power": 125440,
+        "title": "一星金仙",
+        "powerLevel": 28
+    },
+    {
+        "icon": "PowerIconPurple2",
+        "power": 134560,
+        "title": "二星金仙",
+        "powerLevel": 29
+    },
+    {
+        "icon": "PowerIconPurple3",
+        "power": 144000,
+        "title": "三星金仙",
+        "powerLevel": 30
+    },
+    {
+        "icon": "PowerIconPurple4",
+        "power": 153760,
+        "title": "四星金仙",
+        "powerLevel": 31
+    },
+    {
+        "icon": "PowerIconPurple5",
+        "power": 163840,
+        "title": "五星金仙",
+        "powerLevel": 32
+    },
+    {
+        "icon": "PowerIconPurple6",
+        "power": 174240,
+        "title": "六星金仙",
+        "powerLevel": 33
+    },
+    {
+        "icon": "PowerIconPurple7",
+        "power": 184960,
+        "title": "七星金仙",
+        "powerLevel": 34
+    },
+    {
+        "icon": "PowerIconPurple8",
+        "power": 196000,
+        "title": "八星金仙",
+        "powerLevel": 35
+    },
+    {
+        "icon": "PowerIconPurple9",
+        "power": 207360,
+        "title": "九星金仙",
+        "powerLevel": 36
+    },
+    {
+        "icon": "PowerIconOrange1",
+        "power": 273800,
+        "title": "一星神仙",
+        "powerLevel": 37
+    },
+    {
+        "icon": "PowerIconOrange2",
+        "power": 288800,
+        "title": "二星神仙",
+        "powerLevel": 38
+    },
+    {
+        "icon": "PowerIconOrange3",
+        "power": 304200,
+        "title": "三星神仙",
+        "powerLevel": 39
+    },
+    {
+        "icon": "PowerIconOrange4",
+        "power": 320000,
+        "title": "四星神仙",
+        "powerLevel": 40
+    },
+    {
+        "icon": "PowerIconOrange5",
+        "power": 336200,
+        "title": "五星神仙",
+        "powerLevel": 41
+    },
+    {
+        "icon": "PowerIconOrange6",
+        "power": 352800,
+        "title": "六星神仙",
+        "powerLevel": 42
+    },
+    {
+        "icon": "PowerIconOrange7",
+        "power": 369800,
+        "title": "七星神仙",
+        "powerLevel": 43
+    },
+    {
+        "icon": "PowerIconOrange8",
+        "power": 387200,
+        "title": "八星神仙",
+        "powerLevel": 44
+    },
+    {
+        "icon": "PowerIconOrange9",
+        "power": 405000,
+        "title": "九星神仙",
+        "powerLevel": 45
+    }
+]

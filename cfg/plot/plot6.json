@@ -1,0 +1,467 @@
+ [
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 6,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 6,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 6,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	
+ {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1031,
+					"type":1611202561,
+					"gender":1,
+					"direction":4,
+					"action":1,
+					"clothes":1610879183,
+					"x":240,
+					"y":-100,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1032,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":300,
+					"y":-10,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1033,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":384,
+					"y":97,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1034,
+					"type":1611202561,
+					"gender":1,
+					"direction":6,
+					"action":1,
+					"clothes":1610879183,
+					"x":450,
+					"y":180,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1035,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":342,
+					"y":-72,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1036,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":413,
+					"y":-28,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+		 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1037,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":500,
+					"y":50,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+		 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1038,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":404,
+					"y":-155,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+		 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1039,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":466,
+					"y":-102,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+		 {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1040,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879183,
+					"x":550,
+					"y":-35,
+					"hp":100,
+					"objName":"青云护法"
+				}
+    },
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":1,
+					"action":1
+				}
+    },
+			{
+        "className":"taskPlot.filters.AddBubbleToObjFilter",
+        "plotId": 6,
+        "mouseSetting":"stage",
+  		"countDownSetting":5000,
+        "data":[
+					{
+						"objId":0,
+						"talk":"<t>color###什么鬼地方，这么凶残！</t>", //传闻配置的格式
+						"x":-170,
+						"y":-195
+					}
+					]
+    },
+	
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 6,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "看来这青云门果然有古怪，竟能引动轩辕剑出鞘，你们再不让开，莫怪我手下不留情！"
+        }
+    },
+
+	{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 6,
+         "data":
+        {
+		"action":"hide"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 6,
+		"countDownSetting":1000,
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"x":0,
+					"y":0,
+					"skinName":"HalfBlackBg",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12,
+				    "depth":0
+				} 
+    },	 
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 6,
+		"countDownSetting":2000,
+		"data":{//1播放动画,
+					"relative":"stage",//"map","role","stage"
+					"x":0,
+					"y":0,
+					"skinName":"T_9533_0000",
+					"type":"swf",
+					"playTimes":1,
+					"frameRate":12,
+				    "depth":0
+				} 
+    },
+	{
+	    "className":"taskPlot.filters.UseSkillFilter",
+        "plotId": 6, 
+  		"countDownSetting":1000,
+		"data":{//4：震屏 
+					"0":
+					{
+						"fromObjId":0,
+						"toObjId":[1031,1032,1033,1034,1035,1036,1037,1038,1039,1040],
+						"skillType":565,
+						"skillLv":1,
+						"hp":-100,
+						"die":1,
+						"end":1,//是否结束
+						"repel": 0    //被击飞
+					}
+				}
+	}, 
+    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 6,
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"skinName":"HalfBlackBg",
+					"type":"swf"
+				}
+ 
+    },
+   
+	{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 6,
+         "data":
+        {
+		"action":"show"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	    {
+        "className":"taskPlot.filters.ScreenShakeFilter",
+        "plotId": 6,		
+  		"countDownSetting":5000,
+        "mouseSetting":"stage",
+        "data":{//震屏数据
+					"strength":6,
+					"attenuation":1,
+					"rate":100,
+					"duration":300
+				}
+    },
+	 {
+      "className":"taskPlot.filters.DelayPlotFilter",/**无条件延时*/
+      "plotId":6,/**剧情id*/
+      "countDownSetting":1000,/**延时时长：ms*/
+			"data":{
+			} 
+  },
+		{
+		
+        "className":"taskPlot.filters.FocusFilter",
+        "plotId": 6,		
+  		"countDownSetting":5000,
+        "mouseSetting":"stage",
+		"data":{//焦点移到某个物体或位置
+                    "target":"point",
+                    "x":1897,//目标位置的x，定位物体时不需配置此项
+					"y":616,  //目标位置的y，定位物体时不需配置此项
+					"duration":60,//移动所需时间，60为1s
+					"delay":0//移动到目标位置时需停留的时间，60为1s
+				}
+    },
+	  {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1014,
+					"type":1611202561,
+					"gender":1,
+					"direction":3,
+					"action":1,
+					"clothes":1610883079,
+					"x":966,
+					"y":-1071,
+					"hp":100,
+					"objName":"青云门掌门"
+				}
+    },
+	{ 
+	    "className":"taskPlot.filters.ObjFallDownFilter",  
+        "plotId": 6,  
+		"data":{//3：下落;5：角色移动
+					"objId":1014,
+					"startPicPt":{"x":966,"y":-1071},
+					"destPicPt":{"x":966,"y":-651},
+					"speed":300,
+					"ghostShadow":1,
+					"shake":1
+				} 
+        
+    },
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 6,
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"x":966,
+					"y":-651,
+					"skinName":"T_9528_0000",
+					"type":"",
+					"loopEnd":"remove",//播放结束后移除还是stop，remove | stop,type不等于"swf"时需要配置
+					"loopFrame":1,//1,type不等于"swf"时需要配置
+					"loopTimes":1,//循环次数,type不等于"swf"时需要配置
+					"renderRate":3,//渲染频率3,type不等于"swf"时需要配置
+					"totalFrames":13//总帧数,type不等于"swf"时需要配置
+				} 
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 6,
+        "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "青云门掌门",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_2.png",
+        	"talkStr": "哈哈哈哈，轩辕剑果能引出五彩神石之力，如今我有五彩神石在手，你又带着轩辕剑贸然闯入，当真是天助我也！交出轩辕剑，免你一死！"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 6,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "五彩神石？听起来很耳熟啊……不过话说回来居然有人带着棺材出场，难道是怕死了没人收尸吗？"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 6,
+        "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "青云门掌门",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_2.png",
+        	"talkStr": "哼，黄口小儿，不识抬举！轩辕剑主<font color='#ff0000'>@player@</font>，留下你的轩辕剑吧！"
+        }
+    },
+		    {
+        "className":"taskPlot.filters.CallNpcFilter",
+        "plotId": 6,
+				"data":{//1播放动画,
+					 "index":4
+				}
+ 
+    }, 
+	{ 
+	"className":"taskPlot.filters.UpdatePlayerActionFilter",
+        "plotId": 6,
+        "commonState":"updateAction", 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":1,
+					"action":1
+				}
+	},
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 6,
+				"data":{//1播放动画,
+				}
+ 
+    },   
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 6,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	}, 
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 6,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 6,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+    ]

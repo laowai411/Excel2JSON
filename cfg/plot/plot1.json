@@ -1,0 +1,160 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 1,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 1,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 1,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+			{
+        "className":"taskPlot.filters.UpdatePlayerFilter",
+        "plotId": 1,
+        "commonState":"updatePlayer", 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":1,
+					"x":5720,
+					"y":5142,
+					"action":1
+				}
+    },
+
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 1,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1003,
+				"type":1611202561,
+				"gender":1,
+				"direction":1,
+				"action":1,
+				"clothes":1610940477,
+				"x":288,
+				"y":-600,
+				"hp":100,
+				"objName":""
+		} 
+ 
+    },
+		{
+	    "className":"taskPlot.filters.ObjFallDownFilter",  
+        "plotId": 1, 
+  		"countDownSetting":2000,
+		"data":{//3：下落;5：角色移动
+					"objId":1003,
+					"startPicPt":{"x":288,"y":-600},
+					"destPicPt":{"x":288,"y":8},
+					"speed":600,
+					"ghostShadow":0,
+					"shake":0
+				}
+	},
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 1,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+			"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "“<font color='#00aeef'>莽荒金卡</font>，可体验<font color='#00aeef'>空间传送</font>“等超值贵宾级专属待遇”哇塞，天上掉馅饼耶，给你32个赞。"
+        }
+    },
+		{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 1,
+        "mouseSetting":"stage",
+        "countDownSetting":3000,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":330,
+					"y":-77,
+					"skinName":"GuideClickGetVIP",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				}
+ 
+    },
+    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 1,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetVIP",
+					"type":"swf"
+				}
+ 
+    },
+     {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 1,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1003
+		} 
+ 
+    },
+
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 1,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 1,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},    
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 1,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 1,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+]

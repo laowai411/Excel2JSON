@@ -1,0 +1,299 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 8,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 8,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 8,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 8, 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":
+        {
+        	"speakerName": "阳小多",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060005.png",
+        	"talkStr": "拓趴小儿还不死心，竟敢跟上来。"
+        }
+    },
+	 {
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+        
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1019,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879015,
+					"x":390,
+					"y":0,
+					"hp":100,
+					"objName":"拓趴"
+				} 
+        
+    },
+		{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1020,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879015,
+					"x":500,
+					"y":150,
+					"hp":100,
+					"objName":"拓趴"
+				} 
+        
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1021,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610879015,
+					"x":160,
+					"y":100,
+					"hp":100,
+					"objName":"拓趴首领"
+				} 
+        
+    },
+	 {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 8, 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+            "speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+       	 	"talkStr": "这追上的拓趴怎么比起之前的要厉害很多？难道他们怒气值满了？"
+        }
+    },
+    {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1002,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610813697,
+					"x":600,
+					"y":-120,
+					"hp":100,
+					"speed":350,
+					"objName":"灵兽"
+				} 
+        
+    },
+
+    {
+    	"className":"taskPlot.filters.HitObjsFilter",
+        "plotId": 8, 
+        "data":
+        {
+        	"objId":1002,
+        	"speed":600,//单位 像素/秒
+        	"hitObjIds":[1019,1020,1021],//撞飞，按顺序配置需要撞飞的objId;
+			"roar":1// 0不咆哮 1咆哮
+        } 
+        
+    },
+		 {
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 8,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1002,
+					"direction":5
+				} 
+        
+    },
+		{
+        "className":"taskPlot.filters.AddBubbleToObjFilter",
+        "plotId": 8, 
+        "mouseSetting":"stage",
+  		"countDownSetting":1000,
+        "data":[
+					{
+						"objId":0,
+						"talk":"<t>color###！！！</t>", //传闻配置的格式
+						"x":-60,
+						"y":-165
+					}
+					]
+    },	
+	{
+		"className":"taskPlot.filters.ScreenShakeFilter", 
+        "plotId": 8,  
+        "data":{//震屏数据
+					"strength":6,
+					"attenuation":1,
+					"rate":100,
+					"duration":2000
+				}
+	},
+		{
+        "className":"taskPlot.filters.AddBubbleToObjFilter",
+        "plotId": 8, 
+        "mouseSetting":"stage",
+  		"countDownSetting":2000,
+        "data":[//冒泡说话
+					{
+						"objId":1002,
+						"talk":"<t>color###吼！！！！！</t>",//传闻配置的格式
+						"x":-165,
+						"y":-150
+					}
+				]
+    },
+		
+		 {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 8, 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "阳小多",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060005.png",
+        	"talkStr": "哎呦，不错哦，没想到黑白宫刚从昆仑搞来的灵兽尽然与你如此亲近。<font color='#ff0000'>@player@</font>你真是魅力无穷啊！"
+        }
+    },
+	 {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 8, 
+         "mouseSetting":"stage",
+  		"countDownSetting":5000,
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "嘻嘻，这真真是极好的，闯荡江湖怎能没有一拉风的坐骑。"
+        }
+    },
+	 {
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 8,  
+        "mouseSetting":"stage",
+        "countDownSetting":3000,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":300,
+					"y":71,
+					"skinName":"GuideClickGetMount",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				} 
+        
+    },
+	    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 8,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetMount",
+					"type":"swf"
+				}
+ 
+    },
+    {
+    	 "className":"taskPlot.filters.RideMountFilter", 
+        "operType": 9,
+        "plotId": 8,
+        "data":
+        {
+        	"status":2//1：出战、未骑乘；2：出战、骑乘；0：未出战
+        }
+    },
+	{
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 8,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1002
+		} 
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 8,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },    
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 8,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 8,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 8,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+    ]

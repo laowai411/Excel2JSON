@@ -1,0 +1,543 @@
+﻿{
+/*
+"id" 6为vip页签，特殊处理，以下字段对于vip页签不适用
+{
+	字段说明：
+	label		左边树列表显示文字
+	icon		icon名字
+	title		分页标题
+	task		cell列表
+		taskName	cell标题
+		level		开启等级
+		rewardCon	奖励物品str
+		rewardLevel	星星数
+		operate		操作类型 1：打开模块 2：寻路
+		totalCount	副本/活动最大次数
+		response	与operate有关 格式：xx|xx
+		copyShareType	副本的共享类型，存在此字段，则完成度数据要到副本相关的管理器获取
+		acitivityId	活跃度id，存在此字段，则完成次数数据要到活跃度管理器获取
+		additionId	需要预览的id，到helperAddition.json中找
+}
+*/
+    "0": {
+        "label": "我要升级",
+        "icon": "VipIcon0",
+        "title": "快速升级，每日必做",
+        "task": [
+            {
+                "taskName": "轩辕秘境",
+                "level": 28,
+                "rewardCon": "经验：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "copyShareType": 1,
+				"additionId":1,
+                "totalCount": 3,
+                "response": "303|0_30030005"
+            },
+            {
+                "taskName": "护送女神",
+                "level": 30,
+                "rewardCon": "经验：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "acitivityId": 2,
+				"additionId":2,
+                "totalCount": 3,
+                "response": "303|0_30030003"
+            },
+            {
+                "taskName": "斩妖任务",
+                "level": 31,
+                "rewardCon": "经验：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "acitivityId": 3,
+				"additionId":3,
+                "totalCount": 10,
+                "response": "CycleTaskMod"
+            },
+            {
+                "taskName": "皇榜任务",
+                "level": 32,
+                "rewardCon": "经验：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "acitivityId": 4,
+				"additionId":4,
+                "totalCount": 9,
+                "response": "303|0_3003000b"
+            },
+            {
+                "taskName": "万兽塔",
+                "level": 30,
+                "rewardCon": "经验：",
+                "rewardLevel": 4,
+                "operate": 2,
+                "copyShareType": 3,
+                "copyCount": 3,
+				"additionId":5,
+                "totalCount": 2,
+                "response": "303|0_30030006"
+            },
+            {
+                "taskName": "三千幻界",
+                "level": 30,
+                "rewardCon": "经验：",
+                "rewardLevel": 4,
+                "operate": 2,
+                "copyShareType": 4,
+				"additionId":6,
+                "totalCount": 2,
+                "response": "303|0_30030008"
+            },
+            {
+                "taskName": "守卫龙宫",
+                "level": 36,
+                "rewardCon": "经验：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "copyShareType": 8,
+                "copyCount": 8,
+				"additionId":8,
+                "totalCount": 2,
+                "response": "303|0_3003001a"
+            },
+            {
+                "taskName": "兽魂古道",
+                "level": 38,
+                "rewardCon": "经验：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "copyShareType": 9,
+				"additionId":9,
+                "totalCount": 2,
+                "response": "303|0_3003001b"
+            },
+            {
+                "taskName": "封魔任务",
+                "level": 33,
+                "rewardCon": "经验：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "acitivityId": 5,
+				"additionId":10,
+                "totalCount": 30,
+                "response": "303|0_3003000a"
+            },
+            {
+                "taskName": "元神出窍（挂机）",
+                "level": 30,
+                "rewardCon": "经验：",
+                "rewardLevel": 3,
+				"additionId":23,
+                "operate": 2,
+                "response": "303|0_30030021"
+            },
+            {
+                "taskName": "天外飞仙（VIP挂机）",
+                "level": 30,
+                "rewardCon": "经验：",
+                "rewardLevel": 5,
+				"additionId":24,
+                "operate": 2,
+                "response": "303|0_30030023"
+            }
+        ]
+    },
+    "1": {
+        "label": "我要赚钱",
+        "icon": "VipIcon1",
+        "title": "古剑奇侠，快速致富",
+        "task": [
+            {
+                "taskName": "富甲天下",
+                "level": 34,
+                "rewardCon": "铜钱：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "copyShareType": 6,
+				"additionId":11,
+                "totalCount": 2,
+                "response": "303|0_30030015"
+            },
+            {
+                "taskName": "轩辕秘境",
+                "level": 28,
+                "rewardCon": "铜钱：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "copyShareType": 1,
+				"additionId":1,
+                "totalCount": 3,
+                "response": "303|0_30030005"
+            },
+            {
+                "taskName": "万兽塔",
+                "level": 30,
+                "rewardCon": "铜钱：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "copyShareType": 3,
+				"additionId":5,
+                "totalCount": 2,
+                "response": "303|0_30030006"
+            },
+            {
+                "taskName": "三千幻界",
+                "level": 30,
+                "rewardCon": "铜钱：",
+                "rewardLevel": 3,
+                "operate": 2,
+                "copyShareType": 4,
+				"additionId":6,
+                "totalCount": 2,
+                "response": "303|0_30030008"
+            },
+            {
+                "taskName": "仙盟福利",
+                "rewardCon": "铜钱：",
+                "rewardLevel": 2,
+                "operate": 1,
+                "response": "GuildMod"
+            },
+            {
+                "taskName": "封魔任务",
+                "level": 33,
+                "rewardCon": "铜钱：",
+                "rewardLevel": 1,
+                "operate": 2,
+                "acitivityId": 5,
+				"additionId":10,
+                "totalCount": 30,
+                "response": "303|0_3003000a"
+            },
+            {
+                "taskName": "物品分解",
+                "rewardCon": "铜钱：",
+                "level": 25,
+                "rewardLevel": 1,
+                "operate": 1,
+                "response": "Equip|5"
+            }
+        ]
+    },
+    "2": {
+        "label": "我要修为",
+        "icon": "VipIcon2",
+        "title": "功法天书，必备功法",
+        "task": [
+            {
+                "taskName": "幻冥界",
+                "level": 36,
+                "rewardCon": "修为：",
+                "rewardLevel": 4,
+                "operate": 2,
+                "copyShareType": 11,
+				"additionId":12,
+                "totalCount": 2,
+                "response": "303|0_3003001f"
+            },
+            {
+                "taskName": "护送女神",
+                "level": 30,
+                "rewardCon": "修为：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "acitivityId": 2,
+				"additionId":2,
+                "totalCount": 3,
+                "response": "303|0_30030003"
+            },
+            {
+                "taskName": "斩妖任务",
+                "level": 31,
+                "rewardCon": "修为：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "acitivityId": 3,
+				"additionId":3,
+                "totalCount": 10,
+                "response": "CycleTaskMod"
+            },
+            {
+                "taskName": "皇榜任务",
+                "level": 32,
+                "rewardCon": "修为：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "acitivityId": 4,
+				"additionId":4,
+                "totalCount": 9,
+                "response": "303|0_3003000b"
+            },
+            {
+                "taskName": "封魔任务",
+                "level": 33,
+                "rewardCon": "修为：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "acitivityId": 5,
+				"additionId":10,
+                "totalCount": 30,
+                "response": "303|0_3003000a"
+            },
+            {
+                "taskName": "日常—活跃度",
+                "level": 32,
+                "rewardCon": "修为：",
+                "rewardLevel": 3,
+                "operate": 1,
+                "response": "DailyMod|0"
+            }
+        ]
+    },
+    "3": {
+        "label": "我要声望",
+        "icon": "VipIcon3",
+        "title": "屠神杀魔，声望技能",
+        "task": [
+            {
+                "taskName": "屠魔殿",
+                "level": 35,
+                "rewardCon": "声望：",
+                "rewardLevel": 5,
+                "operate": 2,
+				"additionId":14,
+                "response": "303|0_30030012"
+            },
+            {
+                "taskName": "封神战场<font color='#808080'>(定时活动)</font>",
+                "level": 30,
+                "rewardCon": "声望：",
+                "rewardLevel": 5,
+                "operate": 1,
+				"additionId":15,
+                "response": "CampFight"
+            },
+            {
+                "taskName": "九幽探险<font color='#808080'>(定时活动)</font>",
+                "level": 35,
+                "rewardCon": "声望：",
+                "rewardLevel": 4,
+				"additionId":17,
+                "operate": 1,
+                "response": "PVPTaskEnter"
+            },
+            {
+                "taskName": "仙道会<font color='#808080'>(定时活动)</font>",
+                "level": 30,
+                "rewardCon": "声望：",
+                "rewardLevel": 4,
+				"additionId":18,
+                "operate": 1,
+                "response": "ActivityEnter||GodsArenaEnterPanel"
+            }
+        ]
+    },
+    "4": {
+        "label": "我要装备",
+        "icon": "VipIcon4",
+        "title": "神装在手，天下我有",
+        "task": [
+           
+            {
+                "taskName": "华丽仙器",
+                "level": 35,
+                "rewardCon": "仙器：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "response": "303|0_30030022"
+            },
+			{
+                "taskName": "万兽塔",
+                "level": 30,
+                "rewardCon": "月魄：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "copyShareType": 3,
+				"additionId":5,
+                "totalCount": 2,
+                "response": "303|0_30030006"
+            },
+            {
+                "taskName": "三千幻界",
+                "level": 30,
+                "rewardCon": "星魂：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "copyShareType": 4,
+				"additionId":6,
+                "totalCount": 2,
+                "response": "303|0_30030008"
+            },
+            {
+                "taskName": "守卫龙宫",
+                "level": 36,
+                "rewardCon": "星魂、月魄：",
+                "rewardLevel": 4,
+                "operate": 2,
+                "copyShareType": 8,
+                "copyCount": 8,
+				"additionId":8,
+                "totalCount": 2,
+                "response": "303|0_3003001a"
+            },
+            {
+                "taskName": "渡劫",
+                "level": 30,
+                "rewardCon": "仙魂：",
+                "rewardLevel": 5,
+				"additionId":22,
+                "operate": 1,
+                "response": "Cross"
+            },
+            {
+                "taskName": "世界boss",
+                "level": 35,
+                "rewardCon": "玲珑鼎：",
+                "rewardLevel": 5,
+				"additionId":20,
+                "operate": 1,
+                "response": "DailyMod|1"
+            },
+            {
+                "taskName": "轩辕垂钓",
+                "rewardCon": "宝石：",
+                "rewardLevel": 3,
+                "level": 0,
+				"additionId":21,
+                "operate": 2,
+                "response": "303|0_30030014"
+            }
+        ]
+    },
+    "5": {
+        "label": "我要变强",
+        "icon": "VipIcon5",
+        "title": "人神动荡，逐鹿争锋",
+        "task": [
+            {
+                "taskName": "装备强化",
+                "level": 25,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Equip|0|0"
+            },
+            {
+                "taskName": "宠物成长",
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Pet|1"
+            },
+            {
+                "taskName": "声望技能",
+                "level": 10,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "SkillSetting"
+            },
+            {
+                "taskName": "鸿蒙天书",
+                "level": 25,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "MartialArt"
+            },
+            {
+                "taskName": "坐骑战魂",
+                "level": 38,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Mount|1"
+            },
+			{
+                "taskName": "秘符修炼",
+                "level": 40,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "MartialArt|2"
+            },
+            {
+                "taskName": "橙装仙魂",
+                "level": 30,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Equip|3|0"
+            },
+            {
+                "taskName": "华丽仙器",
+                "level": 35,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 2,
+                "response": "303|0_30030022"
+            },
+            {
+                "taskName": "时装强化",
+                "level": 30,
+                "rewardCon": "战力：",
+                "rewardLevel": 4,
+                "operate": 1,
+                "response": "Equip|1"
+            },
+            {
+                "taskName": "镶嵌宝石",
+                "level": 25,
+                "rewardCon": "战力：",
+                "rewardLevel": 4,
+                "operate": 1,
+                "response": "Gem"
+            },
+            {
+                "taskName": "装备洗练",
+                "level": 35,
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Equip|2|0"
+            },
+            {
+                "taskName": "宠物技能",
+                "level": 40,
+                "rewardCon": "战力：",
+                "rewardLevel": 4,
+                "operate": 1,
+                "response": "Pet|5"
+            },
+            {
+                "taskName": "帝王将相",
+                "level": 45,
+                "rewardCon": "战力：",
+                "rewardLevel": 4,
+                "operate": 1,
+                "response": "KingMod"
+            },
+            {
+                "taskName": "宠物灵性",
+                "rewardCon": "战力：",
+                "rewardLevel": 5,
+                "operate": 1,
+                "response": "Pet|2"
+            },
+            {
+                "taskName": "宠物融合",
+                "rewardCon": "战力：",
+                "rewardLevel": 3,
+                "operate": 1,
+                "response": "Pet|5"
+            }
+        ]
+    },
+    "6": {
+        "label": "VIP",
+        "icon": "VipIcon6"
+    }
+}

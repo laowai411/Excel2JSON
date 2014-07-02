@@ -1,0 +1,38 @@
+[
+    {
+        "open_hole_materials": 0,
+        "holeIndex": 0,
+        "open_hole_b_penny": 0,
+        "open_hole_yb": 0,
+        "materials_count": 0,
+        "open_hole_penny": 0,
+        "open_hole_b_yb": 0
+    },
+    {
+        "open_hole_materials": 537268225,
+        "holeIndex": 1,
+        "open_hole_b_penny": 0,
+        "open_hole_yb": 0,
+        "materials_count": 1,
+        "open_hole_penny": 0,
+        "open_hole_b_yb": 1
+    },
+    {
+        "open_hole_materials": 537268225,
+        "holeIndex": 2,
+        "open_hole_b_penny": 0,
+        "open_hole_yb": 0,
+        "materials_count": 2,
+        "open_hole_penny": 0,
+        "open_hole_b_yb": 2
+    },
+    {
+        "open_hole_materials": 537333761,
+        "holeIndex": 3,
+        "open_hole_b_penny": 0,
+        "open_hole_yb": 50,
+        "materials_count": 1,
+        "open_hole_penny": 0,
+        "open_hole_b_yb": 0
+    }
+]

@@ -1,0 +1,11 @@
+[
+	{
+		"tq":20000,
+		"count":10,
+		"type_exp":0,
+		"type_times":1,
+		"type_move":2,
+		"type_item":3,
+		"goal":[20,40,60,80,100]
+	}
+]

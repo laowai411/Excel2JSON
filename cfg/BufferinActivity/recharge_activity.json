@@ -1,0 +1,22 @@
+[  //单笔充值活动
+   {
+       "bottomCount":1000,
+	   "topCount":9999,
+	   "discount":12
+   },
+   {
+       "bottomCount":10000,
+	   "topCount":49999,
+	   "discount":14
+   },
+   {
+       "bottomCount":50000,
+	   "topCount":99999,
+	   "discount":16
+   },
+   {
+       "bottomCount":100000,
+	   "topCount":99999999,
+	   "discount":18
+   }
+]

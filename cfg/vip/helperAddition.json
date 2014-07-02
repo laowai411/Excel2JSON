@@ -1,0 +1,558 @@
+﻿{
+/*
+字段说明：
+additionId 	标识id
+name 		标题名
+infoState	描述，{desId}内为动态内容helperDes.json中找
+awardNum	（列表）奖励类型，星星数 type 0：经验  1：物品  2：铜钱 3：修为 4：声望 ，最多3个
+goods		奖励物品列表
+*/
+
+    "1": {
+        "additionId": 1,
+        "name": "轩辕秘境",
+        "infoState": "<br>轩辕城秘境之一，难度较低，挂机即可轻松通关<br>组队副本，建议组队前往提升通关速度",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":0,"amount":2},
+			{"type":2,"amount":2}
+        ],
+        "goods": [
+            {
+				"itemId": "538378261",
+				"bindingFlag": 1,
+				"amount": 1
+			},
+			{
+				"itemId": "269619202",
+				"bindingFlag": 1,
+				"amount": 1
+			},
+			{
+				"itemId": "537464833",
+				"bindingFlag": 1,
+				"amount": 1
+			},
+			{
+				"itemId": "537268225",
+				"bindingFlag": 1,
+				"amount": 1
+			},
+			{
+				"itemId": "538378281",
+				"bindingFlag": 1,
+				"amount": 1
+			},
+			{
+				"itemId": "537858049",
+				"bindingFlag": 1,
+				"amount": 1
+			}
+        ]
+    },
+	"2": {
+        "additionId": 2,
+        "name": "护送女神",
+        "infoState": "女神返天，众仙相送！<br>25级可参与的休闲娱乐活动，可获得大量经验和修为奖励",
+        "awardNum": [
+            {"type":3,"amount":4},
+			{"type":0,"amount":4}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"3": {
+        "additionId": 3,
+        "name": "斩妖任务",
+        "infoState": "古剑斩妖，轩辕震名！<br>31级可接受的日常任务，可获得大量经验和修为奖励",
+        "awardNum": [
+            {"type":0,"amount":4},
+		    {"type":3,"amount":4}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"4": {
+        "additionId": 4,
+        "name": "皇榜任务",
+        "infoState": "轩辕揭榜，声动九霄！<br>32级可接受的日常任务，可获得大量经验和修为奖励",
+        "awardNum": [
+            {"type":0,"amount":4},
+			{"type":3,"amount":4}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"5": {
+        "additionId": 5,
+        "name": "万兽塔",
+        "infoState": "轩辕城秘境之一，难度较高，需要一定实力及操作技巧<br>单人副本，建议通过自身操作减少副本难度",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":0,"amount":2},
+			{"type":2,"amount":2}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378400",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "538378414",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "269619202",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "537595905",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378281",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "537268225",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"6": {
+        "additionId": 6,
+        "name": "三千幻界",
+        "infoState": "轩辕城秘境之一，难度较高，需要一定实力及操作技巧才可通过<br>单人副本，建议通过使用副本内置技能减少副本难度",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":0,"amount":2},
+			{"type":2,"amount":2}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378400",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378413",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "269619202",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "537595905",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "538378281",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "537858049",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"8": {
+        "additionId": 8,
+        "name": "守卫龙宫",
+        "infoState": "轩辕城秘境之一，难度较高，需要一定实力及团队配合<br>组队副本，建议团队分工配合减少副本难度",
+        "awardNum": [
+            {"type":0,"amount":3},
+			{"type":1,"amount":3}
+        ],
+        "goods": [
+            {
+				 "itemId": "537727048",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "537071618",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "537075714",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "537464833",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378281",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"9": {
+        "additionId": 9,
+        "name": "兽魂古道",
+        "infoState": "轩辕城秘境之一，难度较高，需要一定实力及团队配合<br>组队副本，建议团队分工配合减少副本难度",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":0,"amount":2}
+        ],
+        "goods": [
+            {
+				 "itemId": "539033602",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "539033603",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "538902533",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902537",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902535",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902536",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902532",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902531",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538902530",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"10": {
+        "additionId": 10,
+        "name": "封魔任务",
+        "infoState": "古剑封魔，威慑荒古！<br>33级可接受的日常任务，可获得大量经验和修为奖励",
+        "awardNum": [
+            {"type":0,"amount":4},
+			{"type":3,"amount":4},
+			{"type":1,"amount":3}
+        ],
+        "goods": [
+            {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378282",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"11": {
+        "additionId": 11,
+        "name": "富甲天下",
+        "infoState": "轩辕城秘境之一，难度中等，需要一定实力才可通关",
+        "awardNum": [
+            {"type":2,"amount":2},
+			{"type":0,"amount":2}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378308",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"12": {
+        "additionId": 12,
+        "name": "幻冥界",
+        "infoState": "轩辕城秘境之一，难度较高，需要一定实力及团队配合<br>组队副本，建议团队分工配合减少副本难度",
+        "awardNum": [
+            {"type":3,"amount":4},
+			{"type":0,"amount":3}
+        ],
+        "goods": [
+              {
+				 "itemId": "537727075",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			 {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"14": {
+        "additionId": 14,
+        "name": "屠魔殿",
+        "infoState": "轩辕城秘境之一，难度中等，需要一定实力才可通关",
+        "awardNum": [
+            {"type":4,"amount":3},
+			{"type":0,"amount":2}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378256",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  },
+			  {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			  }
+        ]
+    },
+	"15": {
+        "additionId": 15,
+        "name": "封神战场",
+        "infoState": "三分天下，一举成神！<br>30级可参与的大型阵营活动，可获得声望奖励<br><font color='#00ff00'>注：开服前三天均开启封神战场</font>",
+        "awardNum": [
+            {"type":4,"amount":3}
+        ],
+        "goods": [
+                   {
+				 "itemId": "1073938434",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378256",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"17": {
+        "additionId": 17,
+        "name": "九幽探险",
+        "infoState":"九幽异宝，群雄争锋！<br>35级可参与的大型探险活动，可获得大量经验、修为和声望奖励",
+        "awardNum": [
+            {"type":4,"amount":3},
+			{"type":3,"amount":3},
+			{"type":0,"amount":3}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378256",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+			       {
+				 "itemId": "538378248",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"19": {
+        "additionId": 19,
+        "name": "仙盟战神",
+        "infoState":"仙盟战神，谁与争锋！<br>加入仙盟即可参与的仙盟内置活动，可获得大量仙盟贡献和声望",
+        "awardNum": [
+            {"type":4,"amount":3},
+			{"type":0,"amount":2}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378256",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378310",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"20": {
+        "additionId": 20,
+        "name": "世界boss",
+        "infoState":"神兽出，法宝显！<br>35级可参与的大型抢宝活动，可获得稀有道具——法宝<br>出现地图：麒麟潭、朱雀峰、紫雷巅",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":2,"amount":3}
+        ],
+        "goods": [
+              {
+				 "itemId": "269619204",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378328",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"21": {
+        "additionId": 21,
+        "name": "轩辕垂钓",
+        "infoState":"轩辕垂钓，愿者上钩！<br>30级可参与的休闲娱乐活动，可获得宝石碎片",
+        "awardNum": [
+            {"type":1,"amount":3},
+			{"type":0,"amount":2},
+			{"type":2,"amount":2}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378345",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538247169",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       },
+				   {
+				 "itemId": "538378308",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"22": {
+        "additionId": 22,
+        "name": "渡劫",
+        "infoState":"天雷临体，渡劫成仙！<br>30级可挑战的渡劫系统，通过仙劫后即可获得渡劫专属称号和30-70级橙装仙魂",
+        "awardNum": [
+            {"type":1,"amount":3}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378527",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"23": {
+        "additionId": 23,
+        "name": "元神出窍",
+        "infoState":"元神出窍，神游太虚！<br>任意仙友均可随意进入的专属挂机地图，此地图中击杀怪物可获得经验",
+        "awardNum": [
+            {"type":1,"amount":3}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    },
+	"24": {
+        "additionId": 24,
+        "name": "天外飞仙",
+        "infoState":"天外飞仙，海量经验！<br>仅黄金VIP可进入的专属挂机地图，此地图中击杀怪物可获得海量经验。<br><font color='#00ff00'>注：进入挂机可快速获得大量经验</font>",
+        "awardNum": [
+            {"type":0,"amount":5}
+        ],
+        "goods": [
+              {
+				 "itemId": "538378249",
+				 "bindingFlag": 1,
+				 "amount": 1
+			       }
+        ]
+    }
+}

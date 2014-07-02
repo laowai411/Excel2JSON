@@ -1,0 +1,195 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 19,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336,1879113728]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 19,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 19,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 19, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+    },
+    {
+        "plotId": 19,
+        "className":"taskPlot.filters.DialogContentFilter", 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "怎么回事？秘境晃得这么厉害，地震了吗？",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 19, 
+  		"countDownSetting":10000,
+        "mouseSetting":"stage",
+         "data":{
+         	 "speakerName": "梁韵芳",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006006e.png",
+        	"talkStr": "什么地震啊，是你最后激发玄武灵脉之力浮屠宝塔之威震的这里摇晃,<font color='#ff0000'>@player@</font>浮屠宝塔这等神技你日后自然知道有多厉害"
+        	}
+    },
+    /*
+	{
+        "className":"taskPlot.filters.ScreenShakeFilter",
+        "plotId": 19,		
+        "mouseSetting":"stage",
+        "data":{//震屏数据
+					"strength":6,
+					"attenuation":1.1,//震屏强度
+					"rate":100,
+					"duration":2000
+				}
+    },
+    {
+        "className":"taskPlot.filters.DelayPlotFilter",
+        "plotId":19,
+        	"countDownSetting":3000,
+		"data":{//1播放动画,
+				} 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 19,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },  
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 19,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 19,
+		"countDownSetting":2000,
+		"data":{//1播放动画,
+					"depth":0,
+					"relative":"role",//"map","role","stage"
+					"x":0,
+					"y":0,
+					"skinName":"BlackBg",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				} 
+    },
+	
+    {
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 19,
+		"countDownSetting":2000,
+		"data":{//1播放动画,
+					"relative":"stage",//"map","role","stage"
+					"x":0,
+					"y":0,
+					"skinName":"",
+					"type":"swf",
+					"playTimes":1,
+					"frameRate":12
+				} 
+    },
+     {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 19,
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"skinName":"BlackBg",
+					"type":"swf"
+				}
+ 
+    },
+    {
+        "className":"taskPlot.filters.EyeMovieFilter",
+        "plotId": 19,
+				"data":
+				{
+				"relative":"stage",//"map","role","stage"
+							"x":150,
+							"y":50,
+							"skinName":"BlackEye",
+							"type":"swf",
+							"playTimes":1,
+							"frameRate":12,
+							"findWay"://播放完成后寻路目的地；如果不需要寻路则不配置此项
+							{
+								"mapId":303,
+									"npcId":"0_30030005",
+									"flyFlag":0,
+									"delay":0,
+									"needEnforce":0
+							}
+				} 
+	 
+	    },
+	    */
+		 {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 19,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 19,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 19,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 19,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

@@ -1,0 +1,72 @@
+﻿[//合服礼包0，  充值礼包1，  双倍奖励2，     神秘商城3，      仙盟礼包4，      战场礼包5
+	{
+		 "name":"MergeActivityBagUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"合服礼包",
+		 "labelDec":"登录领取",
+		 "lastTime":5,//持续时间，单位：天
+		 "index":0,//显示排序：由小到大
+		 "pageId":0,//页面id，和服务端对应。活动总览0，登录活动1，日常任务活动2，温泉仙女活动3，消费礼包4，海滩探宝5，夏日特卖6，时装兑换7，论坛活动8
+		 "iconSkin":"MergeActivityMergeBag"//对应的图标皮肤名,问程序取
+	},
+	{
+		 "name":"RechargeActivityUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"充值礼包",
+		 "labelDec":"好礼不断",
+		 "lastTime":5,
+		 "index":1,
+		 "pageId":1,
+		 "iconSkin":"MergeActivityRecharge"
+	},
+	{
+		 "name":"DoubleRewardDialyUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"日常奖励",
+		 "labelDec":"畅快体验",
+		 "lastTime":5,//持续时间，单位：天
+		 "index":2,//显示排序：由小到大
+		 "pageId":2,//合服礼包0，  充值礼包1，  双倍奖励2，     神秘商城3，      仙盟礼包4，      战场礼包5
+		 "iconSkin":"MergeActivityDoubleReward"//对应的图标皮肤名,问程序取
+	},
+	{
+		"name":"MergeSaleShopMallUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"合服特卖",
+		 "labelDec":"奇珍异宝",
+		 "lastTime":5,
+		 "index":3,
+		 "pageId":3,
+		 "iconSkin":"MergeActivitySaleShop"
+	},
+	{
+		"name":"PowerRankUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"战力排行榜",
+		 "labelDec":"无上光荣",
+		 "lastTime":5,
+		 "index":4,
+		 "pageId":4,
+		 "iconSkin":"BetaPageBtnPower"
+	},
+	{
+		"name":"GuildActivityUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"仙盟奖励",
+		 "labelDec":"无上光荣",
+		 "lastTime":5,
+		 "index":5,
+		 "pageId":5,
+		 "iconSkin":"MergeActivityGuild"
+	},
+	{
+		"name":"CampCopyActivityUI",//面板名,用于索引面板
+		 "open":1,//0:不开放  1:开放
+		 "label":"战场奖励",
+		 "labelDec":"群雄逐鹿",
+		 "lastTime":5,
+		 "index":6,
+		 "pageId":6,
+		 "iconSkin":"MergeActivityCamp"
+	}
+]

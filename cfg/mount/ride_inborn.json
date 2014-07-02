@@ -1,0 +1,18 @@
+﻿[
+	{
+		"id":1,
+		"propertyType":3,
+		"addPercent":0.1,
+		"addValue":500,
+		"needMount":269422599,
+		"name":"圣虎天赋"
+	},
+	{
+		"id":2,
+		"propertyType":5,
+		"addPercent":0.2,
+		"addValue":500,
+		"needMount":269422598,
+		"name":"火云天赋"
+	}
+]

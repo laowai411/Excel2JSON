@@ -1,0 +1,167 @@
+﻿[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 24,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 24,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 24,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 24,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1041,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1610883091,
+					"x":100,
+					"y":0,
+					"hp":100,
+					"objName":"木德圣母"
+				}
+  
+    },
+		{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 24,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1042,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610883147,
+					"x":200,
+					"y":0,
+					"hp":100,
+					"objName":"斗篷少年"
+				} 
+    },
+     {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 24,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "木德圣母",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_3.png",
+        	"talkStr": "想不到我木德圣母一世英名竟败于你手……难道他骗了我……不，不可能！<font color='#ff0000'>@player@</font>，就算你能打败我，我也绝不会放过你！"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 24,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "好浓郁的魔气……啊！！！你竟然……"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 24,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+        	"speakerName": "木德圣母",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_3.png",
+        	"talkStr": "哈哈哈哈，魔气入体的感觉如何？<font color='#ff0000'>@player@</font>，我在地狱里等着你！"
+        }
+    },
+	{
+	    "className":"taskPlot.filters.UseSkillFilter",
+        "plotId": 24, 
+        "mouseSetting":"stage",
+  		"countDownSetting":2000,
+		"data":{//4：震屏 
+					"0":
+					{
+						"fromObjId":1042,
+						"toObjId":[1041],
+						"skillType":12,
+						"skillLv":1,
+						"hp":-100,
+						"die":0
+					}
+				}
+	},
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 24,
+        "countDownSetting":10000,
+        "mouseSetting":"stage",
+        "data":
+        {
+       	 	"speakerName": "斗篷少年",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006006d.png",
+        	"talkStr": "魔气入体非同小可，<font color='#ff0000'>@player@</font>，你没事吧？！"
+        }
+    },
+
+	    
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 24,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },  
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 24,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},  
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 24,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 24,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+    ]

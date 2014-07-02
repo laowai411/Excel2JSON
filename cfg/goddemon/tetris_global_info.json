@@ -1,0 +1,13 @@
+[
+	{
+		"speed":1200,
+		"cellExp":10,
+		"oneRowExp":100,
+		"twoRowExp":300,
+		"threeRowExp":700,
+		"fourRowExp":1200,
+		"changeShapeConData":[0,5],
+		"cleanData":[0,30,1200],
+		"tenCleanData":[0,300,12000]
+	}
+]

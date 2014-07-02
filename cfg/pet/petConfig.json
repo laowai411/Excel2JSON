@@ -1,0 +1,385 @@
+﻿{
+"aptitudeRange":[[100,399],[400,699],[700,899],[900,1200],[1201,1600]],
+"aptitudeList":
+[
+	{
+		"qualityLevel":1,//品阶等级
+		"randomInfo":[
+									{"probability":10000,"lowValue":100,"highValue":399}
+								]
+	},
+	{
+		"qualityLevel":2,
+		"randomInfo":[
+									{"probability":7000,"lowValue":400,"highValue":500},
+									{"probability":3000,"lowValue":501,"highValue":699}
+								]
+	},
+	{
+		"qualityLevel":3,
+		"randomInfo":[
+									{"probability":5000,"lowValue":700,"highValue":800},
+									{"probability":3000,"lowValue":801,"highValue":850},
+									{"probability":2000,"lowValue":851,"highValue":899}
+								]
+	},
+	{
+		"qualityLevel":4,
+		"randomInfo":[
+		                            {"probability":6000,"lowValue":900,"highValue":950},
+									{"probability":1500,"lowValue":951,"highValue":990},
+									{"probability":1000,"lowValue":991,"highValue":1000},
+									{"probability":720,"lowValue":1001,"highValue":1050},
+									{"probability":400,"lowValue":1051,"highValue":1100},
+									{"probability":200,"lowValue":1101,"highValue":1120},
+									{"probability":100,"lowValue":1121,"highValue":1140},
+									{"probability":50,"lowValue":1141,"highValue":1160},
+									{"probability":20,"lowValue":1161,"highValue":1180},
+									{"probability":10,"lowValue":1181,"highValue":1200}
+								]
+	},
+	{
+		"qualityLevel":5,
+		"randomInfo":[
+		                            {"probability":50,"lowValue":1201,"highValue":1249},
+									{"probability":25,"lowValue":1250,"highValue":1289},
+									{"probability":10,"lowValue":1290,"highValue":1319},
+									{"probability":5,"lowValue":1320,"highValue":1349},
+									{"probability":5,"lowValue":1350,"highValue":1379},
+									{"probability":5,"lowValue":1380,"highValue":1500}
+								]
+	}
+],
+
+"spiritTitleList":
+[
+	{
+		"spiritLevel":10,
+		"addValue":[261,110,58,128,89],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":1,
+		"spiritTitle":"凡级"
+	},
+	{
+		"spiritLevel":20,
+		"addValue":[522,220,116,256,178],
+		"titleId":2,
+		"spiritTitle":"灵级"
+	},
+	{
+		"spiritLevel":30,
+		"addValue":[783,330,174,384,267],
+		"titleId":3,
+		"spiritTitle":"地级"
+	},
+	{
+		"spiritLevel":40,
+		"addValue":[1044,440,232,512,356],
+		"titleId":4,
+		"spiritTitle":"天级"
+	},
+	{
+		"spiritLevel":50,
+		"addValue":[1305,550,290,640,445],
+		"titleId":5,
+		"spiritTitle":"王级"
+	},
+	{
+		"spiritLevel":60,
+		"addValue":[1566,660,348,768,534],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":6,
+		"spiritTitle":"圣级"
+	},
+	{
+		"spiritLevel":70,
+		"addValue":[1827,770,406,896,623],
+		"titleId":7,
+		"spiritTitle":"皇级"
+	},
+	{
+		"spiritLevel":80,
+		"addValue":[2088,880,464,1024,712],
+		"titleId":8,
+		"spiritTitle":"仙级"
+	},
+	{
+		"spiritLevel":90,
+		"addValue":[2349,990,522,1152,801],
+		"titleId":9,
+		"spiritTitle":"神级"
+	},
+	{
+		"spiritLevel":100,
+		"addValue":[2610,1100,580,1280,890],
+		"titleId":10,
+		"spiritTitle":"传奇"
+	}
+],
+
+
+"potentialTitleList":
+[
+	{
+		"potentialLevel":10,
+		"addValue":[731,307,164,360,250],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":1,
+		"potentialTitle":"初境"
+	},
+    {
+		"potentialLevel":20,
+		"addValue":[1462,614,328,720,500],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":2,
+		"potentialTitle":"秘境"
+	},
+	{
+		"potentialLevel":30,
+		"addValue":[2193,921,492,1080,750],
+		"titleId":3,
+		"potentialTitle":"离境"
+	},
+	{
+		"potentialLevel":40,
+		"addValue":[2924,1228,656,1440,1000],
+		"titleId":4,
+		"potentialTitle":"兑境"
+	},
+	{
+		"potentialLevel":50,
+		"addValue":[3655,1535,820,1800,1250],
+		"titleId":5,
+		"potentialTitle":"乾境"
+	},
+	{
+		"potentialLevel":60,
+		"addValue":[4386,1842,984,2160,1500],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":6,
+		"potentialTitle":"坤境"
+	},
+       {
+		"potentialLevel":70,
+		"addValue":[5117,2149,1148,2520,1750],//分别代表气血，攻击，防御，命中，暴击
+		"titleId":7,
+		"potentialTitle":"地境"
+	},
+	{
+		"potentialLevel":80,
+		"addValue":[5848,2456,1312,2880,2000],
+		"titleId":8,
+		"potentialTitle":"玄境"
+	},
+	{
+		"potentialLevel":90,
+		"addValue":[6579,2763,1476,3240,2250],
+		"titleId":9,
+		"potentialTitle":"天境"
+	},
+	{
+		"potentialLevel":100,
+		"addValue":[7310,3070,1640,3600,2500],
+		"titleId":10,
+		"potentialTitle":"圣境"
+	}
+],
+
+//提升悟性消耗资源配置
+"enhanceSpiritLevelConsumeInfo":
+[
+	{
+		"lowLevel":0,
+		"highLevel":19,
+		"itemType":536948737,
+		"count":1,
+		"addBlessValue":80
+	},
+        {
+		"lowLevel":20,
+		"highLevel":39,
+		"itemType":536948738,
+		"count":1,
+		"addBlessValue":160
+	},
+	{
+		"lowLevel":40,
+		"highLevel":59,
+		"itemType":536948739,
+		"count":1,
+		"addBlessValue":320
+	},
+	{
+		"lowLevel":60,
+		"highLevel":79,
+		"itemType":536948740,
+		"count":1,
+		"addBlessValue":640
+	},
+	{
+		"lowLevel":80,
+		"highLevel":99,
+		"itemType":536948741,
+		"count":1,
+		"addBlessValue":1280
+	}
+],
+
+//提升成长消耗资源配置
+"enhancePotentialLevelConsumeInfo":
+[
+	{
+		"lowLevel":0,
+		"highLevel":19,
+		"itemType":536944641,
+		"count":1,
+		"addBlessValue":80
+	},
+        {
+		"lowLevel":20,
+		"highLevel":39,
+		"itemType":536944642,
+		"count":1,
+		"addBlessValue":160
+	},
+        {
+		"lowLevel":40,
+		"highLevel":59,
+		"itemType":536944643,
+		"count":1,
+		"addBlessValue":320
+	},
+	{
+		"lowLevel":60,
+		"highLevel":79,
+		"itemType":536944644,
+		"count":1,
+		"addBlessValue":640
+	},
+	{
+		"lowLevel":80,
+		"highLevel":99,
+		"itemType":536944645,
+		"count":1,
+		"addBlessValue":1280
+	}
+],
+
+"addPetConsumeInfo":
+[
+	{
+		"index":4,
+		"moneyType":1,//0非绑定元宝，1绑定元宝，2非绑定铜钱，3绑定铜钱
+		"moneyCount":50
+	},
+	{
+		"index":5,
+		"moneyType":0,
+		"moneyCount":100
+	}
+],
+
+"skillBarOpenInfo":
+[
+	{
+		"index":4,
+		"spiritLevel":0,
+		"potentialLevel":20
+	},
+	{
+		"index":5,
+		"spiritLevel":20,
+		"potentialLevel":0
+	},
+	{
+		"index":6,
+		"spiritLevel":0,
+		"potentialLevel":60
+	},
+	{
+		"index":7,
+		"spiritLevel":60,
+		"potentialLevel":0
+	},
+	{
+		"index":8,
+		"spiritLevel":0,
+		"potentialLevel":80
+	}
+],
+
+//传闻广播配置
+"potentialLevel":[10,20,30,40,50,55,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],//成长传闻播放等级
+"potentialLevelByBless":[],//成长通过祝福播放等级
+"spiritLevel":[10,20,30,40,50,55,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],//悟性传闻播放等级
+"spiritLevelByBless":[],//悟性通过祝福播放等级
+"aptitudeMin":900,//获得珍惜宠物传闻最小资质值
+
+//[保底下限,连续下降次数]
+"potentialLimit":
+[
+	[7,6],[19,6],[27,5],[136,5],[210,4],[446,4],[393,3],[723,3],[716,2],[1247,2]
+],
+
+"spiritLimit":
+[
+	[7,6],[34,6],[32,5],[136,5],[210,4],[446,4],[393,3],[723,3],[716,2],[1247,2]
+],
+
+"addPotentialMate":[536944641,536944642,536944643,536944644,536944645,541003777],//增加成长祝福使用材料
+"addSpiritMate":[536948737,536948738,536948739,536948740,536948741],//增加悟性祝福使用材料
+
+//特殊的消耗材料增加成长祝福值配置,各成长等级不同
+"addPotentialBlessCfg":
+{
+	"itemType":541003777,
+	"levelAddBless":[1300,1300,1300,1300,1300,1300,1300,1300,1300,1300,1300,1386,1386,1386,1386,1386,1386,1386,1386,1386,1386,1485,1485,1485,1485,1485,1485,1485,1485,1485,1485,1733,1733,1733,1733,1733,1733,1733,1733,1733,1733,1890,1890,1890,1890,1890,1890,1890,1890,1890,1890,2080,2080,2080,2080,2080,2080,2080,2080,2080,2080,2600,2600,2600,2600,2600,2600,2600,2600,2600,2600,2971,2971,2971,2971,2971,2971,2971,2971,2971,2971,3250,3250,3250,3250,3250,3250,3250,3250,3250,3250,3466,3466,3466,3466,3466,3466,3466,3466,3466]//各个成长等级增加的祝福值
+},
+
+//战斗力计算公式
+"powerCalculate":[0.0625,1,0.333,0.3,0.4,0.333,0.333,0.333],//[气血,攻击,防御,命中,暴击]
+
+"changeAppearConsumeYb":200,
+"changeAppearStartLevel":0,
+"changeAppearInfo":
+[
+	{
+		"potentialLevel":20,
+		"appearType":[1610813467,1610813467],//[男,女]
+		"appearName":["三公主","三公主"]//[男的名字,女的名字]
+	},
+	{
+		"potentialLevel":40,
+		"appearType":[1610813468,1610813468],//[男,女]
+		"appearName":["魅狐仙","魅狐仙"]//[男的名字,女的名字]
+	},
+	{
+		"potentialLevel":60,
+		"appearType":[1610813469,1610813469],//[男,女]
+		"appearName":["九媚妖姬","九媚妖姬"]//[男的名字,女的名字]
+	}
+	
+	,
+	{
+		"potentialLevel":80,
+		"appearType":[1610813470,1610813470],//[男,女]
+		"appearName":["清风仙子","清风仙子"]//[男的名字,女的名字]
+	},
+	{
+		"potentialLevel":100,
+		"appearType":[1610813471,1610813471],//[男,女]
+		"appearName":["妖后红镰","妖后红镰"]//[男的名字,女的名字]
+	}
+	
+],
+
+"spiritLevelProgressBar":[0,10,20,30,40,50,60,70,80,90,100],//悟性等级进度条配置
+"potentialLevelProgressBar":[0,10,20,30,40,50,60,70,80,90,100],//成长等级进度条配置
+"initPropertyValueByQuality":[177,72,36,84,57],//品阶初始化附加单位属性,分别代表气血，攻击，防御，命中，暴击
+"initPropertyValueByLevel":[12,5,3,6,4],//宠物等级附加属性,分别代表气血，攻击，防御，命中，暴击
+"spiritCoefficient":[1,1,1,1,1],//悟性转换系数系数，分别代表气血，攻击，防御，命中，暴击
+"consumeSpiritBlessValuePercent":20,//接受悟性祝福升级消耗的悟性祝福值
+"consumePotentialBlessValuePercent":20,//接受成长祝福升级消耗的成长祝福值
+"buySpiritblessValue":[100,700],//1元宝购买悟性祝福值
+"buyPotentialblessValue":[100,500],//1元宝购买成长祝福值
+"buySpiritblessValueLevel":18,//购买悟性祝福值最低等级
+"buyPotentialBlessValueLevel":18,//购买成长祝福值最低等级
+"changeNameConsumeYuanbao":10,//宠物改名消耗元宝
+"changeNameFreeTime":3//宠物改名免费次数
+
+}

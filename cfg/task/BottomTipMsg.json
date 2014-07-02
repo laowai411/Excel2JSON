@@ -1,0 +1,274 @@
+[	
+    {	
+        "taskId": 10001,	
+        "wordStr": "浩然乾坤以心之力，破苍穹而出，受命于天。",	
+        "showType": 1	
+    },	
+    {	
+        "taskId": 10002,	
+        "wordStr": "风随影动，御风而行，快，我要再快一点",	
+        "showType": 0	
+    },	
+    {"taskId": 10003, 	
+	"wordStr": "《滴水经》滴水成丝，守的滴水不漏，纪一川果然厉害", 
+	"showType": 0
+	},
+    {	
+        "taskId": 10004,	
+        "wordStr": "九牙战士，好霸气的名字，也不知道实力如何，我可不能轻敌",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10005,	
+        "wordStr": "生死相斗才能真正的历练自己，困笼场？我接了。",	
+        "showType": 0	
+    },	
+    {"taskId": 10006, "wordStr": "花姑，我也不是泥捏的，区区小妖翼蛇而已，何惧", "showType": 0},	
+    {	
+        "taskId": 10007,	
+        "wordStr": "红嘟嘟的真可爱，可以不要这么萌嚒，你个小东西比草泥马还萌耶！！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10008,	
+        "wordStr": "震山犀，你这个妖魔界的原生态呆瓜屌丝，受死。！",	
+        "showType": 0	
+    },	
+    {"taskId": 10009, "wordStr": "万法归一，天地皓然，以力破之，给我破！！！！", "showType": 0},	
+    {	
+        "taskId": 10010,	
+        "wordStr": "大胆毛贼，太岁头上动土，我让你知道我的厉害。！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10011,	
+        "wordStr": "燕山还是太小了，冲出燕山，走向大夏世界，终有一日，我要让世间我记住我的名字！",	
+        "showType": 0	
+    },	
+	    {
+        "taskId": 10012,	
+        "wordStr": "击杀莲花童子，玉蒲团可以让你凌空翱翔！",	
+        "showType": 0	
+    },	
+{	
+        "taskId": 18001,	
+        "wordStr": "浩然乾坤以心之力，破苍穹而出，受命于天。！",	
+        "showType": 1	
+    },	
+    {	
+        "taskId": 18002,	
+        "wordStr": "风随影动，御风而行，我很牛叉耶！！",	
+        "showType": 0	
+    },	
+    {"taskId": 18003, "wordStr": "《滴水经》滴水成丝，守的滴水不漏，我要成名…", "showType": 0},	
+    {	
+        "taskId": 18004,	
+        "wordStr": "九牙战士，好霸气的名字，也不知道实力如何，我可不能轻敌！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 18005,	
+        "wordStr": "生死相斗才能真正的激发自己的潜力，困笼场？我接了。！",	
+        "showType": 0	
+    },	
+    {"taskId": 18006, "wordStr": "花姑，你当我是泥捏的，区区小妖翼蛇而已，何惧。……", "showType": 0},	
+    {	
+        "taskId": 18007,	
+        "wordStr": "哎呦呦。真可爱耶，可以不要这么萌嚒，你个小东西比草泥马还萌耶！！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 18008,	
+        "wordStr": "震山犀，你敢吃我一招吗？受死。！",	
+        "showType": 0	
+    },	
+    {"taskId": 18009, "wordStr": "万法归一，天地皓然，以力破之，给我破！！", "showType": 0},	
+    {	
+        "taskId": 18010,	
+        "wordStr": "大胆毛贼，老虎不发威你当我是加菲猫，我让你知道我的厉害！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 18011,	
+        "wordStr": "坐进观天天很小，冲出燕山，走向世界，终有一日，我要让世间我记住我的名字！",	
+        "showType": 0	
+    },	
+{	
+        "taskId": 19001,	
+        "wordStr": "浩然乾坤以心之力，破苍穹而出，受命于天。！",	
+        "showType": 1	
+    },	
+    {	
+        "taskId": 19002,	
+        "wordStr": "风随影动，御风而行，快，我要再快一点",	
+        "showType": 0	
+    },	
+    {"taskId": 19003, "wordStr": "《滴水经》滴水成丝，守的滴水不漏，纪一川果然厉害……", "showType": 0},	
+    {	
+        "taskId": 19004,	
+        "wordStr": "九牙战士，哎呦不错哦，很酷也，也不知道实力如何，我可不能轻敌！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 19005,	
+        "wordStr": "别人笑我忒疯癫，我笑他人看不穿，区区困笼而已，我接了。！",	
+        "showType": 0	
+    },	
+    {"taskId": 19006, "wordStr": "花鼓，你就送我过去勒，小蛇蛇而已，不怕喏！。……", "showType": 0},	
+    {	
+        "taskId": 19007,	
+        "wordStr": "好乖的娃娃哦，酱紫啊你这么萌，草泥马造吗？！！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 19008,	
+        "wordStr": "山的那边海的那边有一群震山犀，它们皮糙肉造长的太难看。！",	
+        "showType": 0	
+    },	
+    {"taskId": 19009, "wordStr": "万法归一，天地皓然，以力破之，给我破！！！！", "showType": 0},	
+    {	
+        "taskId": 19010,	
+        "wordStr": "区区大胆毛贼，也想挑衅我，吃了蛇胆了，我让你知道我的厉害。！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 19011,	
+        "wordStr": "冲出燕山，走向世界，无与伦比，宇宙无敌！",	
+        "showType": 0	
+    },	
+    {"taskId": 11, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+    {"taskId": 12, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+    {"taskId": 13, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+	{"taskId": 21, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},
+    {"taskId": 22, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+    {"taskId": 23, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+	{"taskId": 31, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},
+    {"taskId": 32, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+    {"taskId": 33, "wordStr": "修仙之路多坎坷，自当潜心修炼！", "showType": 1},	
+    {"taskId": 11007, "wordStr": "天降大任于斯人，必得苦修，先修心，再修体，后休仙。！", "showType": 1},	
+    {"taskId": 11008, "wordStr": "天降大任于斯人，必得苦修，先修心，再修体，后休仙。！", "showType": 1},	
+    {"taskId": 11009, "wordStr": "天降大任于斯人，必得苦修，先修心，再修体，后休仙。！", "showType": 1},	
+    {	
+        "taskId": 10015,	
+        "wordStr": "浮屠塔显机缘现，谁主沉浮乱世苍！",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 11022,	
+        "wordStr": "浮屠塔显机缘现，谁主沉浮乱世苍！",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 11023,	
+        "wordStr": "浮屠塔显机缘现，谁主沉浮乱世苍！",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 10016,	
+        "wordStr": "走啊走啊走，走过红尘多逍遥，看看世间多变幻，一心只问蜀道难于上青天……",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 11069,	
+        "wordStr": "哇，马师姐，如此凌厉的剑招，太霸气了,看来萌妹子也不是好惹的。！",	
+        "showType": 1	
+    },	
+    {"taskId": 10018, "wordStr": "宝剑赠英雄，好马配好鞍，宝马良驹！！", "showType": 1},	
+    {	
+        "taskId": 10019,	
+        "wordStr": "这伏羲八卦阵真奥妙，离火符以得，还差其六！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 10021,	
+        "wordStr": "我被坑了，跑出来这么多小妖，你妹啊！慢慢封印吧！",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 10022,	
+        "wordStr": "得到三生镇魂鼎中的八卦符印，去封印小妖喽！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 10028,	
+        "wordStr": "转手已得四张符，没想到我还是挺厉害嘛，想想有点小激动！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 10031,	
+        "wordStr": "巽风符入手，革命尚未成功，同志还须努力啊！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 11019,	
+        "wordStr": "修行虽易，机缘不易，且行且珍惜！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 11020,	
+        "wordStr": "没想到这么快就收集了这么多，看来离完成大典不远了！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 11021,	
+        "wordStr": "没想到这么快就收集了这么多，看来离完成大典不远了！",	
+        "showType": 0	
+    },	
+	{
+        "taskId": 10036,	
+        "wordStr": "还差最后一步就可以完成师门大典了。！",	
+        "showType": 1	
+    },	
+	{
+        "taskId": 10038,	
+        "wordStr": "天地乾坤，八卦无极，伏羲八卦阵我已习得初步阵法。",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 11013,	
+        "wordStr": "八荒玄合，天地无极，多谢赐教！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 11014,	
+        "wordStr": "八荒玄合，天地无极，多谢赐教！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 11015,	
+        "wordStr": "八荒玄合，天地无极，多谢赐教！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10025,	
+        "wordStr": "神机榜，内含玄机，有缘人得之，一探究竟好了！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10033,	
+        "wordStr": "万法归一，相生无极，新技能真牛逼，用起来也是得心应手！",	
+        "showType": 0	
+    },	
+    {"taskId": 10039, "wordStr": "风云再起，北灵之原妖魔动荡！", "showType": 0},	
+    {	
+        "taskId": 10041,	
+        "wordStr": "玄武阵失效，用八卦阵暂时加持阵法，得尽快想到办法！",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10042,	
+        "wordStr": "北灵之原纷乱，大量妖魔横空而来。？",	
+        "showType": 0	
+    },	
+    {	
+        "taskId": 10055,	
+        "wordStr": "叶青灵感觉到玄武灵脉的波动，就在结界之中。！",	
+        "showType": 1	
+    },	
+    {	
+        "taskId": 10074,	
+        "wordStr": "虎啸龙腾万兽奔，试练修仙论战力！",	
+        "showType": 0	
+    },	
+    {"taskId": 10078, "wordStr": "三千世界幻三千，千千里来千千去！", "showType": 0}	
+]	

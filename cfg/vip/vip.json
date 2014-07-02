@@ -1,0 +1,90 @@
+﻿{
+/*
+字段说明：
+name		名称
+originalPrice	原价
+currentPrice	现价
+type			物品id
+level			等级
+pageing			分类
+describe		描述
+con				描述2（小助手那边显示）
+*/
+    "2": {
+        "name": "青铜VIP",
+        "originalPrice": 299,
+        "currentPrice": 149,
+        "type": 537927681,
+        "level": 1,
+        "pageing": 1,
+        "describe": "成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip",
+        "con": "1.获得青铜VIP属性加成：<font color='#00ff00'>生命 +400、防御 +30</font><br>2.每天可免费使用<font color='#ffff00'>20次</font>浮云<br>3.每天可领10绑定元宝、18888铜钱<font color='#ffff00'>(累积领70元宝，132216铜钱)</font><br>4.每天可领取<font color='#ffff00'>3个急急如律令</font><br>5.vip专属<font color='#ffff00'>随身仓库</font><br>6.每天可免费使用<font color='#ffff00'>3次</font>喇叭发言<br>7.好友列表前置并<font color='#ffff00'>特殊显示</font><br>8.拥有<font color='#ffff00'>更改宠物名字</font>权利<br>9.人物打坐经验加成<font color='#ffff00'>【5%】</font><br>10.每天增加<font color='#ffff00'>答题辅助功能1次</font><br>11.每天增加<font color='#ffff00'>2次</font>斩妖刷新次数<br>12.每天增加<font color='#ffff00'>2次</font>护送刷新次数<br>13.开启<font color='#ffff00'>一键刷出紫色任务</font>功能<br>14.宠物灵性成功率增加<font color='#ffff00'>【1%】</font>"
+    },
+    "1": {
+        "name": "白银VIP",
+        "originalPrice": 599,
+        "currentPrice": 399,
+        "type": 537931777,
+        "level": 1,
+        "pageing": 1,
+        "describe": "成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip",
+        "con": "1.获得白银VIP属性加成：<font color='#00aeef'>生命 +500、防御 +50、暴击 +40</font><br>2.每天可免费使用<font color='#ffff00'>50次</font>浮云<br>3.每天可领15绑定元宝、28888铜钱<font color='#ffff00'>(累积领450元宝，866640铜钱)</font><br>4.每天可领取<font color='#ffff00'>5个急急如律令</font><br>5.vip专属<font color='#ffff00'>随身仓库</font><br>6.每天可免费使用<font color='#ffff00'>4次</font>喇叭发言<br>7.好友列表前置并<font color='#ffff00'>特殊显示</font><br>8.拥有<font color='#ffff00'>更改宠物名字</font>权利<br>9.人物打坐经验加成<font color='#ffff00'>【8%】</font><br>10.每天增加<font color='#ffff00'>答题辅助功能2次</font><br>11.每天增加<font color='#ffff00'>5次</font>斩妖刷新次数<br>12.每天增加<font color='#ffff00'>5次</font>护送刷新次数<br>13.开启<font color='#ffff00'>一键刷出紫色任务</font>功能<br>14.宠物灵性成功率增加<font color='#ffff00'>【1%】</font><br>15.宠物成长成功率增加<font color='#ffff00'>【1%】</font><br>16.开启<font color='#ffff00'>一键猎取</font>宠物技能功能<br>17.开启<font color='#ffff00'>批量洗练</font>功能"
+    },
+    "0": {
+        "name": "黄金VIP",
+        "originalPrice": 2399,
+        "currentPrice": 1999,
+        "type": 537935873,
+        "level": 1,
+        "pageing": 1,
+        "returnTypes": [
+            {
+                "type": 269291521,
+                "binding": 1,
+                "count": 1
+            },
+            {
+                "type": 269357057,
+                "binding": 1,
+                "count": 1
+            },
+            {
+                "type": 537530375,
+                "binding": 1,
+                "count": 1
+            },
+            {
+                "type": 537464850,
+                "binding": 1,
+                "count": 20
+            },
+			{
+                "type": 537464837,
+                "binding": 1,
+                "count": 5
+            },
+            {
+                "type": 536944642,
+                "binding": 1,
+                "count": 5
+            },
+            {
+                "type": 538378511,
+                "binding": 1,
+                "count": 10
+            },
+            {
+                "type": 539033603,
+                "binding": 1,
+                "count": 10
+            },
+            {
+                "type": 537727044,
+                "binding": 1,
+                "count": 1
+            }
+        ],
+        "describe": "成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip成为黄金vip",
+        "con": "1.获得黄金VIP属性加成：<font color='#dd00fe'>生命 +600、攻击 +50、防御 +75、暴击 +60</font>(<font color='#ffff00'>黄金VIP可进行升级</font>)<br>2.每三天充值达到或超过500元宝，即可额外领取<font color='#ffff00'>黄金vip大礼包</font>，包含海量珍稀道具，助你快速提升战力<br>3.可进入<font color='#ffff00'>天外飞仙—黄金VIP挂机地图</font>快速获得大量经验<font color='#ffff00'>（同等级怪物经验是元神出窍的36倍）</font><br>4.可免费<font color='#ffff00'>无限使用</font>浮云<br>5.每天领18绑定元宝、38888铜钱<font color='#ffff00'>(累积领3240元宝，700万铜钱)</font><br>6.首次成为黄金vip可获<font color='#ffff00'>1888元宝的黄金礼包（内含大量成长道具）</font><br>7.可每天通过古剑祝福购买<font color='#ffff00'>3折特价商品</font><br>8.每天可领取<font color='#ffff00'>8个急急如律令</font><br>9.vip专属<font color='#ffff00'>随身仓库</font><br>10.每天可免费使用<font color='#ffff00'>5次</font>喇叭发言<br>11.好友列表前置并<font color='#ffff00'>特殊显示</font><br>12.拥有<font color='#ffff00'>更改宠物名字</font>权利<br>13.人物打坐经验加成<font color='#ffff00'>【10%】</font><br>14.每天增加<font color='#ffff00'>答题辅助功能3次</font><br>15.每天增加<font color='#ffff00'>7次</font>斩妖刷新次数<br>16.每天增加<font color='#ffff00'>7次</font>护送刷新次数<br>17.开启<font color='#ffff00'>一键刷出橙色任务</font>功能<br>18.成长、灵性成功率增加<font color='#ffff00'>【2%】</font><br>19.开启<font color='#ffff00'>一键猎取</font>宠物技能、<font color='#ffff00'>直接挑战</font>宠物魂兽功能<br>20.开启<font color='#ffff00'>批量洗练</font>功能<br>21.封神战场<font color='#ffff00'>VIP专属通道</font><br>22.随机获得一个<font color='#ffff00'>七仙女坐标位置</font><br>23.<font color='#ffff00'>批量提升十次</font>血脉、灵珠功能<br>24.开启<font color='#ffff00'>批量搜神50次</font>功能<br>25.开启<font color='#ffff00'>立即完成扫荡</font>功能<br>26.开启<font color='#ffff00'>高级福利补偿</font>功能（可找回修为和声望）<br>27.开启<font color='#ffff00'>清除渡劫冷却时间</font>功能<br>28.开启<font color='#ffff00'>快速升级宝石</font>功能"
+    }
+}

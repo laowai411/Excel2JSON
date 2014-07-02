@@ -1,0 +1,114 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 32,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 32,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 32,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 32,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "黑苗巫王",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_8.png",
+        	"talkStr": "只有最强者才能追随您的脚步么……既然如此，这枚五彩石碎片之力，我收下了！"
+        }
+    },
+	{
+         "plotId": 32,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+            "countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "慕容紫依",
+        	"talkStr": "不好！他妄想已凡人之躯炼化五彩石，五彩神石之力岂是他所能驾驭！<font color='#ff0000'>@player@</font>，快阻止他！",
+        	"headSrc": "skin/npc/image/image_6006006e.png"
+        }
+    },
+	{
+         "plotId": 32,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "斗篷少年",
+        	"talkStr": "……来不及了，他已经被力量所控制了……",
+        	"headSrc": "skin/npc/image/image_6006006d.png"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 32,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "黑苗巫王",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_8.png",
+        	"talkStr": "……杀！"
+        }
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 32,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },         
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 32,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	}, 
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 32,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 32,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

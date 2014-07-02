@@ -1,0 +1,6 @@
+﻿{
+    "tabs":["神兵器灵","跨服BOSS"],//显示的切换按钮
+    "pic":["newFeature1.jpg","newFeature4.jpg"],//显示的图片
+    "openPage":["1|MagicalMod|2","1|CrossServerGods|0|4"],//打开界面
+    "toNextTime":["8000","8000"]//切换到下一张的时间间隔(毫秒)
+}

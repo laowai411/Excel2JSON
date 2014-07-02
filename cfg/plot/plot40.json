@@ -1,0 +1,166 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 40,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336,1879113728]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 40,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 40,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 40, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+    },
+    {
+        "plotId": 40,
+        "className":"taskPlot.filters.DialogContentFilter", 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "咦，这是什么？",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 40, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1060,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1610940447,
+					"x":100,
+					"y":-175,
+					"hp":100,
+					"objName":"装备仙魂"
+				}
+ 
+    },
+    {
+    	"className":"taskPlot.filters.ObjFallDownFilter", 
+        "plotId": 40, 
+		"data":{//3：下落;5：角色移动
+					"objId":1060,
+					"startPicPt":{"x":100,"y":-175},
+					"destPicPt":{"x":100,"y":50},
+					"speed":300,
+					"ghostShadow":1,
+					"fallEffect":"T_9527_0000",
+					"shake":1
+				}
+  
+    },
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 40, 
+        "mouseSetting":"stage",
+        "countDownSetting":10000,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":150,
+					"y":50,
+					"skinName":"GuideClickGetSpirit",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				}
+ 
+    },
+    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 40,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetSpirit",
+					"type":"swf"
+				}
+ 
+    },
+      {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 40,
+				"data":
+				{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+						"objId":1060
+				} 
+ 
+    },
+    {
+        "plotId": 40,
+        "className":"taskPlot.filters.DialogContentFilter", 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "仙魂炼器？看来能让我神兵威力更上一层楼！",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+    
+		 {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 40,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 40,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 40,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 40,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

@@ -1,0 +1,22 @@
+﻿[
+	{
+		"mission": 10241,
+		"id": 1,
+		"level": 30,
+		"title": "@player@，人家的宠物<font color='#00aeef'>震翅鹰</font>在轩辕秘境迷路了，你去帮人家寻回来好不好~",
+		"content": "通关轩辕秘境-古剑奇侠后，你可以：<br>1.升级至<font color='#ffff00'>LV.31</font><br>2.获得仙宠<font color='#00aeef'>震翅鹰</font>",
+		"picUrl": "1610879080",
+		"linkType": 2,
+		"linkData": "立即前往|303|0_30030005|7139|4215"
+	},
+	{
+		"mission": 11126,
+		"id": 2,
+		"level": 31,
+		"title": "听闻<font color='#00aeef'>万兽塔-子夜殿</font>中藏有<font color='#dd00fe'>紫色神装</font>，@player@，你就带人家一起去找找嘛~",
+		"content": "通关万兽塔-子夜殿后，你可以：<br>1.大量<font color='#ffff00'>经验</font><br>2.获得<font color='#dd00fe'>紫色装备</font>",
+		"picUrl": "skin/ui/systemNotice/img/32.jpg",
+		"linkType": 2,
+		"linkData": "立即前往|303|0_30030006|7660|3399"
+	}
+]

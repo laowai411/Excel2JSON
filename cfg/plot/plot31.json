@@ -1,0 +1,102 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 31,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 31,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 31,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 31,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "啸月玄帝",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_7.png",
+        	"talkStr": "果然还是……打不过你………妲己，你还是和当年一样美丽而强大……能死在你手上，我也……"
+        }
+    },
+	{
+         "plotId": 31,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+            "countTime": 10000,
+        	"speakerType": 0,
+        	"speakerName": "妲己",
+        	"talkStr": "……会被人利用的人，真是愚蠢至极！<font color='#ff0000'>@player@</font>，这枚五彩石碎片，你拿去吧。",
+        	"headSrc": "skin/npc/image/image_60060085.png"
+        }
+    },
+	{
+        "plotId": 31,
+        "className":"taskPlot.filters.DialogContentFilter", 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerType": 1,
+        	"speakerName": "@player@",
+        	"talkStr": "总觉得哪里有点奇怪，啸月玄帝怎么会突然进犯狐岐山呢……算了，这枚五彩石碎片，我先收下了！",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 31,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },      
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 31,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	}, 
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 31,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 31,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

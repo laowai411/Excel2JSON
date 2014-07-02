@@ -1,0 +1,311 @@
+﻿[
+	{
+		"copyType":20,
+		"name":"单人副本",
+		"copys":[
+			{
+				"orderIndex":0,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":1,/*副本共享type*/
+				"copyDesc":"轩辕秘境",/*副本描述*/
+				"npcId":"0_30030005",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":28,/*显示等级*/
+				"totalTimes":3/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":1,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":3,/*副本共享type*/
+				"copyDesc":"万兽塔",/*副本描述*/
+				"npcId":"0_30030006",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":30,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":2,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":4,/*副本共享type*/
+				"copyDesc":"三千幻界",/*副本描述*/
+				"npcId":"0_30030008",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":31,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":3,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":97,/*副本共享type*/
+				"copyDesc":"屠魔殿",/*副本描述*/
+				"npcId":"0_30030012",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":31,/*显示等级*/
+				"totalTimes":1/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":4,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":6,/*副本共享type*/
+				"copyDesc":"富甲天下",/*副本描述*/
+				"npcId":"0_30030015",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":28,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":5,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":7,/*副本共享type*/
+				"copyDesc":"仙宠林",/*副本描述*/
+				"npcId":"0_30030016",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":30,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":6,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":10,/*副本共享type*/
+				"copyDesc":"四象神台",/*副本描述*/
+				"npcId":"0_3003001c",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":46,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":7,/*排序*/
+				"copyType":30,/*0:单人副本 1：组队副本*/
+				"shareType":95,/*副本共享type*/
+				"copyDesc":"天兽阁",/*副本描述*/
+				"npcId":"0_30030028",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":52,/*显示等级*/
+				"totalTimes":4/*总次数为0 表示标题*/
+			},
+			{
+				"orderIndex":8,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":130,/*副本共享type*/
+				"copyDesc":"五行神兵阵",/*副本描述*/
+				"npcId":"0_3003002a",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":56,/*显示等级*/
+				"totalTimes":2/*总次数为0 表示标题*/
+			}			
+		]
+	},
+	{
+		"copyType":30,/*0:单人副本 1：组队副本*/
+		"name":"组队副本",
+		"copys":[
+				{
+					"orderIndex":0,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":8,/*副本共享type*/
+					"copyDesc":"守卫龙宫",/*副本描述*/
+					"npcId":"0_3003001a",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":36,/*显示等级*/
+					"totalTimes":2/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":1,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":11,/*副本共享type*/
+					"copyDesc":"幻冥界",/*副本描述*/
+					"npcId":"0_3003001f",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":36,/*显示等级*/
+					"totalTimes":2/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":2,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":9,/*副本共享type*/
+					"copyDesc":"兽魂古道",/*副本描述*/
+					"npcId":"0_3003001b",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":38,/*显示等级*/
+					"totalTimes":2/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":3,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":12,/*副本共享type*/
+					"copyDesc":"摇钱树",/*副本描述*/
+					"npcId":"0_3003002b",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":55,/*显示等级*/
+					"totalTimes":2/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":4,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":13,/*副本共享type*/
+					"copyDesc":"聚灵洞",/*副本描述*/
+					"npcId":"0_3003002c",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":43,/*显示等级*/
+					"totalTimes":2/*总次数为0 表示标题*/
+				}
+		]	
+	}
+	,
+	{
+		"copyType":1000,
+		"name":"系统功能",
+		"copys":[
+			{
+				"orderIndex":0,/*排序*/
+				"copyType":1000,/*0:单人副本 1：组队副本*/
+				"shareType":1000,/*副本共享type*/
+				"copyDesc":"仙器化翼",/*副本描述*/
+				"npcId":"0_30030005",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":34,/*显示等级*/
+				"totalTimes":10,/*总次数为0 表示标题*/
+				"open":"FairyEquip,2"
+			},
+				{
+					"orderIndex":1,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1001,/*副本共享type*/
+					"copyDesc":"祭炼兵魂",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":56,/*显示等级*/
+					"totalTimes":10,/*总次数为0 表示标题*/
+					"open":"MagicalMod,1"
+				},
+				{
+					"orderIndex":2,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1002,/*副本共享type*/
+					"copyDesc":"神魔真谛",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":53,/*显示等级*/
+					"totalTimes":10,/*总次数为0 表示标题*/
+					"open":"GodDemonMod,4"
+				},
+				{
+					"orderIndex":3,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1003,/*副本共享type*/
+					"copyDesc":"血脉觉醒",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":38,/*显示等级*/
+					"totalTimes":10,/*总次数为0 表示标题*/
+					"open":"Mount,4"
+				},
+				{
+					"orderIndex":4,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1004,/*副本共享type*/
+					"copyDesc":"强化附魔",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":30,/*显示等级*/
+					"totalTimes":15,/*总次数为0 表示标题*/
+					"open":"Equip,0,2"
+				},
+				{
+					"orderIndex":5,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1005,/*副本共享type*/
+					"copyDesc":"化身涅槃",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":54,/*显示等级*/
+					"totalTimes":10,/*总次数为0 表示标题*/
+					"open":"Huashen,3"
+				},
+				{
+					"orderIndex":6,/*排序*/
+					"copyType":1000,/*0:单人副本 1：组队副本*/
+					"shareType":1006,/*副本共享type*/
+					"copyDesc":"封神榜",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":53,/*显示等级*/
+					"totalTimes":15,/*总次数为0 表示标题*/
+					"open":"GodsRank"
+				}
+		]
+	},
+	{
+		"copyType":40,/*0:单人副本 1：组队副本*/
+		"name":"其他副本",
+		"copys":[
+				{
+					"orderIndex":0,/*排序*/
+					"copyType":40,/*0:单人副本 1：组队副本*/
+					"shareType":98,/*副本共享type*/
+					"copyDesc":"天外天",/*副本描述*/
+					"npcId":"0_30030022",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":35,/*显示等级*/
+					"totalTimes":1/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":0,/*排序*/
+					"copyType":40,/*0:单人副本 1：组队副本*/
+					"shareType":99,/*副本共享type*/
+					"copyDesc":"天外飞仙（VIP挂机）",/*副本描述*/
+					"npcId":"0_30030023",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":30,/*显示等级*/
+					"totalTimes":1/*总次数为0 表示标题*/
+				},
+				{
+					"orderIndex":0,/*排序*/
+					"copyType":40,/*0:单人副本 1：组队副本*/
+					"shareType":100,/*副本共享type*/
+					"copyDesc":"元神出窍",/*副本描述*/
+					"npcId":"0_30030021",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":30,/*显示等级*/
+					"totalTimes":1/*总次数为0 表示标题*/
+				},
+			{
+				"orderIndex":3,/*排序*/
+				"copyType":20,/*0:单人副本 1：组队副本*/
+				"shareType":96,/*副本共享type*/
+				"copyDesc":"神魔试炼",/*副本描述*/
+				"npcId":"0_30030027",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":50,/*显示等级*/
+				"totalTimes":1/*总次数为0 表示标题*/
+			}
+		]	
+	},
+	{
+		"copyType":10,
+		"name":"情缘双修",
+		"copys":[
+			{
+				"orderIndex":0,/*排序*/
+				"copyType":10,/*0:单人副本 1：组队副本*/
+				"shareType":101,/*副本共享type*/
+				"copyDesc":"情缘任务",/*副本描述*/
+				"npcId":"0_30030005",/*寻路npcId*/
+				"mapId":303,/*寻路mapId*/
+				"level":20,/*显示等级*/
+				"totalTimes":1,/*总次数为0 表示标题*/
+				"open":"MarryTask"
+			},
+				{
+					"orderIndex":3,/*排序*/
+					"copyType":30,/*0:单人副本 1：组队副本*/
+					"shareType":95,/*副本共享type*/
+					"copyDesc":"情缘双修",/*副本描述*/
+					"npcId":"0_30030029",/*寻路npcId*/
+					"mapId":303,/*寻路mapId*/
+					"level":32,/*显示等级*/
+					"totalTimes":1/*总次数为0 表示标题*/
+				}
+		]
+	}
+]

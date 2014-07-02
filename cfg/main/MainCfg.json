@@ -1,0 +1,2176 @@
+﻿{
+	"mainOpens" :
+	{
+		//主界面按钮pet,skill,guild,friend,activity,wonderLand,pay,shop,sysSet
+		//小地图按钮rate,bless,sale,map,team,onHook,mail,screen,sound,unSound,gm,f8
+		//如果要配置强制打开一个面板，可以配置strengthOpen = true属性，如果配置
+		//每次点击都是开启面板，要配置alwaysOpen = true,否则将是取反处理成打开->关闭->打开
+		"role" :
+		{
+			"tooltip":"人物",
+			"keyName":"Role",
+			"sound":"sound/ui_yj1.mp3",
+			"name" : "Role"
+		},
+		"bag" :
+		{
+			"tooltip":"背包",
+			"keyName":"Bag",
+			"sound":"sound/ui_yj2.mp3",
+			"name" : "Bag"
+		},
+		"sale" :
+		{
+			"tooltip":"市场",
+			"keyName":"MarketMod",
+			"name" : "MarketMod"
+		},
+		"map" :
+		{
+			"tooltip":"地图",
+			"keyName":"MiddleWorld",
+			"name" : "MiddleWorld"
+		},
+		"huashen" :
+		{
+			"tooltip":"身外化身",
+			"keyName":"Huashen",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "Huashen"
+		},
+		"longmai" :
+		{
+			"tooltip":"龙脉",
+			"keyName":"Longmai",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "Longmai"
+		},
+		"shenbing" :
+		{
+			"tooltip":"神兵",
+			"keyName":"MagicalMod",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "MagicalMod"
+		},
+		"godDemon" :
+		{
+			"tooltip":"神魔变",
+			"keyName":"GodDemonMod",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "GodDemonMod"
+		},
+		"marryMarriage" :
+		{
+			"tooltip":"姻缘",
+			"keyName":"MarryMarriageMod",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "MarryMarriageMod"
+		},
+		"fairyEquip" :
+		{
+			"tooltip":"仙器",
+			"keyName":"FairyEquip",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "FairyEquip"
+		},
+		"makeEquip" :
+		{
+			"tooltip":"炼器",
+			"keyName":"Equip",
+			"sound":"sound/ui_yj3.mp3",
+			"name" : "Equip"
+		},
+		"gem" :
+		{
+			"tooltip":"宝石",
+			"keyName":"Gem",
+			"sound":"sound/ui_yj4.mp3",
+			"name" : "Gem"
+		},
+		"composite" :
+		{
+			"tooltip":"合成",
+			"keyName":"Composite",
+			"sound":"sound/ui_yj5.mp3",
+			"name" : "Composite"
+		},
+		"guild" :
+		{
+			"tooltip":"仙盟",
+			"keyName":"GuildMod",
+			"sound":"sound/ui_yj6.mp3",
+			"name" : "GuildMod"
+		},
+		"friend" :
+		{
+			"tooltip":"好友",
+			"keyName":"FriendMod",
+			"sound":"sound/ui_yj7.mp3",
+			"name" : "FriendMod"
+		},
+		"onHook":
+		{
+			"tooltip":"挂机",
+			"sound":"sound/ui_yj8.mp3",
+			"keyName":"onHook"
+		},
+		"team" :
+		{
+			"tooltip":"组队",
+			"keyName":"Team",
+			"name" : "Team"
+		},
+		"mail" :
+		{
+			"tooltip":"邮件",
+			"keyName":"MailMod",
+			"name" : "MailMod"
+		},
+		"gm" :
+		{
+			"tooltip":"联系GM",
+			"name" : "ConnectGM"
+		},
+		
+		"skill" :
+		{
+			"tooltip":"技能",
+			"keyName":"SkillSetting",
+			"sound":"sound/ui_yj9.mp3",
+			"name" : "SkillSetting"
+		},
+		"screen" :
+		{
+			"tooltip":"屏蔽",
+			"keyName":"hidePlayer",
+			"name" : "RingTaskMod"
+		},
+		"shop" :
+		{
+			"tooltip":"商城",
+			"keyName":"ShopMallMod",
+			"name" : "ShopMallMod"
+		},
+		"sysSet" :
+		{
+			"tooltip":"系统设置",
+			"name" : "SystemSettingMod"
+		},
+		"rate" :
+		{
+			"tooltip":"排行榜",
+			"keyName":"Rank",
+			"name" : "Rank"
+		},
+		"cheats" :
+		{
+			"tooltip":"仙途",
+			"keyName":"MartialArt",
+			"sound":"sound/ui_yj13.mp3",
+			"name" : "MartialArt"
+		},
+		"achievement" :
+		{
+			"tooltip":"成就",
+			"name" : "AchievementMod"
+		},
+		"mount" :
+		{
+			"tooltip":"坐骑",
+			"sound":"sound/ui_yj6.mp3",
+			"name" : "Mount"
+		},
+		"pet" :
+		{
+			"tooltip":"宠物",
+			"keyName":"Pet",
+			"sound":"sound/ui_yj10.mp3",
+			"name" : "Pet"
+		},
+		"wonderLand" :
+		{
+			"tooltip":"搜神",
+			"sound":"sound/ui_yj11.mp3",
+			"name" : "Chest"
+		},
+		"activity" :
+		{
+			"tooltip":"活跃度",
+			"keyName":"DailyMod",
+			"sound":"sound/ui_yj12.mp3",
+			"name" : "DailyMod"
+		},
+		"bless"  :
+		{
+			"tooltip":"福利",
+			"name":"Welfare"
+		},
+		"rest":
+		{
+			"tooltip":"打坐",
+			"sound":"sound/ui_yj6.mp3",
+			"keyName":"Sitting"
+		},
+		"riding":
+		{
+			"tooltip":"骑乘",
+			"sound":"sound/ui_yj5.mp3",
+			"keyName":"Mount"
+		},
+		"hookSetting":
+		{
+			"tooltip":"挂机设置"
+		},
+		"f8" :
+		{
+			"tooltip":"全屏[F8]",
+			"name" : "CopySweepMod"
+		},
+		"screen":
+		{
+			"tooltip":"开启屏蔽"
+		},
+		"showScreen":
+		{
+			"tooltip":"关闭屏蔽"
+		},
+		"unLock":
+		{
+			"tooltip":"关闭保护锁"
+		},
+		"lock":
+		{
+			"tooltip":"开启保护锁"
+		},
+		"sound":
+		{
+			"tooltip":"关闭声音"
+		},
+		"unSound":
+		{
+			"tooltip":"开启声音"
+		},
+		"hideSkill":
+		{
+			"tooltip":"收起技能栏"
+		},
+		"openSkill":
+		{
+			"tooltip":"展开技能栏"
+		},
+		"lockSkill":
+		{
+			"tooltip":"解锁技能"
+		},
+		"unLockSkill":
+		{
+			"tooltip":"锁定技能"
+		},
+		"collect":
+		{
+			"tooltip":"收藏地址"
+		},
+		"official":
+		{
+			"tooltip":"官网"
+		},
+		"pay":
+		{
+			"tooltip":"快速充值"
+		},
+		"fish":
+		{
+			"tooltip":"钓鱼",
+			"keyName":""
+		},
+		"fishBag":
+		{
+			"tooltip":"鱼镂",
+			"name":"FishBag"
+		}
+	},
+	"iconOpens" :
+	{
+		//主界面上的图标,首先在MainConst类里面注册一个名称，该名称唯一
+		//可以配置strengthOpen = true属性，如果配置
+		//每次点击都是开启面板，要配置alwaysOpen = true，
+		//否则将是取反处理成打开->关闭->打开
+		//一种是静态的图标,表1表示，指定位置不受其他影响
+		//其他的将按照组来排位置
+		//一种是主界面下方有新增信息时要移动并排列的图标，比如邀请组队,交易等，用2表示。
+		//类型为2将会按照类型为2的进行排序。
+		//如果将起点和终点设置成为相同的则将不进行移动
+		//offSet表示非1类型下，多个图标布局时，与图标位置成一定差值一个常量,
+		//正数表示从左到右排，负数表示从右到左排
+		//useMoveEffect是否使用移动效果，不使用则直接布局
+		"iconTypes" :
+		{
+			"1" :
+			{
+				//静态图标
+				//图标位置在每一个静态图标内配置startPoint属性和Target属性相同
+				//startPoint位置：X为正则表示相对正的坐标，X为负则表示相对舞台右侧向左的坐标，Y同理。
+				"totalLimit":0,
+				"position":["left",0,"top",0] //容器生成的位置
+			},
+			"2" :
+			{
+				//主界面下方的图标
+				"sequence" : [] , //将配置一个顺序按照这个顺序来显示图标
+				"maxCount" : 9, //一行最多排个图标
+				"startPoint" : ["left",100,"top",200] , //开始出发点,此位置相对于舞台
+				"targetPoint" : ["right",-888,"bottom",-100] , //目标点,此位置相对于容器
+				"offSet" : [39, 39] ,
+				"position":["right",-1,"bottom",-1], //容器生成的位置
+				"tailEffect":true,
+				"totalLimit":0,  //总共显示的数量
+				"useMoveEffect" : true //是否使用移动特效来处理这些图标,这个属性和sequence冲突
+			},
+			"3" :
+			{
+				//小地图左边的图标
+				"sequence" : ["NewFeatureIcon","PrivilegeIcon","betaActivityIcon","OpenServerName","equipTargetIcon","supportIcon","vipHelperBookIcon","vipHelperRoleIcon","canGetRewardIcon","onLineRewardIcon","getRewardTomorrowIcon","VipDueIcon","crossIcon","huaShenCopyIcon","bibleCopyIcon","kingIcon","chestIcon","chest2Icon","FirstRechargeIcon","buyTask","misteryShopIcon","bottleIcon","friendRecommendIcon","treasureIcon","vipRewardIcon","crossServerGodsIcon","godsRankIcon","campFightIcon","guildPartyIcon","cityWarRewardIcon","WorldBossIconName","WorldJiuYouBossIconName","ProtTsDoubTimeIconName","questionIcon","hotSpringIcon","SeventFariyIconName","godsAreaRewardIcon","godsAreaIcon","guildGod","pveRewardIcon","campRewardIcon","questionRewardIcon","preindulgenceIcon","taskAddFavorIcon","guildFightTimeIcon","guildFightRewardIcon","PVPTaskRewardIcon","PVPTaskEnterIcon","guildGiftIconS","SeventFariyGetRewIconName","godsRingIcon","godsRingRewardIcon","BackIcon","ConsumeIcon","RechargeIcon","fundSIcon","fundIcon","LuckWheelIcon","SupportExpIcon","specialActivityIcon","specialSellIcon","mergeActivityIcon","GoldVipActivityIcon","mergeSellIcon","StarTreasureHouseIcon","MonthTreasureHouseIcon","crossServerGodsRewardIcon","crossServerCampRewardIcon","flowerRankIcon","cityWarIcon","cityWarWelfareIcon","holidayBagsIcon","BufferinActivityIcon","WeekendSaleIcon","ConsumeRankIcon","MingRenTangRankIcon","KillMonsterIcon","oneDiscountShopIcon","ConsumeBagIcon","MonsterCardIcon","PlatformIcon","SWHSRankIcon","MountSpiritRankIcon","ChouJiangIcon","GuildConsumeIcon","ActivityConsumeIcon","ActivityRechargeIcon","ActivityMarryIcon","OpenServerRebateName","SBRankIcon","OldPlayerReturnIcon","VipMemberYYIcon","VIPGift360Icon"] , //将配置一个顺序按照这个顺序来显示图标
+				"maxCount" : 9, //一行最多排个图标
+				"startPoint" : ["center",-31,"top",280] , //开始出发点,此位置相对于容器坐标
+				"targetPoint" : ["right",-260,"top",25] , //目标点
+				"position":["right",-1,"top",0],
+				"totalLimit":18,
+				"offSet" : [55, 68] , //图标的宽度和高度
+				"useMoveEffect" : false //是否使用移动特效来处理这些图标
+				
+			}
+		},
+		"icons" :
+		{
+			//类型为1的图标
+			"testIcon" :
+			{
+				"startPoint" : ["right",-500,"top",500] , //图片放置点
+				"targetPoint" : ["right",-500,"top",500] , //图片放置点
+				"type" : 1,
+				"skinName" : "TeamInvateIcon",
+				"open" :
+				{
+					"name" : "InvateJoinProxy", "alwaysOpen" : true
+				}
+			},
+			"mutiStoneIcon"://五彩石。
+			{
+			       "startPoint" : ["right",-85,"top",202] , //图片放置点
+				"targetPoint" : ["right",-85,"top",202] , //图片放置点
+			       "type":1,
+			       "skinName":"MutiStoneIcon",
+			       "open":
+			       {
+			             "name":"MutiStone", "alwaysOpen" : true
+			       }
+
+			},
+			"strongRoadIcon"://强者之路
+			{
+			       "startPoint" : ["right",-85,"top",202] , //图片放置点
+				"targetPoint" : ["right",-85,"top",202] , //图片放置点
+			       "type":1,
+			       "skinName":"StrongRoadIcon",
+			       "open":
+			       {
+			             "name":"StrongRoadMod", "alwaysOpen" : true
+			       }
+
+			},
+		"askGuiderIcon" ://咨询指导员
+			{
+				"startPoint" : ["right",-94,"bottom",-160] , //图片放置点
+				"targetPoint" : ["right",-94,"bottom",-160] , //图片放置点
+				"type" : 1,
+				"skinName" : "AskGuiderIcon",
+				"open" :
+				{
+					"name" : "AskGuiderMod", "alwaysOpen" : true
+				}
+			},
+			"hideGuiderIcon" ://咨询指导员
+			{
+				"startPoint" : ["right",-50,"bottom",-130] , //图片放置点
+				"targetPoint" : ["right",-50,"bottom",-130] , //图片放置点
+				"type" : 1,
+				"skinName" : "HideAskGuiderIcon",
+				"open" :
+				{
+					
+				}
+			},
+
+			//类型为2的图标
+			"invateTeam" :
+			{
+				//skinName
+				//"tooltip":"aaa",
+				"type" : 2,
+				"skinName" : "TeamInvateIcon",
+				"open" :
+				{
+					"name" : "InvateJoinProxy", "alwaysOpen" : true
+				}
+			},
+			
+			"doubleRestIcon" :
+			{
+				"type" : 2,
+				"skinName" : "DoubleRestIcon",
+				"open" :
+				{
+					"name" : "InvateJoinProxy", "alwaysOpen" : true
+				}
+			},
+			"tradeAviteIconName" :
+			{
+				"type" : 2,
+				"skinName" : "TradeAviteIcon",
+				"open" :
+				{
+					"name" : "TradeAviteWin", "alwaysOpen" : true
+				}
+			},
+			"GhostTrialRewardIcon" :
+			{
+				"type" : 2,
+				"skinName" : "GhostTrialBonusIcon"
+			},
+			"copySweepIconName" :
+			{
+				"type" : 2,
+				"skinName" : "CopySweepWareHourceIcon",
+				"open" :
+				{
+					"name" : "CopySweepWareHourseMod", "alwaysOpen" : true
+				}
+			},
+			"ProtTsIconName" ://护送任务 Icon
+			{
+				"type" : 2,
+				"skinName" : "ProtTsIcon",
+				"open" :
+				{
+					"name" : "ProtTsInfoWin", "alwaysOpen" : true
+				}
+			},
+			"KillmonstorIconName" ://斩妖任务 Icon
+			{
+				"type" : 2,
+				"skinName" : "CycleTaskIcon",
+				"open" :
+				{
+					"name" : "CycleTaskMod", "alwaysOpen" : true
+				}
+			},
+			"conveneToCopy" :
+			{
+				"type" : 2,
+				"skinName" : "ConveneToCopyIcon",
+				"open" :
+				{
+					"name" : "TeamConfirm", "alwaysOpen" : true
+				}
+			},
+			"guildAviteIconName" :
+			{
+				"type" : 2,
+				"skinName" : "GuildAviteIcon",
+				"open" :
+				{
+					"name" : "GuildInviteMod", "alwaysOpen" : true
+				}
+			},
+			"TreasureWarehouseIcon" :
+			{
+				"type" : 2,
+				"skinName" : "TreasureWarehouseIcon",
+				"open" :
+				{
+					"name" : "StoresMod", "alwaysOpen" : true, "args":7
+				}
+			},
+			"TanBaoWareIcon" :
+			{
+				"type" : 2,
+				"skinName" : "TanBaoWareIcon",
+				"open" :
+				{
+					"name" : "StoresMod", "alwaysOpen" : true, "args":10
+				}
+			},
+			"DivorceIcon" : // 离婚按钮
+			{
+				"type" : 2,
+				"skinName" : "DivorceIcon",
+				"open" :
+				{
+					"name" : "DivorceTipFrame", "alwaysOpen" : true
+				}
+			},
+			"guildMemberJoinIcon" :
+			{
+				"type" : 2,
+				"skinName" : "GuildJoinIcon",
+				"open" :
+				{
+					"name" : "GuildMemberJoinMod", "alwaysOpen" : true
+				}
+			},
+			"friendIconName" :
+			{
+				"type" : 2,
+				"skinName" : "FriendIcon",
+				"open" :
+				{
+					"name" : "FriendApplyMod", "alwaysOpen" : true
+				}
+			},
+			"DrugIcon" :
+			{
+				"type" : 2,
+				"skinName" : "DrugIcon",
+				"open" :
+				{
+					"name" : "DrugNotEnough", "alwaysOpen" : true
+				}
+			},
+			"MarryTaskIcon" :
+			{
+				"type" : 2,
+				"skinName" : "MarryTaskIcon"
+				
+			},
+			"AskMarryIcon" :
+			{
+				"type" : 2,
+				"skinName" : "AskMarryIcon",
+				"open" :
+				{
+					"name" : "AskMarryNoticeMod", "alwaysOpen" : true
+				}
+			},
+			"NewPlayIcon" :
+			{
+				"type" : 2,
+				"skinName" : "NewPlayIcon",
+				"open" :
+				{
+					"name" : "NewPlay", "alwaysOpen" : true
+				}
+			},
+
+			"privateIcon1" :
+			{
+				"type" : 2
+			},
+			"privateIcon2" :
+			{
+				"type" : 2
+			},
+			"privateIcon3" :
+			{
+				"type" : 2
+			},
+			"privateIcon4" :
+			{
+				"type" : 2
+			},
+			"privateIcon5" :
+			{
+				"type" : 2
+			},
+			"privateIcon6" :
+			{
+				"type" : 2
+			},
+			"friendBless" :
+			{
+				"type" : 2,
+				"skinName" : "FriendBlessIcon",
+				"open" :
+				{
+					"name" : "FriendBlessMod", "alwaysOpen" : true
+				}
+			},
+			"InviteDuelIcon" :
+			{
+				"type" : 2,
+				"skinName" : "InviteDuelIcon",
+				"open" :
+				{
+					"name" : "InviteDuel", "alwaysOpen" : true
+				}
+			},
+			"studySkill" :
+			{
+				"type" : 2,
+				"skinName" : "StudySkillIcon",
+				"open" :
+				{
+					"name" : "SkillSetting", "alwaysOpen" : true
+				}
+			},
+			"SupportDueIcon" : /*古剑祝福到期图标*/
+			{
+				"type" : 2,
+				"skinName" : "SupportDueIcon"
+			},
+			"ChestStorageIcon" : /*搜神仓库图标*/
+			{
+				"type" : 2,
+				"skinName" : "ChestStorageIcon",
+				"open" :
+				{
+					"name" : "StoresMod", "alwaysOpen" : true, "args":5
+				}
+			},
+			"RankChangeIcon" : /*排行榜变化图标*/
+			{
+				"type" : 2,
+				"skinName" : "RankChangeIcon"
+			},
+			"guildFightConveneIcon"://仙盟战召集
+			{
+			        "type":2,
+				"skinName":"GuildFightIcon",
+				"open":
+				{
+				       "name":"GuildFightConvene", "alwaysOpen" : true
+				}
+			},
+			"martialArtIcon"://仙途修炼图标
+			{
+			        "type":2,
+				"skinName":"MartialArtIcon",
+				"open":
+				{
+				       "name":"MartialArt", "alwaysOpen" : true
+				}
+			},
+			"kingLoseIcon"://帝王将相失去仙职图标
+			{
+			    "type":2,
+				"skinName":"KingLoseIcon"
+			},
+			"godsRankReduceIcon"://封神榜排名下降图标
+			{
+			    "type":2,
+				"skinName":"GodsRankReduceIcon"
+			},
+			"recieveFlowerIcon"://收花图标
+			{
+			        "type":2,
+				"skinName":"ReceiveFlowerIcon",
+				"open":
+				{
+				       "name":"ReceiveFlower", "alwaysOpen" : true,"strengthOpen":true
+				}
+			},
+			//类型为3的图标
+			"godsAreaRewardIcon":
+			{
+			       "type":3,
+			       "skinName":"GodsAreaRewardIcon",
+			       "open":
+			       {
+			             "name":"PVEGetReward", "alwaysOpen" : true
+			       }
+			},
+			"godsAreaIcon": /*仙道会*/
+			{
+			      "type":3,
+			       "skinName":"GodsAreaIcon",
+				   "level":[30,10000],
+			       "open":
+			       {
+			             "name":"ActivityEnter", "alwaysOpen" : true, "args":["","GodsArenaEnterPanel"]
+			       }
+			},
+			"buyTask"://商城购买任务图标
+			{
+			      "type":3,
+			       "skinName":"BuyTaskIcon",
+			       "open":
+			       {
+			             "name":"TaskGetItem", "alwaysOpen" : true
+			       }
+			},
+			//类型为3的图标
+			"crossIcon"://渡劫
+			{
+			      "type":3,
+			       "skinName":"CrossIcon",
+				   "level":[30,10000],
+			       "open":
+			       {
+			             "name":"Cross", "alwaysOpen" : true
+			       }
+			},
+			"bibleCopyIcon"://鸿蒙圣境
+			{
+			      "type":3,
+			       "skinName":"BibleCopyIcon",
+				   "level":[34,10000],
+			       "open":
+			       {
+			             "name":"Bible", "alwaysOpen" : true
+			       }
+			},
+			"guildGod"://仙盟战神
+			{
+			      "type":3,
+			       "skinName":"GuildGodIcon",
+			       "open":
+			       {
+			             "name":"GuildGodMod", "alwaysOpen" : true
+			       }
+			},
+			"vipRewardIcon"://vip奖励
+			{
+                               "type":3,
+				"skinName":"VipGetRewardIcon",
+				"open":
+				{
+				       "name":"GetVipReward", "alwaysOpen" : true
+				}
+			},
+			"misteryShopIcon"://神秘商店
+			{
+                               "type":3,
+				"skinName":"MisteryShopIcon",
+				"open":
+				{
+				       "name":"MisteryShop", "alwaysOpen" : true
+				}
+			},
+			"PVPTaskEnterIcon"://九幽进入图标
+			{
+                               "type":3,
+				"skinName":"PVPTaskIcon",
+				"level":[35,10000],
+				"open":
+				{
+				       "name":"PVPTaskEnter", "alwaysOpen" : true
+				}
+			},
+			"PVPTaskRewardIcon"://九幽奖励
+			{ 
+			       "type":3,
+				"skinName":"PVPRewardIcon",
+				"open":
+				{
+				       "name":"PVEGetReward", "alwaysOpen" : true
+				}
+			},
+			"betaActivityIcon":
+			{  
+			       "type":3,
+				"skinName":"BetaActivityIcon",
+				"open":
+				{
+				       "name":"BetaAcitivity", "alwaysOpen" : true
+				}
+			},
+			"guildFightTimeIcon"://仙盟战活动时间图标
+			{
+			        "type":3,
+				"skinName":"GuildFightTimeIcon",
+				"level":[30,10000],
+				"open":
+				{
+				       "name":"GuildFightEnter", "alwaysOpen" : true
+				}
+			},
+			"guildFightRewardIcon"://仙盟战奖励
+			{
+			        "type":3,
+				"skinName":"GuildFightRewardIcon",
+				"open":
+				{
+				       "name":"PVEGetReward", "alwaysOpen" : true
+				}
+			},
+			"pveRewardIcon" :
+			{
+				"type" : 3,
+				"skinName" : "PVERewardIcon",
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true, "strengthOpen" : true
+				}
+			},
+			"ProtTsDoubTimeIconName" ://护送任务 双倍时间 Icon
+			{
+				"type" : 3,
+				"skinName" : "ProtsDouble",
+				"level":[25,10000],
+				"open" :
+				{
+					"name" : "ProtTsDoubTimeNoteWin", "alwaysOpen" : true
+				}
+			},
+			"WorldBossIconName" ://世界boss Icon
+			{
+				"type" : 3,
+				"skinName" : "WorldBossIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "DailyMod", "alwaysOpen" : true
+				}
+			},
+			"WorldJiuYouBossIconName" ://九幽boss Icon
+			{
+				"type" : 3,
+				"skinName" : "JiuYouBossIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "PVPTaskEnter", "alwaysOpen" : true
+				}
+			},
+			"campFightIcon" :
+			{
+				"type" : 3,
+				"skinName" : "CampBattleFieldIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "CampFight", "alwaysOpen" : true
+				}
+			},
+			"hotSpringIcon" :
+			{
+				"type" : 3,
+				"skinName" : "HotSpringIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "ActivityEnter", "alwaysOpen" : true, "args":["","HotspringEnterPanel"]
+				}
+			},
+			"equipTargetIcon" :
+			{
+				"type" : 3,
+				"skinName" : "EquipTargetShowIcon",
+				"open" :
+				{
+					"name" : "EquipTargetMod", "alwaysOpen" : true
+				}
+			},
+				"bottleIcon" :
+			{
+				"type" : 3,
+				"skinName" : "BottleIcon",
+				"open" :
+				{
+					"name" : "FriendBottleMod", "alwaysOpen" : true
+				}
+			},
+			"friendRecommendIcon" :
+			{
+				"type" : 3,
+				"skinName" : "FriendRecommendIcon",
+				"open" :
+				{
+					"name" : "OneKeyAddFriendMod", "alwaysOpen" : true
+				}
+			},
+			"guildPartyIcon" :
+			{
+				"type" : 3,
+				"skinName" : "GuildPartyIcon",
+				"level":[25,10000],
+				"open" :
+				{
+					"name" : "GuildPartyMod", "alwaysOpen" : true
+				}
+			},
+			"preindulgenceIcon" :
+			{
+				"type" : 3,
+				"skinName" : "IndulgenceIcon",
+				"open" :
+				{
+					"name" : "Prevents", "alwaysOpen" : true
+				}
+			},
+			"campRewardIcon" :
+			{
+				"type" : 3,
+				"skinName" : "CampRewardIcon",
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true, "strengthOpen" : true
+				}
+			},
+			"treasureIcon" :
+			{
+				"type" : 3,
+				"skinName" : "TreasureIcon",
+				"open" :
+				{
+					"name" : "TreasureAttic", "alwaysOpen" : true
+				}
+			},
+			"vipExpIcon" :
+			{
+				"type" : 3,
+				"skinName" : "VipExpIcon",
+				"open" :
+				{
+					"name" : "VipHelper", "alwaysOpen" : true
+				}
+			},
+			"questionIcon" :
+			{
+				"type" : 3,
+				"skinName" : "StartQuestionIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "QuestionStartMod", "alwaysOpen" : true
+				}
+			},
+			"chestIcon" :
+			{
+				"type" : 3,
+				"skinName" : "ChestIcon",
+				"level":[5,10000],
+				"open" :
+				{
+					"name" : "Chest", "alwaysOpen" : true
+				}
+			},
+			"chest2Icon" :
+			{
+				"type" : 3,
+				"skinName" : "Chest2Icon",
+				"level":[5,10000],
+				"open" :
+				{
+					"name" : "Chest2", "alwaysOpen" : true
+				}
+			},
+			"fundIcon" :
+			{
+				"type" : 3,
+				"skinName" : "FundIcon",
+				"level":[1,10000],
+				"open" :
+				{
+					"name" : "Fund", "alwaysOpen" : true
+				}
+			},
+			"fundSIcon" :
+			{
+				"type" : 3,
+				"skinName" : "FundSIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "FundS", "alwaysOpen" : true
+				}
+			},
+			"FirstRechargeIcon" :
+			{
+				"type" : 3,
+				"skinName" : "FirstRechargeIcon",
+				"level":[1,10000],
+				"open" :
+				{
+					"name" : "FirstRecharge", "alwaysOpen" : true
+				}
+			},
+			"RechargeIcon" :
+			{
+				"type" : 3,
+				"skinName" : "RechargeIcon",
+				"level":[5,10000],
+				"open" :
+				{
+					"name" : "Recharge", "alwaysOpen" : true
+				}
+			},
+			"ConsumeIcon" :
+			{
+				"type" : 3,
+				"skinName" : "ConsumeIcon",
+				"level":[5,10000],
+				"open" :
+				{
+					"name" : "Consume", "alwaysOpen" : true
+				}
+			},
+			"BackIcon" :
+			{
+				"type" : 3,
+				"skinName" : "FirstServerIcon",
+				"level":[5,10000]
+			},
+			"questionRewardIcon" :
+			{
+				"type" : 3,
+				"skinName" : "QuestionRewardIcon",
+				"open" :
+				{
+					"name" : "QuestionRewardMod", "alwaysOpen" : true
+				}
+			},
+			"guildGiftIconS" :
+			{
+				"type" : 3,
+				"skinName" : "GuildGiftIcon",
+				"open" :
+				{
+					"name" : "GuildGift", "alwaysOpen" : true, "strengthOpen" : true
+				}
+			},
+			"taskAddFavorIcon":
+			{
+			       "type":3,
+			       "skinName":"AddFavorIcon",
+			       "open":
+			       {
+			             "name":"AddFavorite", "alwaysOpen" : true
+			       }
+
+			},
+			"SeventFariyIconName" ://七仙女
+			{
+				"type" : 3,
+				"skinName" : "SeventFOAddIcon",
+				"level":[38,10000],
+				"open" :
+				{
+					"name" : "SeventFairymaidenMod", "alwaysOpen" : true
+				}
+			},
+			"SeventFariyGetRewIconName" ://七仙女领取奖励
+			{
+				"type" : 3,
+				"skinName" : "SeventFOGetRewIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "SeventFairymaidenGetRewardMod", "alwaysOpen" : true
+				}
+			},
+			"OpenServerName" :// 开服活动Icon
+			{
+				"type" : 3,
+				"skinName" : "OpenServerIcon",
+				"level":[12,10000],
+				"open" :
+				{
+					"name" : "OpenServerActive", "alwaysOpen" : true
+				}
+			},
+			"VipDueIcon" :/*Vip到期Icon*/
+			{
+				"type" : 3,
+				"skinName" : "VipDueIcon",
+				"open" :
+				{
+					"name" : "VipDue", "alwaysOpen" : true
+				}
+			},
+			"vipHelperBookIcon" :/*小师妹Icon*/
+			{
+				"type" : 3,
+				"skinName" : "VipHelperBookIcon",
+				"open" :
+				{
+					"name" : "VipHelper", "alwaysOpen" : true
+				}
+			},
+			"vipHelperRoleIcon" :/*元神祝福奖励Icon*/
+			{
+				"type" : 3,
+				"skinName" : "VipHelperRoleIcon",
+				"open" :
+				{
+					"name" : "VipHelper", "alwaysOpen" : true
+				}
+			},
+			"supportIcon" :/*古剑辅助Icon*/
+			{
+				"type" : 3,
+				"skinName" : "SupportIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "Support", "alwaysOpen" : true
+				}
+			},
+			"canGetRewardIcon" :/*在线奖励可领取Icon*/
+			{
+				"type" : 3,
+				"skinName" : "CanGetRewardIcon",
+				"open" :
+				{
+					"name" : "OnlineReward", "alwaysOpen" : true
+				}
+			},
+			"onLineRewardIcon" :/*在线奖励剩余时间Icon*/
+			{
+				"type" : 3,
+				"skinName" : "OnLineRewardIcon",
+				"open" :
+				{
+					"name" : "OnlineReward", "alwaysOpen" : true
+				}
+			},
+			"getRewardTomorrowIcon" :/*在线奖励明日再来Icon*/
+			{
+				"type" : 3,
+				"skinName" : "GetRewardTomorrowIcon"
+			},
+			"SupportExpIcon" :/*元神祝福奖励Icon*/
+			{
+				"type" : 3,
+				"skinName" : "SupportExpIcon",
+				"open" :
+				{
+					"name" : "SupportReward", "alwaysOpen" : true
+				}
+			},
+			"godsRingIcon" : // 擂台活动
+			{
+				"type" : 3,
+				"skinName" : "GodsRingIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "ActivityEnter", "alwaysOpen" : true, "args":["","ChallengeEnterPanel"]
+				}
+			},
+			"godsRingRewardIcon":// 擂台奖励
+			{
+				"type" : 3,
+				"skinName" : "GodsRingRewardIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true
+				}
+			},
+
+			"mergeActivityIcon" ://合服活动
+			{
+				"type" : 3,
+				"skinName" : "MergeActivityIcon",
+				"level":[40,10000],
+				"open" :
+				{
+					"name" : "MergeActivity", "alwaysOpen" : true
+				}
+			},
+			"mergeSellIcon" ://合服特卖
+			{
+				"type" : 3,
+				"skinName" : "MergeSellIcon",
+				"level":[40,10000],
+				"open" :
+				{
+					"name" : "BargainShopsMod", "alwaysOpen" : true, "args":"merge"
+				}
+			},
+			"specialActivityIcon" ://夏日活动
+			{
+				"type" : 3,
+				"skinName" : "SpecialActivity_Icon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "SevenMonthActivity", "alwaysOpen" : true
+				}
+			},
+			"specialSellIcon" ://夏日特卖
+			{
+				"type" : 3,
+				"skinName" : "SpeciaSell_Icon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "BargainShopsMod", "alwaysOpen" : true, "args":"active"
+				}
+			},
+			"oneDiscountShopIcon" ://一折店
+			{
+				"type" : 3,
+				"skinName" : "oneDiscountShopIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "BargainShopsMod", "alwaysOpen" : true, "args":"oneDiscount"
+				}
+			},
+			"ConsumeBagIcon" ://消费有礼
+			{
+				"type" : 3,
+				"skinName" : "ConsumeBagIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "ConsumeBagMod", "alwaysOpen" : true
+				}
+			},
+			"StarTreasureHouseIcon" ://星魂藏宝阁
+			{
+				"type" : 3,
+				"skinName" : "StarTreasureHouseIcon",
+				"level":[40,10000],
+				"open" :
+				{
+					"name" : "TreasureHouse", "alwaysOpen" : true, "strengthOpen" : true
+				}
+			},
+			"MonthTreasureHouseIcon" ://月魄藏宝阁
+			{
+				"type" : 3,
+				"skinName" : "MonthTreasureHouseIcon",
+				"level":[40,10000],
+				"open" :
+				{
+					"name" : "TreasureHouse", "alwaysOpen" : true, "strengthOpen" : true
+				}
+			},
+			"crossServerGodsIcon" : // 跨服仙道会
+			{
+				"type" : 3,
+				"skinName" : "CrossServerGodsIcon",
+				"level":[45,10000],
+				"open" :
+				{
+					"name" : "ActivityEnter", "alwaysOpen" : true, "args":["","GodsArenaCrossEnterPanel"]
+				}
+			},
+			"crossServerGodsRewardIcon" : // 跨服仙道会奖励
+			{
+				"type" : 3,
+				"skinName" : "CrossServerGodsRewardIcon",
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true
+				}
+			},
+			"crossServerCampRewardIcon" : // 跨服阵营战奖励
+			{
+				"type" : 3,
+				"skinName" : "CrossServerCampRewardIcon",
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true
+				}
+			},			
+			"kingIcon" : // 帝王将相图标
+			{
+				"type" : 3,
+				"skinName" : "KingIcon",
+				"level":[41,10000],
+				"open" :
+				{
+					"name" : "KingMod", "alwaysOpen" : true
+				}
+			},
+			"cityWarIcon" : // 攻城战图标
+			{
+				"type" : 3,
+				"skinName" : "CityWarIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "CityWarEnterMod", "alwaysOpen" : true
+				}
+			},
+			"cityWarWelfareIcon" : // 攻城战福利图标
+			{
+				"type" : 3,
+				"skinName" : "CityWarWelfareIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "BargainShopsMod", "alwaysOpen" : true, "args":"cityWar"
+				}
+			},
+			"cityWarRewardIcon" : // 攻城战奖励图标
+			{
+				"type" : 3,
+				"skinName" : "CityWarRewardIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "PVEGetReward", "alwaysOpen" : true
+				}
+			},
+			"flowerRankIcon" ://鲜花排行榜
+			{
+				"type" : 3,
+				"skinName" : "flowerRankIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "FlowerRank", "alwaysOpen" : true
+				}
+			},
+			"ConsumeRankIcon" ://消费排行榜
+			{
+				"type" : 3,
+				"skinName" : "ConsumeRankIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "ActivityRank", "alwaysOpen" : true
+				}
+			},
+			"MingRenTangRankIcon" ://名人堂排行榜
+			{
+				"type" : 3,
+				"skinName" : "MingRenTangRankIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "MingRenTangRankMod", "alwaysOpen" : true
+				}
+			},
+			"GoldVipActivityIcon" ://黄金vip活动礼包
+			{
+				"type" : 3,
+				"skinName" : "GoldVipActivityIcon",
+				"level":[1,10000],
+				"open" :
+				{
+					"name" : "GoldVipGiftBag", "alwaysOpen" : true
+				}
+			},
+			"holidayBagsIcon"://开学礼包图标
+			{
+				"type" : 3,
+				"skinName" : "holidayBagsIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "HolidayBagsMod", "alwaysOpen" : true
+				}
+			},
+			"OtherIcon" : // 其他图标
+			{
+				"type" : 3,
+				"skinName" : "OtherIcon"
+			},
+			"WeekendSaleIcon" : //周末卖场
+			{
+				"type" : 3,
+				"skinName" : "WeekendSaleIcon",
+				"level":[15,10000],
+				"open" :
+				{
+					"name" : "WeekendSaleMod", "alwaysOpen" : true
+				}
+			},
+			"NewFeatureIcon" : //新功能介绍
+			{
+				"type" : 3,
+				"skinName" : "NewFeatureIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "NewFeature", "alwaysOpen" : true
+				}
+			},
+			"BufferinActivityIcon"://百服庆典图标
+			{
+				"type" : 3,
+				"skinName" : "BufferinActivityIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "BufferinActivityMod", "alwaysOpen" : true
+				}
+			},
+			"KillMonsterIcon"://人气杀怪活动图标
+			{
+				"type" : 3,
+				"skinName" : "KillMonsterIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "KillMonsterActivityMod", "alwaysOpen" : true
+				}
+			},
+			"MonsterCardIcon"://幻兽来袭图标
+			{
+				"type" : 3,
+				"skinName" : "MonsterCardIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "MonsterCardMod", "alwaysOpen" : true
+				}
+			},
+			"PlatformIcon"://平台图标
+			{
+				"type" : 3,
+				"skinName" : "PlatformIcon",
+				"level":[30,10000]
+			},
+			"ChouJiangIcon"://双十一抽奖图标
+			{
+				"type" : 3,
+				"skinName" : "ChouJiangIcon",
+				"level":[30,10000]
+			},
+			"GuildConsumeIcon"://仙盟消费奖励
+			{
+				"type" : 3,
+				"skinName" : "GuildConsumeIcon",
+				"level":[30,10000]
+			},
+			"ActivityConsumeIcon"://消费图标
+			{
+				"type" : 3,
+				"skinName" : "ActivityConsumeIcon",
+				"level":[30,10000]
+			},
+			"ActivityRechargeIcon"://充值图标
+			{
+				"type" : 3,
+				"skinName" : "ActivityRechargeIcon",
+				"level":[30,10000]
+			},
+			"ActivityMarryIcon"://古剑婚戒图标
+			{
+				"type" : 3,
+				"skinName" : "ActivityMarryIcon",
+				"level":[30,10000]
+			},
+			"LuckWheelIcon" : // 幸运转盘图标
+			{
+				"type" : 3,
+				"skinName" : "LuckWheelIcon",
+				"level":[30,10000],
+				"open" :
+				{
+					"name" : "LuckWheel", "alwaysOpen" : true
+				}
+			},
+			"huaShenCopyIcon" : // 身外化身副本图标
+			{
+				"type" : 3,
+				"skinName" : "HuaShenCopyIcon",
+				"level":[54,10000],
+				"open" :
+				{
+					"name" : "HuaShenCopy", "alwaysOpen" : true
+				}
+			},
+			"SWHSRankIcon" ://身外化身排行榜图标
+			{
+				"type" : 3,
+				"skinName" : "SWHSRankIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "ActivityRank", "alwaysOpen" : true
+				}
+			},
+			"MountSpiritRankIcon" ://坐骑化灵排行榜图标
+			{
+				"type" : 3,
+				"skinName" : "MountSpiritRankIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "ActivityRank", "alwaysOpen" : true
+				}
+			},
+			"godsRankIcon" ://封神榜图标
+			{
+				"type" : 3,
+				"skinName" : "GodsRankIcon",
+				"level":[53,10000],
+				"open" :
+				{
+					"name" : "GodsRank", "alwaysOpen" : true
+				}
+			},
+			"OpenServerRebateName" :// 开服返利活动Icon
+			{
+				"type" : 3,
+				"skinName" : "OpenServerRebateName",
+				"level":[12,10000],
+				"open" :
+				{
+					"name" : "OpenServerRebateActive", "alwaysOpen" : true
+				}
+			},
+			"PrivilegeIcon" ://至尊特权
+			{
+				"type" : 3,
+				"skinName" : "PrivilegeIcon",
+				"level":[5,10000],
+				"open" :
+				{
+					"name" : "Privilege", "alwaysOpen" : true
+				}
+			},
+			"SBRankIcon" ://神兵排行榜图标
+			{
+				"type" : 3,
+				"skinName" : "SBRankIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "ActivityRank", "alwaysOpen" : true
+				}
+			},
+			"OldPlayerReturnIcon" ://仙友回归活动
+			{
+				"type" : 3,
+				"skinName" : "OldPlayerReturnIcon",
+				"level":[20,10000],
+				"open" :
+				{
+					"name" : "OldPlayerReturnActivity", "alwaysOpen" : true
+				}
+			},
+			"VipMemberYYIcon": /*YY会员图标*/
+			{
+			       "type":3,
+			       "skinName":"VipMemberYYIcon",
+			       "level":[30,10000],
+			       "open":
+			       {
+			             "name":"YYVipMemberMod", "alwaysOpen" : true 
+			       }
+			},
+			"VIPGift360Icon": /*360 VIP领取奖励*/
+			{
+			       "type":3,
+			       "skinName":"VIPGift360Icon",
+			       "level":[30,10000],
+			       "open":
+			       {
+			             "name":"VIPGift360", "alwaysOpen" : true 
+			       }
+			}
+		}
+	},
+	"skill" :
+	{
+		//技能相关配置
+		"basicKey":"左键",
+		"qKey":"Q",
+		"wKey":"W",
+		"eKey":"E",
+		"key" : ["1", "2", "3", "4", "5", "6", "7", "8"] ,
+		"skillTab" :
+		{
+			//1,2,3对应三种职业的技能，panel对应技能所在的面板 ,container容器，每个职业的三个面板对应1007，1008，1009三个容器
+			
+			"2" : [ 
+						
+						{"type":1001,"level":1},
+						{"type":1002,"level":1},
+						{"type":1005,"level":1},
+						{"type":1001,"level":2},
+						{"type":1002,"level":2},
+						{"type":1007,"level":1},
+						{"type":1007,"level":2},
+						{"type":1001,"level":3},
+						{"type":1018,"level":1},
+						{"type":1002,"level":3},
+						{"type":1005,"level":2},
+						{"type":1011,"level":1},
+						{"type":1007,"level":3},
+						{"type":1001,"level":4},
+						{"type":1018,"level":2},
+						{"type":1005,"level":3},
+						{"type":1020,"level":1},
+						{"type":1002,"level":4},
+						{"type":1011,"level":2},
+						{"type":1007,"level":4},
+						{"type":1001,"level":5},
+						{"type":1018,"level":3},
+						{"type":1004,"level":1},
+						{"type":1005,"level":4},
+						{"type":1020,"level":2},
+						{"type":1019,"level":1},
+						{"type":1002,"level":5},
+						{"type":1001,"level":6},
+						{"type":1007,"level":5},
+						{"type":1011,"level":3},
+						{"type":1018,"level":4},
+						{"type":1004,"level":2},
+						{"type":1005,"level":5},
+						{"type":1020,"level":3},
+						{"type":1019,"level":2},
+						{"type":1001,"level":7},
+						{"type":1002,"level":6},
+						{"type":1018,"level":5},
+						{"type":1011,"level":4},
+						{"type":1007,"level":6},
+						{"type":1004,"level":3},
+						{"type":1005,"level":6},
+						{"type":1020,"level":4},
+						{"type":1019,"level":3},
+						{"type":1001,"level":8},
+						{"type":1002,"level":7},
+						{"type":1018,"level":6},
+						{"type":1007,"level":7},
+						{"type":1011,"level":5},
+						{"type":1004,"level":4},
+						{"type":1005,"level":7},
+						{"type":1020,"level":5},
+						{"type":1019,"level":4},
+						{"type":1001,"level":9},
+						{"type":1002,"level":8},
+						{"type":1018,"level":7},
+						{"type":1007,"level":8},
+						{"type":1011,"level":6},
+						{"type":1004,"level":5},
+						{"type":1005,"level":8},
+						{"type":1020,"level":6},
+						{"type":1019,"level":5},
+						{"type":1001,"level":10},
+						{"type":1002,"level":9},
+						{"type":1018,"level":8},
+						{"type":1007,"level":9},
+						{"type":1011,"level":7},
+						{"type":1004,"level":6},
+						{"type":1005,"level":9},
+						{"type":1020,"level":7},
+						{"type":1002,"level":10},
+						{"type":1018,"level":9},
+						{"type":1007,"level":10},
+						{"type":1011,"level":8},
+						{"type":1004,"level":7},
+						{"type":1005,"level":10},
+						{"type":1018,"level":10},
+						{"type":1019,"level":6},
+						{"type":1001,"level":11},
+						{"type":1002,"level":11},
+						{"type":1018,"level":11},
+						{"type":1007,"level":11},
+						{"type":1011,"level":9},
+						{"type":1004,"level":8},
+						{"type":1005,"level":11},
+						{"type":1020,"level":8},
+						{"type":1019,"level":7},
+						{"type":1001,"level":12},
+						{"type":1002,"level":12},
+						{"type":1018,"level":12},
+						{"type":1007,"level":12},
+						{"type":1011,"level":10},
+						{"type":1004,"level":9},
+						{"type":1005,"level":12},
+						{"type":1020,"level":9},
+						{"type":1019,"level":8}
+
+
+
+				
+			] ,
+			"1" : [ 
+				
+				
+				{"type":2001,"level":1},
+				{"type":2008,"level":1},
+				{"type":2005,"level":1},
+				{"type":2001,"level":2},
+				{"type":2008,"level":2},
+				{"type":2007,"level":1},
+				{"type":2007,"level":2},
+				{"type":2001,"level":3},
+				{"type":2018,"level":1},
+				{"type":2008,"level":3},
+				{"type":2005,"level":2},
+				{"type":2011,"level":1},
+				{"type":2007,"level":3},
+				{"type":2001,"level":4},
+				{"type":2018,"level":2},
+				{"type":2005,"level":3},
+				{"type":2013,"level":1},
+				{"type":2008,"level":4},
+				{"type":2011,"level":2},
+				{"type":2007,"level":4},
+				{"type":2001,"level":5},
+				{"type":2018,"level":3},
+				{"type":2004,"level":1},
+				{"type":2005,"level":4},
+				{"type":2013,"level":2},
+				{"type":2019,"level":1},
+				{"type":2008,"level":5},
+				{"type":2001,"level":6},
+				{"type":2007,"level":5},
+				{"type":2011,"level":3},
+				{"type":2018,"level":4},
+				{"type":2004,"level":2},
+				{"type":2005,"level":5},
+				{"type":2013,"level":3},
+				{"type":2019,"level":2},
+				{"type":2001,"level":7},
+				{"type":2008,"level":6},
+				{"type":2018,"level":5},
+				{"type":2011,"level":4},
+				{"type":2007,"level":6},
+				{"type":2004,"level":3},
+				{"type":2005,"level":6},
+				{"type":2013,"level":4},
+				{"type":2019,"level":3},
+				{"type":2001,"level":8},
+				{"type":2008,"level":7},
+				{"type":2018,"level":6},
+				{"type":2007,"level":7},
+				{"type":2011,"level":5},
+				{"type":2004,"level":4},
+				{"type":2005,"level":7},
+				{"type":2013,"level":5},
+				{"type":2019,"level":4},
+				{"type":2001,"level":9},
+				{"type":2008,"level":8},
+				{"type":2018,"level":7},
+				{"type":2007,"level":8},
+				{"type":2011,"level":6},
+				{"type":2004,"level":5},
+				{"type":2005,"level":8},
+				{"type":2013,"level":6},
+				{"type":2019,"level":5},
+				{"type":2001,"level":10},
+				{"type":2008,"level":9},
+				{"type":2018,"level":8},
+				{"type":2007,"level":9},
+				{"type":2011,"level":7},
+				{"type":2004,"level":6},
+				{"type":2005,"level":9},
+				{"type":2013,"level":7},
+				{"type":2008,"level":10},
+				{"type":2018,"level":9},
+				{"type":2007,"level":10},
+				{"type":2011,"level":8},
+				{"type":2004,"level":7},
+				{"type":2005,"level":10},
+				{"type":2018,"level":10},
+				{"type":2019,"level":6},
+						{"type":2001,"level":11},
+						{"type":2008,"level":11},
+						{"type":2018,"level":11},
+						{"type":2007,"level":11},
+						{"type":2011,"level":9},
+						{"type":2004,"level":8},
+						{"type":2005,"level":11},
+						{"type":2013,"level":8},
+						{"type":2019,"level":7},
+						{"type":2001,"level":12},
+						{"type":2008,"level":12},
+						{"type":2018,"level":12},
+						{"type":2007,"level":12},
+						{"type":2011,"level":10},
+						{"type":2004,"level":9},
+						{"type":2005,"level":12},
+						{"type":2013,"level":9},
+						{"type":2019,"level":8}
+
+
+				
+			] ,
+			"3" : [ 
+				
+				{"type":3001,"level":1},
+				{"type":3002,"level":1},
+				{"type":3005,"level":1},
+				{"type":3001,"level":2},
+				{"type":3002,"level":2},
+				{"type":3007,"level":1},
+				{"type":3007,"level":2},
+				{"type":3001,"level":3},
+				{"type":3011,"level":1},
+				{"type":3002,"level":3},
+				{"type":3005,"level":2},
+				{"type":3018,"level":1},
+				{"type":3007,"level":3},
+				{"type":3001,"level":4},
+				{"type":3011,"level":2},
+				{"type":3005,"level":3},
+				{"type":3021,"level":1},
+				{"type":3002,"level":4},
+				{"type":3018,"level":2},
+				{"type":3007,"level":4},
+				{"type":3001,"level":5},
+				{"type":3011,"level":3},
+				{"type":3004,"level":1},
+				{"type":3005,"level":4},
+				{"type":3021,"level":2},
+				{"type":3019,"level":1},
+				{"type":3002,"level":5},
+				{"type":3001,"level":6},
+				{"type":3007,"level":5},
+				{"type":3018,"level":3},
+				{"type":3011,"level":4},
+				{"type":3004,"level":2},
+				{"type":3005,"level":5},
+				{"type":3021,"level":3},
+				{"type":3019,"level":2},
+				{"type":3001,"level":7},
+				{"type":3002,"level":6},
+				{"type":3011,"level":5},
+				{"type":3018,"level":4},
+				{"type":3007,"level":6},
+				{"type":3004,"level":3},
+				{"type":3005,"level":6},
+				{"type":3021,"level":4},
+				{"type":3019,"level":3},
+				{"type":3001,"level":8},
+				{"type":3002,"level":7},
+				{"type":3011,"level":6},
+				{"type":3007,"level":7},
+				{"type":3018,"level":5},
+				{"type":3004,"level":4},
+				{"type":3005,"level":7},
+				{"type":3021,"level":5},
+				{"type":3019,"level":4},
+				{"type":3001,"level":9},
+				{"type":3002,"level":8},
+				{"type":3011,"level":7},
+				{"type":3007,"level":8},
+				{"type":3018,"level":6},
+				{"type":3004,"level":5},
+				{"type":3005,"level":8},
+				{"type":3021,"level":6},
+				{"type":3019,"level":5},
+				{"type":3001,"level":10},
+				{"type":3002,"level":9},
+				{"type":3011,"level":8},
+				{"type":3007,"level":9},
+				{"type":3018,"level":7},
+				{"type":3004,"level":6},
+				{"type":3005,"level":9},
+				{"type":3021,"level":7},
+				{"type":3002,"level":10},
+				{"type":3011,"level":9},
+				{"type":3007,"level":10},
+				{"type":3018,"level":8},
+				{"type":3004,"level":7},
+				{"type":3005,"level":10},
+				{"type":3011,"level":10},
+				{"type":3019,"level":6},
+						{"type":3001,"level":11},
+						{"type":3002,"level":11},
+						{"type":3011,"level":11},
+						{"type":3007,"level":11},
+						{"type":3018,"level":9},
+						{"type":3004,"level":8},
+						{"type":3005,"level":11},
+						{"type":3021,"level":8},
+						{"type":3019,"level":7},
+						{"type":3001,"level":12},
+						{"type":3002,"level":12},
+						{"type":3011,"level":12},
+						{"type":3007,"level":12},
+						{"type":3018,"level":10},
+						{"type":3004,"level":9},
+						{"type":3005,"level":12},
+						{"type":3021,"level":9},
+						{"type":3019,"level":8}
+
+			]
+		},
+		"battleScheme" : [[1, 0] , [5, 5000] , [30, 200000000]] ,
+		"battleSkill"  : 3600,
+		"sysScheme" :
+		{
+			//推荐方案配置
+			"open" : [1, 20000] , //打开[等级，声望]
+			"scheme" : [[1, 0] , [1, 20000] , [1, 50000] , [1, 100000]] //方案出现配置，0杀怪，1输出，2控制，3抗性
+			
+		}
+	},
+	"shortcutKey":{//快捷键
+		"Role"  :{
+			"tooltip":"人物(<font color='#ffff00'>C</font>)",
+			"key":"67",
+			"text":"人物  C",
+			"open":{"name" : "Role"}
+		},
+		"Bag"   :{
+			"tooltip":"背包(<font color='#ffff00'>B</font>)",
+			"key":"66",
+			"text":"背包  B",
+			"open":{"name" : "Bag"}
+		},
+		"SkillSetting" :{
+			"tooltip":"技能(<font color='#ffff00'>V</font>)",
+			"key":"86",
+			"text":"技能  V",
+			"open":{"name" : "SkillSetting"}
+		},
+		"MartialArt":{
+			"tooltip":"仙途(<font color='#ffff00'>F</font>)",
+			"key":"70",
+			"text":"仙途  F",
+			"open":{"name" : "MartialArt"}
+		},
+		"Pet"   :{
+			"tooltip":"宠物(<font color='#ffff00'>P</font>)",
+			"key":"80",
+			"text":"宠物  P",
+			"open":{"name" : "Pet"}
+		},
+		"FriendMod":{
+			"tooltip":"好友(<font color='#ffff00'>N</font>)",
+			"key":"78",
+			"text":"好友  N",
+			"open":{"name" : "FriendMod"}
+		},
+		"GuildMod":{
+			"tooltip":"仙盟(<font color='#ffff00'>X</font>)",
+			"key":"88",
+			"text":"仙盟  X",
+			"open":{"name" : "GuildMod"}
+		},
+		"TaskMod":{
+			"tooltip":"任务(<font color='#ffff00'>L</font>)",
+			"key":"76",
+			"text":"任务  L",
+			"open":{"name" : "TaskMod"}
+		},
+		"onHook":{
+			"tooltip":"挂机(<font color='#ffff00'>A</font>)",
+			"tooltip":"挂机(<font color='#ffff00'>A</font>)",
+			"key":"65",
+			"text":"挂机  A"
+		},
+		"Mount":{
+			"tooltip":"骑乘(<font color='#ffff00'>D</font>)",
+			"key":"68",
+			"text":"骑乘  D"
+		},
+		"Composite":{
+			"tooltip":"合成(<font color='#ffff00'>H</font>)",
+			"key":"72",
+			"text":"合成  H",
+			"open":{"name" : "Composite"}
+		},
+		"Gem":{
+			"tooltip":"宝石(<font color='#ffff00'>Y</font>)",
+			"key":"89",
+			"text":"宝石  Y",
+			"open":{"name" : "Gem"}
+		},
+		"Equip":{
+			"tooltip":"炼器(<font color='#ffff00'>G</font>)",
+			"key":"71",
+			"text":"炼器  G",
+			"open":{"name" : "Equip"}
+		},
+		"Rank":{
+			"tooltip":"排行(<font color='#ffff00'>U</font>)",
+			"key":"85",
+			"text":"排行  U",
+			"open":{"name" : "Rank"}
+		},
+		"MailMod":{
+			"tooltip":"邮件(<font color='#ffff00'>I</font>)",
+			"key":"73",
+			"text":"邮件   I",
+			"open":{"name" : "MailMod"}
+		},
+		"Team":{
+			"tooltip":"组队(<font color='#ffff00'>T</font>)",
+			"key":"84",
+			"text":"组队  T",
+			"open":{"name" : "Team"}
+		},
+		"MarketMod":{
+			"tooltip":"市场(<font color='#ffff00'>K</font>)",
+			"key":"75",
+			"text":"市场  K",
+			"open":{"name" : "MarketMod"}
+		},
+		"ShopMallMod":{
+			"tooltip":"商城(<font color='#ffff00'>O</font>)",
+			"key":"79",
+			"text":"商城  O",
+			"open":{"name" : "ShopMallMod"}
+		},
+		"MiddleWorld":{
+			"tooltip":"地图(<font color='#ffff00'>M</font>)",
+			"key":"77",
+			"text":"地图  M",
+			"open":{"name" : "MiddleWorld"}
+		},
+		"Sitting"	:{
+			"tooltip":"打坐(<font color='#ffff00'>S</font>)",
+			"key":"83",
+			"text":"打坐  S"
+		},
+		"DailyMod":{
+			"tooltip":"日常(<font color='#ffff00'>，</font>)",
+			"key":"188",
+			"text":"日常  ,",
+			"open":{"name" : "DailyMod"}
+		},
+		"Esc":{
+			"key":"27",
+			"text":"关闭界面   ESC"
+		},
+		"hidePlayer":{
+			"key":"120",
+			"text":"屏蔽玩家   F9"
+		},
+		"changeTarget":{
+			"key":"9",
+			"text":"切换目标   Tab"
+		},
+		"pickUp":{
+			"key":"90",
+			"text":"一键拾取  Z"
+		},
+		"godDemon":{
+			"key":"32",
+			"text":"神魔变  空格"
+		},
+		"chatFocus":{
+			"key":"13",
+			"text":""
+		},
+		"callBackPet":{
+			"key":"74",
+			"text":"召唤/收回宠物     J"
+		},
+		"skill_99":{
+			"key":"192",
+			"text":""
+		},
+		"skill_100":{
+			"key":"81",
+			"text":""
+		},
+		"skill_101":{
+			"key":"87",
+			"text":""
+		},
+		"skill_102":{
+			"key":"69",
+			"text":""
+		},
+		"skill_qte":{
+			"key":"82",
+			"text":""
+		},
+		"skill_0":{
+			"key":"49,97",
+			"text":""
+		},
+		"skill_1":{
+			"key":"50,98",
+			"text":""
+		},
+		"skill_2":{
+			"key":"51,99",
+			"text":""
+		},
+		"skill_3":{
+			"key":"52,100",
+			"text":""
+		},
+		"skill_4":{
+			"key":"53,101",
+			"text":""
+		},
+		"skill_5":{
+			"key":"54,102",
+			"text":""
+		},
+		"skill_6":{
+			"key":"55,103",
+			"text":""
+		},
+		"skill_7":{
+			"key":"56,104",
+			"text":""
+		},
+		"skill_8":{
+			"key":"C49,C97",
+			"text":""
+		},
+		"skill_9":{
+			"key":"C50,C98",
+			"text":""
+		},
+		"skill_10":{
+			"key":"C51,C99",
+			"text":""
+		},
+		"skill_11":{
+			"key":"C52,C100",
+			"text":""
+		},
+		"skill_12":{
+			"key":"C53,C101",
+			"text":""
+		},
+		"skill_13":{
+			"key":"C54,C102",
+			"text":""
+		},
+		"skill_14":{
+			"key":"C55,C103",
+			"text":""
+		},
+		"skill_15":{
+			"key":"C56,C104",
+			"text":""
+		}
+
+	},
+	"crossCfg":[  //渡劫副本的提示,当玩家战斗力在一定阶段时比如>2000,小于4000,此时会认为在2000的阶段。当玩家所在的阶段中的value属性存在时则会提示。
+		{"fight":0},
+		{"fight":5000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":6000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":7000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":8000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":9000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":10000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":11000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":12000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":13000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":14000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":15000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":18000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":20000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"},
+		{"fight":30000,"value":"您已战力精进，可以尝试再次渡劫，<br>渡劫可使您<font color='#ffff00'>战力提升、获得渡劫称号！</font><br>(*^__^*) 嘻嘻……快来渡劫吧！"}
+	],
+	"bibleCfg":[  //战技副本的提示,当功法等级达到固定值时弹出提示
+		{"level":30,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":40,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":50,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":60,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":70,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":80,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":90,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":100,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":110,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":120,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":125,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":130,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":135,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":140,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":145,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":150,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":155,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":165,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":175,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":185,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":195,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":200,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":205,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":215,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":230,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":240,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"},
+		{"level":250,"value":"您的仙途已修炼至新的等级，可以去鸿蒙圣境挑战新的战技师<font color='#ffff00'>领悟新战技了！</font><br>(*^__^*) 嘻嘻……快来挑战吧！"}
+	]
+}

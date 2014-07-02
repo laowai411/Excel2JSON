@@ -1,0 +1,270 @@
+{
+/*字段说明
+categoryId		分类ID
+categoryName	分类名称
+rankSubList		子分类（榜单）列表
+	rankId			榜单ID
+	rankingName		榜单名称
+	cols			榜单表头列表
+	detailType		详细信息类型（0-无，1-人物形象展示，2-宠物形象展示，3-坐骑形象展示,4-神魔展示）
+*/
+    "1": {
+        "categoryId": 1,
+        "categoryName": "人物榜",
+        "rankSubList": [
+            {
+                "rankId": 1,
+                "rankingName": "战力排行榜",
+                "cols": ["排名","玩家姓名","仙盟","职业","阵营","战力","升降"],
+                "detailType": 1,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 2,
+                "rankingName": "等级排行榜",
+                "cols": ["排名","玩家姓名","仙盟","职业","阵营","等级","升降"],
+                "detailType": 1,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 1
+            },
+            {
+                "rankId": 3,
+                "rankingName": "声望排行榜",
+                "cols": ["排名","玩家姓名","仙盟","职业","阵营","声望","升降"],
+                "detailType": 1,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 2
+            },
+            {
+                "rankId": 16,
+                "rankingName": "渡劫排行榜",
+                "cols": ["排名","玩家姓名","职业","阵营","仙劫","升降"],
+                "detailType": 1,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 3
+            },
+			{
+                "rankId": 20,
+                "rankingName": "亲密度排行榜",
+                "cols": ["排名","男方名字","女方名字","亲密度","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 4
+            }
+        ]
+    },
+    "2": {
+        "categoryId": 2,
+        "categoryName": "装备榜",
+        "rankSubList": [
+            {
+                "rankId": 5,
+                "rankingName": "武器排行榜",
+                "cols": ["排名","武器名称","装备评分","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的武器排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 6,
+                "rankingName": "防具排行榜",
+                "cols": ["排名","防具名称","装备评分","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的防具排名：",
+                "rankIndex": 1
+            },
+			{
+                "rankId": 19,
+                "rankingName": "仙器排行榜",
+                "cols": ["排名","仙器名称","装备评分","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的仙器排名：",
+                "rankIndex": 2
+            },
+            {
+                "rankId": 7,
+                "rankingName": "饰品排行榜",
+                "cols": ["排名","饰品名称","装备评分","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的饰品排名：",
+                "rankIndex": 3
+            },
+            {
+                "rankId": 8,
+                "rankingName": "法宝排行榜",
+                "cols": ["排名","法宝名称","装备评分","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的法宝排名：",
+                "rankIndex": 4
+            },
+            {
+                "rankId": 9,
+                "rankingName": "时装收集排行榜",
+                "cols": ["排名","时装总评分","时装件数","主人姓名","职业","阵营","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您的收集时装数排名：",
+                "rankIndex": 5
+            }
+        ]
+    },
+    "3": {
+        "categoryId": 3,
+        "categoryName": "宠物榜",
+        "rankSubList": [
+            {
+                "rankId": 10,
+                "rankingName": "宠物战力排行榜",
+                "cols": ["排名","宠物名","主人姓名","宠物战力","升降"],
+                "detailType": 2,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的宠物排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 11,
+                "rankingName": "宠物资质排行榜",
+                "cols": ["排名","宠物名","主人姓名","宠物资质","升降"],
+                "detailType": 2,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的宠物排名：",
+                "rankIndex": 1
+            },
+            {
+                "rankId": 12,
+                "rankingName": "宠物成长排行榜",
+                "cols": ["排名","宠物名","主人姓名","宠物成长","升降"],
+                "detailType": 2,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的宠物排名：",
+                "rankIndex": 2
+            },
+            {
+                "rankId": 13,
+                "rankingName": "宠物灵性排行榜",
+                "cols": ["排名","宠物名","主人姓名","宠物灵性","升降"],
+                "detailType": 2,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的宠物排名：",
+                "rankIndex": 3
+            },
+              {
+                "rankId": 21,
+                "rankingName": "宠物装备排行榜",
+                "cols": ["排名","宠物名","主人姓名","装备评分","升降"],
+                "detailType": 2,
+                "tipWord": "  ",
+                "rankTip": "您最优秀的宠物排名：",
+                "rankIndex": 4
+            }
+        ]
+    },
+    "4": {
+        "categoryId": 4,
+        "categoryName": "副本榜",
+        "rankSubList": [
+            {
+                "rankId": 14,
+                "rankingName": "万兽塔",
+                "cols": ["排名","副本名","层数","玩家姓名","职业","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您的副本排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 15,
+                "rankingName": "三千幻界",
+                "cols": ["排名","副本名","层数","玩家姓名","职业","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您的副本排名：",
+                "rankIndex": 1
+            }
+        ]
+    },
+    "5": {
+        "categoryId": 5,
+        "categoryName": "坐骑榜",
+        "rankSubList": [
+            {
+                "rankId": 17,
+                "rankingName": "血脉排行榜",
+                "cols": ["排名","主人姓名","坐骑","血脉等级","升降"],
+                "detailType": 3,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 18,
+                "rankingName": "幻灵排行榜",
+                "cols": ["排名","主人姓名","坐骑","幻灵评分","升降"],
+                "detailType": 3,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 1
+            }
+        ]
+    },
+    
+    "6": {
+        "categoryId": 6,
+        "categoryName": "神魔榜",
+        "rankSubList": [
+            {
+                "rankId": 22,
+                "rankingName": "神魔升级",
+                "cols": ["排名","玩家姓名","仙盟","职业","阵营","神魔","升降"],
+                "detailType": 4,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 23,
+                "rankingName": "神魔进化",
+                "cols": ["排名","玩家姓名","仙盟","职业","阵营","评分","升降"],
+                "detailType": 4,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 1
+            }
+        ]
+    },
+    "7": {
+        "categoryId": 7,
+        "categoryName": "化身榜",
+        "rankSubList": [
+            {
+                "rankId": 24,
+                "rankingName": "化身等级排行榜",
+                "cols": ["排名","玩家姓名","化身等级","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 0
+            },
+            {
+                "rankId": 25,
+                "rankingName": "炼体排行榜",
+                "cols": ["排名","玩家姓名","炼体评分","升降"],
+                "detailType": 0,
+                "tipWord": "  ",
+                "rankTip": "您当前排名：",
+                "rankIndex": 1
+            }
+        ]
+    }
+}

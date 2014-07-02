@@ -1,0 +1,177 @@
+[
+{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 9,       
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+ {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 9,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+	{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 9,
+		 "data":
+		 {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	}, 
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 9,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+        
+    },
+	    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 9, 
+         "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "纪巫玉",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_60060045.png",
+        	"talkStr": "自古天赋异禀机缘爆棚之人能炼化灵兽，莫非你就是那大运之人？"
+        }
+    },
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 9, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1022,
+					"type":1611202561,
+					"gender":1,
+					"direction":5,
+					"action":1,
+					"clothes":1610940434,
+					"x":185,
+					"y":-200,
+					"hp":100,
+					"objName":"仙宠蛋"
+				} 
+        
+    },
+	    { 
+	    "className":"taskPlot.filters.ObjFallDownFilter",  
+        "plotId": 9,  
+		"data":{//3：下落;5：角色移动
+					"objId":1022,
+					"startPicPt":{"x":185,"y":-200},
+					"destPicPt":{"x":185,"y":97},
+					"speed":300,
+					"ghostShadow":1,
+					"shake":1
+				} 
+        
+    },
+	{
+        "className":"taskPlot.filters.ScreenShakeFilter", 
+        "plotId": 9, 
+        "data":{//震屏数据
+					"strength":6,
+					"attenuation":1,
+					"rate":100,
+					"duration":300
+				}
+	},
+	{
+        "className":"taskPlot.filters.AddBubbleToObjFilter",
+        "plotId": 9, 
+        "mouseSetting":"stage",
+  		"countDownSetting":500,
+        "data":[
+					{
+						"objId":0,
+						"talk":"<t>color###！！！</t>", //传闻配置的格式
+						"x":-60,
+						"y":-165
+					}
+					]
+    },	
+	{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 9, 
+        "countDownSetting":3000, 
+        "mouseSetting":"stage",
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":245,
+					"y":57,
+					"skinName":"GuideClickGetPet",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				} 
+        
+    },
+	    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 9,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetPet",
+					"type":"swf"
+				}
+ 
+    },
+     {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 9,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1022
+		} 
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 9,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 9,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},   
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 9,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 9,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

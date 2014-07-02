@@ -1,0 +1,72 @@
+﻿[
+    {
+        "mapId": 302,
+        "id": 1,
+        "mapSrc": "skin/ui/image/fairyChild/qingyunmen.jpg",
+        "openLevel": 8,
+        "npcId": "0_30023001"
+    },
+    {
+        "mapId": 303,
+        "id": 2,
+        "mapSrc": "skin/ui/image/fairyChild/xuanyuancheng.jpg",
+        "openLevel": 15,
+        "npcId": "0_30033001"
+    },
+    {
+        "mapId": 304,
+        "id": 3,
+        "mapSrc": "skin/ui/image/fairyChild/xianzonglin.jpg",
+        "openLevel": 18,
+        "npcId": "0_30043001"
+    },
+    {
+        "mapId": 305,
+        "id": 4,
+        "mapSrc": "skin/ui/image/fairyChild/leiyinsi.jpg",
+        "openLevel": 20,
+        "npcId": "0_30053001"
+    },
+    {
+        "mapId": 306,
+        "id": 5,
+        "mapSrc": "skin/ui/image/fairyChild/huqishan.jpg",
+        "openLevel": 20,
+        "npcId": "0_30063001"
+    },
+    {
+        "mapId": 307,
+        "id": 6,
+        "mapSrc": "skin/ui/image/fairyChild/nanzhao.jpg",
+        "openLevel": 28,
+        "npcId": "0_30073001"
+    },
+    {
+        "mapId": 308,
+        "id": 7,
+        "mapSrc": "skin/ui/image/fairyChild/qionghuapai.jpg",
+        "openLevel": 37,
+        "npcId": "0_30083001"
+    },
+    {
+        "mapId": 309,
+        "id": 8,
+        "mapSrc": "skin/ui/image/fairyChild/yumenguan.jpg",
+        "openLevel": 38,
+        "npcId": "0_30093001"
+    },
+    {
+        "mapId": 203,
+        "id": 9,
+        "mapSrc": "skin/ui/image/fairyChild/tongtianling.jpg",
+        "openLevel": 25,
+        "npcId": "0_20033004"
+    },
+    {
+        "mapId": 503,
+        "id": 10,
+        "mapSrc": "skin/ui/image/fairyChild/huanggujindi.jpg",
+        "openLevel": 25,
+        "npcId": "0_50033001"
+    }
+]

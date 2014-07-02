@@ -1,0 +1,22 @@
+[
+     { 
+          "startGrade":0,
+	  "endGrade":5999,
+          "level":3
+     },
+     { 
+          "startGrade":6000,
+	  "endGrade":7000,
+          "level":2
+     },
+     { 
+          "startGrade":7001,
+	  "endGrade":8500,
+          "level":1
+     },
+     { 
+          "startGrade":8500,
+	  "endGrade":80000,
+          "level":0
+     }
+]

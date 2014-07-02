@@ -1,0 +1,14 @@
+{//当有这个任务时，NPC进入副本按钮会有tips taskId:tipStr
+     "10015":"进入<font color='#00ff00'>幻月洞府</font>寻找<font color='#ff0000'>青云掌门</font>",//
+	 "11022":"进入<font color='#00ff00'>幻月洞府</font>寻找<font color='#ff0000'>青云掌门</font>",
+	 "11023":"进入<font color='#00ff00'>幻月洞府</font>寻找<font color='#ff0000'>青云掌门</font>",
+	 "10056":"进入<font color='#00ff00'>凤凰舟</font>消灭邪恶的<font color='#ff0000'>木德圣母</font>",
+	 "11026":"进入<font color='#00ff00'>凤凰舟</font>消灭邪恶的<font color='#ff0000'>木德圣母</font>",
+	 "11027":"进入<font color='#00ff00'>凤凰舟</font>消灭邪恶的<font color='#ff0000'>木德圣母</font>",
+	 "10067":"进入<font color='#00ff00'>轩辕秘境</font>一探究竟",
+	 "11040":"进入<font color='#00ff00'>舍利台</font>消灭入魔的<font color='#ff0000'>法海</font>",
+	 "10123":"进入<font color='#00ff00'>银月祭坛</font>击退<font color='#ff0000'>啸月玄帝</font>",
+	 "10149":"进入<font color='#00ff00'>娲皇崖</font>寻找<font color='#ff0000'>黑苗巫王</font>",
+	 "10160":"进入<font color='#00ff00'>困龙渊</font>消灭<font color='#ff0000'>邪剑仙</font>",
+	 "10174":"进入<font color='#00ff00'>祈雨神坛</font>消灭<font color='#ff0000'>赤骨蝎王</font>"
+}

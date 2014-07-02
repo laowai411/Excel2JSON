@@ -1,0 +1,58 @@
+﻿[
+	{
+		"order":1,                             // 序号
+		"dispIndexArr":[2,3],     		//当前展示的坐骑序号
+		"openLv":[24,99],			//对应的坐骑开启等级
+		"itemType":269422594,			//坐骑的id        任务送的灵虎
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":2,
+		"dispIndexArr":[3],      
+		"itemType":269422596,
+		"openLv":[30],			//对应的坐骑开启等级
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":3,
+		"dispIndexArr":[4,6,7,8],
+		"itemType":269422611,    //商城卖的狮子
+		"openLv":[24,36,48,60],			//对应的坐骑开启等级
+		"description":"<font color='#dd00fe'>霜焰冰狮</font>可通过<a href='event:open'><font color='#ffff00'><U>商城购买</U></font></a>获得"             //打开商城的描述
+	},
+	{
+		"order":4,
+		"dispIndexArr":[4],
+		"itemType":269422612,
+		"openLv":[40],			//对应的坐骑开启等级
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":5,
+		"dispIndexArr":[4,6,7,8],
+		"itemType":269422598,
+		"openLv":[24,36,48,60],			//对应的坐骑开启等级  火云神兽
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":6,
+		"dispIndexArr":[4],
+		"itemType":269422613,
+		"openLv":[48],			//对应的坐骑开启等级
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":7,
+		"dispIndexArr":[4],
+		"itemType":269423618,
+		"openLv":[48],			//对应的坐骑开启等级
+		"description":""             //打开商城的描述
+	},
+	{
+		"order":8,
+		"dispIndexArr":[4],
+		"itemType":269423620,
+		"openLv":[48],			//对应的坐骑开启等级
+		"description":""             //打开商城的描述
+	}
+]

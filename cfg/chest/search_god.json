@@ -1,0 +1,314 @@
+[
+    {
+        "changeItems": [
+            {"type": 537530372, "price": 1100},
+            {"type": 539361282, "price": 3900},
+            {"type": 539361283, "price": 3900},
+            {"type": 539361284, "price": 3900},
+            {"type": 539361285, "price": 3900},
+            {"type": 539361286, "price": 3900},
+            {"type": 539361287, "price": 3900},
+            {"type": 539361292, "price": 3900}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest1.png",
+        "items": [
+            537464836,
+            1073807362,
+            1073938434,
+            1074200578,
+            1074266114,
+            539164681,
+            538378411,
+            538509314,
+            539623435,
+            539033603
+        ],
+        "tabIcons": ["ChestBtn1Up", "ChestBtn1Over", "ChestBtn1Down"],
+        "pageName": "月神嫦娥",
+        "pageId": 1,
+        "props": 538312705,
+        "bigItem": [
+            539361282,
+            539361283,
+            539361284,
+            539361285,
+            539361286,
+            539361287,
+            539361292,
+            537530372
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312705,
+        "pointLimit": 1000,
+        "levelLimit": 1,
+        "retuenIntimate": 10,
+        "description": "月神嫦娥",
+        "promptings": [
+            "每使用元宝搜神1次获得10亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚嫦娥宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_1.json",
+        "payCount": [10, 100, 500]
+    },
+    {
+        "changeItems": [
+            {"type": 537530373, "price": 2550},
+            {"type": 539361294, "price": 10000},
+            {"type": 539361295, "price": 10000},
+            {"type": 539361296, "price": 10000},
+            {"type": 539361297, "price": 10000},
+            {"type": 539361298, "price": 10000},
+            {"type": 539361299, "price": 10000},
+            {"type": 539361304, "price": 10000}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest2.png",
+        "items": [
+            538378286,
+            1073807362,
+            1073938434,
+            1074200578,
+            1074266114,
+            539164682,
+            538378411,
+            538509314,
+            539623436,
+            539033603
+        ],
+        "tabIcons": ["ChestBtn5UP", "ChestBtn5Over", "ChestBtn5Down"],
+        "pageName": "托塔天王",
+        "pageId": 2,
+        "props": 538312707,
+        "bigItem": [
+            539361294,
+            539361295,
+            539361296,
+            539361297,
+            539361298,
+            539361299,
+            539361304,
+            537530373
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312707,
+        "pointLimit": 1000,
+        "levelLimit": 1,
+        "retuenIntimate": 15,
+        "description": "托塔天王",
+        "promptings": [
+            "每使用元宝搜神1次获得15亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚天王宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_2.json",
+        "payCount": [15, 150, 750]
+    },
+    {
+        "changeItems": [
+            {"type": 537530373, "price": 2550},
+            {"type": 539361306, "price": 15000},
+            {"type": 539361307, "price": 15000},
+            {"type": 539361308, "price": 15000},
+            {"type": 539361309, "price": 15000},
+            {"type": 539361310, "price": 15000},
+            {"type": 539361311, "price": 15000},
+            {"type": 539361316, "price": 15000}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest3.png",
+        "items": [
+            538378286,
+            1073807362,
+            1073938434,
+            1074200578,
+            1074266114,
+            539164683,
+            538378412,
+            538509314,
+            539623437,
+            539033603
+        ],
+        "tabIcons": ["ChestBtn4Up", "ChestBtn4Over", "ChestBtn4Down"],
+        "pageName": "天狐妲己",
+        "pageId": 3,
+        "props": 538312708,
+        "bigItem": [
+            539361306,
+            539361307,
+            539361308,
+            539361309,
+            539361310,
+            539361311,
+            539361316,
+            537530373
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312708,
+        "pointLimit": 1200,
+        "levelLimit": 1,
+        "retuenIntimate": 20,
+        "description": "天狐妲己",
+        "promptings": [
+            "每使用元宝搜神1次获得20亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚妲己宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_3.json",
+        "payCount": [20, 200, 1000]
+    },
+    {
+        "changeItems": [
+            {"type": 537530374, "price": 3400},
+            {"type": 539361318, "price": 18000},
+            {"type": 539361319, "price": 18000},
+            {"type": 539361320, "price": 18000},
+            {"type": 539361321, "price": 18000},
+            {"type": 539361322, "price": 18000},
+            {"type": 539361323, "price": 18000},
+            {"type": 539361328, "price": 18000}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest4.png",
+        "items": [
+            537464837,
+            1073807362,
+            1073938434,
+            1074200578,
+            1074266114,
+            539164683,
+            538378303,
+            538509314,
+            539623438,
+            539033603
+        ],
+        "tabIcons": ["ChestBtn3Up", "ChestBtn3Over", "ChestBtn3Down"],
+        "pageName": "九天玄女",
+        "pageId": 4,
+        "props": 538312709,
+        "bigItem": [
+            539361318,
+            539361319,
+            539361320,
+            539361321,
+            539361322,
+            539361323,
+            539361328,
+            537530374
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312709,
+        "pointLimit": 1000,
+        "levelLimit": 1,
+        "retuenIntimate": 22,
+        "description": "九天玄女",
+        "promptings": [
+            "每使用元宝搜神1次获得22亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚玄女宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_4.json",
+        "payCount": [22, 220, 1100]
+    },
+    {
+        "changeItems": [
+            {"type": 537530374, "price": 3400},
+            {"type": 539361330, "price": 25000},
+            {"type": 539361331, "price": 25000},
+            {"type": 539361332, "price": 25000},
+            {"type": 539361333, "price": 25000},
+            {"type": 539361334, "price": 25000},
+            {"type": 539361335, "price": 25000},
+            {"type": 539361340, "price": 25000}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest5.png",
+        "items": [
+            538378287,
+            1073807362,
+            1073938434,
+            1074200578,
+            1074266114,
+            539164683,
+            538378304,
+            538509314,
+            539623439,
+            539033603
+        ],
+        "tabIcons": ["ChestBtn2Up", "ChestBtn2Over", "ChestBtn2Down"],
+        "pageName": "二郎真君",
+        "pageId": 5,
+        "props": 538312706,
+        "bigItem": [
+            539361330,
+            539361331,
+            539361332,
+            539361333,
+            539361334,
+            539361335,
+            539361340,
+            537530374
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312706,
+        "pointLimit": 1000,
+        "levelLimit": 1,
+        "retuenIntimate": 25,
+        "description": "二郎真君",
+        "promptings": [
+            "每使用元宝搜神1次获得25亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚真君宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_5.json",
+        "payCount": [25, 250, 1250]
+    },
+    {
+        "changeItems": [
+            {"type": 537530376, "price": 21000},
+            {"type": 539361342, "price": 26000},
+            {"type": 539361343, "price": 26000},
+            {"type": 539361344, "price": 26000},
+            {"type": 539361345, "price": 26000},
+            {"type": 539361346, "price": 26000},
+            {"type": 539361347, "price": 26000},
+            {"type": 539361352, "price": 26000}
+        ],
+        "roleBg": "/skin/ui/ChestAndRole/chest4.png",
+        "items": [
+            538379100,
+            1073807365,
+            1073938437,
+            1074200581,
+            1074266117,
+            539164683,
+            538378304,
+            538509314,
+            539623440,
+            540676099
+        ],
+        "tabIcons": ["ChestBtn3Up", "ChestBtn3Over", "ChestBtn3Down"],
+        "pageName": "东海龙女",
+        "pageId": 6,
+        "props": 538312710,
+        "bigItem": [
+            539361342,
+            539361343,
+            539361344,
+            539361345,
+            539361346,
+            539361347,
+            539361352,
+            537530376
+        ],
+        "bg": "/skin/ui/ChestAndRole/chestBg1.jpg",
+        "returnProps": 538312710,
+        "pointLimit": 1000,
+        "levelLimit": 1,
+        "retuenIntimate": 30,
+        "description": "东海龙女",
+        "promptings": [
+            "每使用元宝搜神1次获得30亲密度。",
+            "每天首次用元宝进行搜神时，返还一枚龙女宝鉴。",
+            "（今日的宝鉴已返还）"
+        ],
+        "config": "search_god_6.json",
+        "payCount": [30, 300, 1500]
+    }
+]

@@ -1,0 +1,207 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 7,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 7,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 7,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},	
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 7,
+        
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				} 
+    },
+
+	{
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 7,  
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1030,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1610940435,
+					"x":180,
+					"y":157,
+					"hp":100,
+					"objName":"青云门掌门"
+				} 
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 7,
+        "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "（五彩神石在激战中砰然破碎，碎片飞出幻月洞府……）糟了，不小心打碎了这五彩石……"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 7,
+        "mouseSetting":"stage",
+  		"countDownSetting":10000,
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "（上前检查掌门尸身）咦？这是什么？鸿蒙天书？"
+        }
+    },
+	{
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 7, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1030
+				} 
+        
+    },
+	    {
+        "className":"taskPlot.filters.DelayPlotFilter",
+        "plotId":7,
+        	"countDownSetting":100,
+		"data":{//1播放动画,
+				} 
+    },
+{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 7, 
+		"data":{//1播放动画,
+					"relative":"role",//"map","role","stage"
+					"x":180,
+					"y":157,
+					"skinName":"MonsterDieEffect",
+					"type":"",
+					"loopEnd":"remove",//播放结束后移除还是stop，remove | stop,type不等于"swf"时需要配置
+					"loopFrame":1,//1,type不等于"swf"时需要配置
+					"loopTimes":1,//循环次数,type不等于"swf"时需要配置
+					"renderRate":3,//渲染频率3,type不等于"swf"时需要配置
+					"totalFrames":7//总帧数,type不等于"swf"时需要配置
+				} 
+        
+    },
+	{
+        "className":"taskPlot.filters.DelayPlotFilter",
+        "plotId":7,
+        	"countDownSetting":1500,
+		"data":{//1播放动画,
+				} 
+    },
+    {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 7, 
+		"data":{// 鸿蒙天书
+					"objId":1004,
+					"type":1611202561,
+					"gender":1,
+					"direction":1,
+					"action":1,
+					"clothes":1611006095,
+					"x":200,
+					"y":140,
+					"hp":100,
+					"objName":""
+				} 
+        
+    },
+		{
+        "className":"taskPlot.filters.PlayMovieFilter",
+        "plotId": 7, 
+        "mouseSetting":"stage",
+        "countDownSetting":3000,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"x":265,
+					"y":110,
+					"skinName":"GuideClickGetBook",
+					"type":"swf",
+					"playTimes":0,
+					"frameRate":12
+				} 
+        
+    },
+	    {
+        "className":"taskPlot.filters.RemoveMovieFilter",
+        "plotId": 7,
+		"data":{//1播放动画,
+		"depth":1,/**在地图里的深度，1才会响应点击事件：添加该动画时配置了1，则移除时候也要配置1*/
+		"mouseEnabled":1,   //1：要响应鼠标事件；0：不需要响应鼠标事件
+					"relative":"role",//"map","role","stage"
+					"skinName":"GuideClickGetBook",
+					"type":"swf"
+				}
+ 
+    },
+	  {
+        "className":"taskPlot.filters.RemoveObjFilter",
+        "plotId": 7,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"objId":1004
+		} 
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 7,
+				"data":{//1播放动画,
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 7,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},   
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 7,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 7,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+    ]

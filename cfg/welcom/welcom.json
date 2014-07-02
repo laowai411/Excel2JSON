@@ -1,0 +1,17 @@
+{
+    "src":"skin/npc/image/image_6006002b.png",//美女图片
+    "mapId1":299,//蜀山
+    "npcId1":"0_2099000b",//
+
+    "mapId2":300,//昆仑
+    "npcId2":"0_3000000b",//
+
+    "mapId3":301,//蓬莱
+    "npcId3":"0_3001000b",//
+
+    "welcomTxt":
+	       "<font size='15'><B>妖星重现，浩劫将至，轩辕剑出，济世苍生！<br><font color='#ffff00'>拔出轩辕剑找到灵儿</font>，成就救世伟业！</B></font>"
+			
+			
+
+}

@@ -1,0 +1,29 @@
+[
+	{
+		"id":1,
+		"title":"抢购祝福",
+		"sortId":2,
+		"content":"极品限量，每天抢购！",
+		"vipType":0,
+		"linkType":1,
+		"linkData":"3,0,ShopMallMod,0,0"
+	},
+	{
+		"id":2,
+		"title":"神秘商人",
+		"sortId":3,
+		"content":"万兽塔的神秘商人，专售珍稀商品",
+		"vipType":0,
+		"linkType":2,
+		"linkData":"2,303,0_30030006,0,0"
+	},
+	{
+		"id":11,
+		"title":"搜神祝福",
+		"sortId":11,
+		"content":"每日首次元宝搜神，免费返还一枚搜神宝鉴",
+		"vipType":0,
+		"linkType":1,
+		"linkData":"5,0,Chest,0,1"
+	}
+]

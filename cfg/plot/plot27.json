@@ -1,0 +1,124 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 27,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 27,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 27,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+ {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 27, 
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1028,
+					"type":1611202561,
+					"gender":1,
+					"direction":3,
+					"action":1,
+					"clothes":1610883147,
+					"x":-40,
+					"y":-140,
+					"hp":100,
+					"objName":"龙华道人"
+				}
+    },
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 27,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "龙华道人",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006006d.png",
+        	"talkStr": "阎王十殿异常凶险，<font color='#ff0000'>@player@</font>，我们还是合作一起闯吧，老规矩出的东西都是你的。"
+        }
+    },
+	{
+         "plotId": 27,
+        "className":"taskPlot.filters.DialogContentFilter",
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"talkStr": "你就不能让我清静点，有你在还叫什么磨练，你一边打酱油去吧。",
+        	"headSrc": "skin/npc/image/image_1_"
+        }
+    },
+	{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 27,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":{
+        	"speakerName": "龙华道人",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006006d.png",
+        	"talkStr": "……（说的也对，我给的帮助多了反而阻碍了他的修炼……）"
+        }
+    },
+	{
+        "className":"taskPlot.filters.CallNpcFilter",
+         "plotId": 27,
+		"data":
+		{// *剧情步骤类型：2：地图添加objInfo ;*剧情步骤类型：10: 更新地图上物体信息，如强制角色方向
+				"index":3
+		} 
+ 
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 27,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    }, 
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 27,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},   
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 27,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 27,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

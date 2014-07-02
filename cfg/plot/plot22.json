@@ -1,0 +1,128 @@
+[
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 22,
+        "data":
+        {
+	        "flag":1,//0显示，1隐藏
+	        "viewIdList":[0],//0 自己，1：宠物 显示列表
+	 		"hideTypeList":[1610678272,1610809344,1610874880,1879310336]// 屏蔽列表
+        }
+	},
+	{
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 22,
+        "data":
+        {
+        	"action":"close",
+        	"duration":30
+        }
+	},
+		{
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 22,
+         "data":
+        {
+		"action":"add"//"add":首次添加，"hide":隐藏，"show":显示
+        }
+	},
+	{
+        "className":"taskPlot.filters.UpdateObjInfoFilter",
+        "plotId": 6,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":0,
+					"direction":2
+				}
+    },
+ {
+        "className":"taskPlot.filters.AddObjToMapFilter",
+        "plotId": 22,
+ 
+        "step": 1,
+		"data":{// 2：地图添加objInfo ;10: 更新地图上物体信息，如强制角色方向
+					"objId":1027,
+					"type":1611202561,
+					"gender":1,
+					"direction":4,
+					"action":1,
+					"clothes":1610883125,
+					"x":160,
+					"y":92,
+					"hp":100,
+					"objName":"梁韵芳"
+				}
+    },
+{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 22,
+        "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":
+        {
+         "speakerName": "梁韵芳",
+        "speakerType": 0,
+        "headSrc": "skin/npc/image/image_6006006e.png",
+        "talkStr": "没想到这里的试练怪物如此强大，没有一定的能力还是不要提前进来的好。<font color='#ff0000'>@player@</font>，你疼不疼？"
+        }
+    },
+    {
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 22,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":
+        {
+        	"speakerName": "@player@",
+        	"speakerType": 1,
+        	"headSrc": "skin/npc/image/image_1_",
+        	"talkStr": "说的不错，凡事量力而行。贪心不足蛇吞象，小心偷鸡不成反蚀一把米，待我日后再来挑战。"
+        }
+    },
+		{
+        "className":"taskPlot.filters.DialogContentFilter",
+        "plotId": 22,
+         "mouseSetting":"stage",
+  		"countDownSetting":10000, 
+        "data":
+        {
+        	"speakerName": "梁韵芳",
+        	"speakerType": 0,
+        	"headSrc": "skin/npc/image/image_6006006e.png",
+        	"talkStr": "你说的对<font color='#ff0000'>@player@</font>，反正这个地方一直都在，只要找北界王就能进来，日后准备好了我们再来挑战。"
+        }
+    },
+    {
+        "className":"taskPlot.filters.CloseDialogFilter",
+        "plotId": 22,
+				"data":{//1播放动画,
+					 
+				}
+ 
+    },
+    {
+		"className":"taskPlot.filters.SkipBtnFilter",
+        "plotId": 22,
+         "data":
+        {
+		"action":"hide",//"add":首次添加，"hide":隐藏，"show":显示
+		"isAll":1//1跳过和鼠标，0或者不配置：跳过
+        }
+	},    
+    {
+		"className":"taskPlot.filters.PurdahFilter",
+        "plotId": 22,
+        "data":
+        {
+        	"action":"open",
+        	"duration":15
+        }
+	},
+	{
+		"className":"taskPlot.filters.HideOthersFilter",
+        "plotId": 22,
+        "data":
+        {
+        "flag":0//0显示，1隐藏
+        }
+	}	
+	]

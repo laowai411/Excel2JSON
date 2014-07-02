@@ -1,0 +1,27 @@
+[
+	{
+		"sameCount":1,
+		"ordinary":20,
+		"yunshi":20
+	},
+	{
+		"sameCount":2,
+		"ordinary":25,
+		"yunshi":30
+	},
+	{
+		"sameCount":3,
+		"ordinary":50,
+		"yunshi":60
+	},
+	{
+		"sameCount":4,
+		"ordinary":100,
+		"yunshi":120
+	},
+	{
+		"sameCount":5,
+		"ordinary":200,
+		"yunshi":240
+	}
+]

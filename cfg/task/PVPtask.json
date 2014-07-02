@@ -1,0 +1,32 @@
+{ 
+    "0":
+    {
+           "wordDeco":"采集<font color='#00aeef'>仙晶石</font><font color='#ffff00'>([0] / 10)</font>",
+	   "exp":132432,
+	   "cultivation":100,
+	   "credit":0//为0表示没有
+    },
+      "1":
+    {
+           "wordDeco":"击杀<font color='#00aeef'>幽魂兽</font><font color='#ffff00'>([0] / 10)</font>",
+	   "exp":132432,
+	   "cultivation":100,
+	   "credit":0
+    },
+      "2":
+    {
+           "wordDeco":"采集<font color='#00aeef'>仙幻石</font><font color='#ffff00'>([0] / 10)</font>",
+	   "exp":132432,
+	   "cultivation":0,
+	   "credit":1000
+    },
+      "3":
+    {
+           "wordDeco":"收集<font color='#00aeef'>幻魔之心</font><font color='#ffff00'>([0] / 10)</font>",
+	   "exp":132432,
+	   "cultivation":0,
+	   "credit":1000
+    },
+    "CopyLimit":"参与条件：<font color='#00ff00'>人物达到30级</font><br>开启时间：<font color='#ffff00'>12:30-13:00 / 18:30-19:00</font><br>答题奖励：<font color='#00ff00'>大量经验</font>"
+
+}
