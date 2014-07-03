@@ -1,17 +1,22 @@
 
-import common.ExtensionConst;
-import common.Global;
 import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import parser.ParserUtil;
+import common.ExtensionConst;
+import common.Global;
+import common.LogUtil;
+import etc.ConfigManager;
 
 /*
  * To change this template, choose Tools | Templates
@@ -22,6 +27,7 @@ import parser.ParserUtil;
  *
  * @author AngryPotato
  */
+@SuppressWarnings("serial")
 public class Window extends javax.swing.JFrame {
 
     /**
@@ -40,9 +46,13 @@ public class Window extends javax.swing.JFrame {
      */
     public Window() {
         initComponents();
+        setTitle("Excel2JSON");
         readConfig();
         updateViewConfig();
         initFileChooser();
+        Global.registerJButton(gBtnCreateJSON);
+        Global.registerJButton(gBtnCreateExcel);
+        LogUtil.registerStateTxt(gTxtState);
     }
 
     /**
@@ -60,14 +70,14 @@ public class Window extends javax.swing.JFrame {
         gBtnSelect = new javax.swing.JButton();
         gBtnWatchExcel = new javax.swing.JButton();
         gBtnWatchJSON = new javax.swing.JButton();
-        btnCreateJSON = new javax.swing.JButton();
+        gBtnCreateJSON = new javax.swing.JButton();
         gBtnCreateExcel = new javax.swing.JButton();
         gBtnHelp = new javax.swing.JButton();
-        gTxtState = new javax.swing.JTextField();
+        gTxtState = new javax.swing.JTextArea();
         gRadioFormat = new javax.swing.JRadioButton();
-		gRadioNoFormat = new javax.swing.JRadioButton();
-		gRadioGroup.add(gRadioFormat);
-		gRadioGroup.add(gRadioNoFormat);
+	gRadioNoFormat = new javax.swing.JRadioButton();
+	gRadioGroup.add(gRadioFormat);
+	gRadioGroup.add(gRadioNoFormat);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,8 +105,8 @@ public class Window extends javax.swing.JFrame {
             }
         });
 
-        btnCreateJSON.setText("生成json");
-        btnCreateJSON.addMouseListener(new java.awt.event.MouseAdapter() {
+        gBtnCreateJSON.setText("生成json");
+        gBtnCreateJSON.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 onClickCreateJSONHandler(evt);
             }
@@ -151,7 +161,7 @@ public class Window extends javax.swing.JFrame {
                                 .addComponent(gBtnSelect))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
-                        .addComponent(btnCreateJSON)
+                        .addComponent(gBtnCreateJSON)
                         .addGap(65, 65, 65)
                         .addComponent(gBtnCreateExcel))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -190,7 +200,7 @@ public class Window extends javax.swing.JFrame {
                         .addComponent(gRadioNoFormat)
                         .addGap(23, 23, 23)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateJSON)
+                    .addComponent(gBtnCreateJSON)
                     .addComponent(gBtnCreateExcel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -220,10 +230,6 @@ public class Window extends javax.swing.JFrame {
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
     }
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        
-    }
-
     /**
      * 点击了生成json按钮
      * */
@@ -243,8 +249,15 @@ public class Window extends javax.swing.JFrame {
     private void onClickSelectHandler(java.awt.event.MouseEvent evt) {
         fileChooser.showOpenDialog(this);
         selecteDir = fileChooser.getSelectedFile();
-        Global.file_path = selecteDir.getPath().replace("\\", "\\\\");
-        updateViewConfig();
+        if(selecteDir == null)
+        {
+        	selecteDir = new File(gTxtDirPath.getText());
+        }
+        if(selecteDir.exists() == true)
+        {
+        	Global.file_path = selecteDir.getPath().replace("\\", "\\\\");
+        	updateViewConfig();
+        }
     }
     
     /**
@@ -252,31 +265,33 @@ public class Window extends javax.swing.JFrame {
      * */
     private void saveConfig()
     {
-    	File file = new File(Window.class.getResource("").getPath()+Global.config_path);
-    	if(file.exists() == false)
+    	if(Global.IS_DEBUG == true)
     	{
+    		File file = new File(Window.class.getResource("").getPath()+Global.config_path);
+    		if(file.exists() == false)
+    		{
+    			try {
+    				file.createNewFile();
+    			} catch (IOException e) {
+    				e.printStackTrace();
+    				JOptionPane.showMessageDialog(null, "创建配置文件失败"+e.getMessage());
+    				return;
+    			}
+    		}
+    		FileWriter writer;
     		try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-				JOptionPane.showMessageDialog(null, "创建配置文件失败");
-				return;
-			}
+    			writer = new FileWriter(file);
+    			String jsonStr = "{\n" +
+    					"\tdelay:"+Global.delay+",\n" +
+    					"\tjsonFormat:"+gRadioFormat.isSelected()+",\n" +
+    					"\tpath:\""+Global.file_path+"\"\n" +
+    					"}";
+    			writer.write(jsonStr);
+    			writer.close();
+    		} catch (IOException e) {
+    			e.printStackTrace();
+    		}
     	}
-		FileWriter writer;
-		try {
-			writer = new FileWriter(file);
-			String jsonStr = "{\n" +
-								"\tdelay:"+Global.delay+",\n" +
-								"\tjsonFormat:"+gRadioFormat.isSelected()+",\n" +
-								"\tpath:\""+Global.file_path+"\"\n" +
-							"}";
-			writer.write(jsonStr);
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
     }
     
     /**
@@ -366,9 +381,9 @@ public class Window extends javax.swing.JFrame {
 
     private void onClickWatchExcelHandler(java.awt.event.MouseEvent evt) {                                          
          try {
-    		 Desktop.getDesktop().open(new File(Window.class.getResource("").getPath()+"\\etc\\test.xls"));
+    		 Desktop.getDesktop().open(new File(ConfigManager.excelTemplatePath()));
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Window.class.getResource("").getPath()+"\\etc\\test.xls");
+			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+ConfigManager.excelTemplatePath());
 		}
     }
 
@@ -407,7 +422,7 @@ public class Window extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCreateJSON;
+    private javax.swing.JButton gBtnCreateJSON;
     private javax.swing.JButton gBtnCreateExcel;
     private javax.swing.JButton gBtnHelp;
     private javax.swing.JButton gBtnSelect;
@@ -418,6 +433,6 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.ButtonGroup gRadioGroup;
     private javax.swing.JRadioButton gRadioNoFormat;
     private javax.swing.JTextField gTxtDirPath;
-    private javax.swing.JTextField gTxtState;
+    private javax.swing.JTextArea gTxtState;
     // End of variables declaration//GEN-END:variables
 }

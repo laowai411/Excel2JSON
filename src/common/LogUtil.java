@@ -3,49 +3,74 @@ package common;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
-import javax.swing.JTextField;
+import javax.swing.JTextArea;
 
 public class LogUtil {
-
 	
-	private static FileWriter writer;
+	private static FileWriter logWritter;
 	
-	private static JTextField logTxt;
+	private static FileWriter errWritter;
 	
-	public static void registerLogTxt(JTextField txt)
+	private static JTextArea gTxtState;
+	
+	public static void registerStateTxt(JTextArea txt)
 	{
-		logTxt = txt;
+		gTxtState = txt;
 	}
 	
-	@SuppressWarnings("deprecation")
+	/**
+	 * 记录log
+	 * */
+	@SuppressWarnings({ "deprecation" })
 	public static void log(String str)
 	{
-		if(writer == null)
-		{
-			File file = new File(System.getProperty("user.dir")+"\\log.txt");
+		File file = new File(LogUtil.class.getResource("").getPath()+"\\log.txt");
+		if (file.exists() == false) {
 			try {
-				if(file.exists() == false && file.createNewFile() == false)
-				{
-					System.out.println("创建log文件失败!");
-					return;
-				}
-				writer = new FileWriter(file);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				file.createNewFile();
+			} catch (IOException ex) {
 			}
 		}
 		try {
-			java.util.Date date = new java.util.Date();
-			writer.append("["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"] "+str+"\n");
-			logTxt.setText("["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"] "+str+"\n");
-			writer.flush();
-			System.out.println("["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"] "+str+"\n");
+			if(logWritter == null)
+			{
+				logWritter = new FileWriter(file);
+			}
+			Date date = new Date();
+			str = "["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"]  "+str+"\n";
+			logWritter.append(str);
+			logWritter.flush();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		gTxtState.setText(str);
 	}
 	
+	@SuppressWarnings({ "deprecation" })
+	public static void error(String str)
+	{
+		File file = new File(LogUtil.class.getResource("").getPath()+"\\error.txt");
+		if (file.exists() == false) {
+			try {
+				file.createNewFile();
+			} catch (IOException ex) {
+			}
+		}
+		try {
+			if(errWritter == null)
+			{
+				errWritter = new FileWriter(file);
+			}
+			Date date = new Date();
+			str = "["+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"]  "+str+"\n";
+			gTxtState.setText(str);
+			errWritter.append(str);
+			errWritter.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		gTxtState.setText(str);
+	}
 }

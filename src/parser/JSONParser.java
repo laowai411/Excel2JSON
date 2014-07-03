@@ -2,17 +2,24 @@ package parser;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Serializable;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import common.JSONConst;
 import common.LogUtil;
+import common.unicode.UnicodeReader;
+
 public class JSONParser implements IParser {
 
 	/**
@@ -24,254 +31,399 @@ public class JSONParser implements IParser {
 	 * json文件字符串数据
 	 * 
 	 */
-	private String dataStr;
+	private String jsonStr;
 	/**
-	 * json文件数据 [key:[ key:[ ... ] ] ]
+	 * Object形式的json文件数据
 	 * 
 	 */
 	@SuppressWarnings("rawtypes")
-	private HashMap jsonData;
+	private HashMap objectJson = new HashMap<>();;
+	
+	/**
+	 * array形式的json数据
+	 * */
+	@SuppressWarnings("rawtypes")
+	private ArrayList arrayJson = new ArrayList<>();;
+	
 	/**
 	 * 包含了excel名字,sheet名字和json数据
 	 * 
 	 */
-	private HashMap<String, Serializable> data;
-
+	private HashMap<String, Serializable> data = new HashMap<>();;
+	
+	/**
+	 * 行数
+	 * */
+	private int row;
+	
+	/**
+	 * 列数
+	 * */
+	private int col;
+	
+	/**
+	 * 属性名
+	 * */
+	@SuppressWarnings("rawtypes")
+	private HashMap attKeyMap = new HashMap<>();;
+	
+	/**
+	 * 条目索引
+	 * */
+	private ArrayList<Object> indexList = new ArrayList<>();;
+	
 	@Override
 	public void parse(File file) {
-		data = new HashMap<String, Serializable>();
+		arrayJson.clear();
+		objectJson.clear();
+		data.clear();
+		attKeyMap.clear();
+		indexList.clear();
+		row = 0;
+		col = 0;
+		jsonStr = "";
+		
 		this.file = file;
-		LogUtil.log(file.getName()+" 开始解析");
 		readJsonFile(file);
-		dataStr = clearMultiDoc(dataStr);
 		decodeJsonStr();
 	}
 
 	/**
 	 * 将json字符串转化
-	 * 
 	 */
+	@SuppressWarnings({ "rawtypes" })
 	private void decodeJsonStr() {
-		jsonData = new HashMap<>();
+		jsonStr = checkAndReplaceMultiLine(jsonStr);
+		jsonStr = jsonStr.trim();
 		try {
-			JSONObject jsonObj = new JSONObject(dataStr);
-			decodeJsonData(jsonData, jsonObj);
+			JSONObject jsonObj = new JSONObject(jsonStr);
+			objectJson = new HashMap();
+			decodeJSON_Object(objectJson, jsonObj);
 		} catch (JSONException ex) {
 			try {
-				JSONArray jsonArr = new JSONArray(dataStr);
-				decodeJsonArray(jsonData, jsonArr);
+				JSONArray jsonArray = new JSONArray(jsonStr);
+				arrayJson = new ArrayList<>();
+				decodeJSON_Array(arrayJson, jsonArray);
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				LogUtil.log(file.getName()+" 格式不符合!");
-			}
-//			JOptionPane.showMessageDialog(null, file.getName() + "格式错误!\n  "
-//					+ ex.getMessage());
-		}
-		
-	}
-
-	/**
-	 * 解析Json数据并保存
-	 * 
-	 */
-	@SuppressWarnings({ "rawtypes" })
-	private HashMap decodeJsonData(HashMap map, JSONObject json) {
-		Iterator keys = json.keys();
-		while (keys.hasNext() == true) {
-			String key = (String) keys.next();
-			try {
-				Object o = json.get(key);
-				if (o instanceof JSONObject) {
-					decodeObject(map, key, (JSONObject)o);
-				} else if(o instanceof JSONArray)
-				{
-					decodeArray(map, key, (JSONArray) o);
-				}
-				else if(o instanceof Integer)
-				{
-					decodeSimple(map, key, (int)o);
-				}
-				else if (o instanceof String) {
-					decodeSimple(map, key, (String) o);
-				}
-				keys.remove();
-			} catch (JSONException ex) {
-				Logger.getLogger(JSONParser.class.getName()).log(Level.SEVERE,
-						null, ex);
+				LogUtil.error(file.getName()+"  "+ex.getMessage());
+				LogUtil.error(file.getName()+"  "+e.getMessage());
+				JOptionPane.showMessageDialog(null, file.getName() + "格式错误!\n  " + ex.getMessage()+"\n"+e.getMessage());
+				LogUtil.error(file.getName() + "格式错误!\n  ");
 			}
 		}
-		return map;
 	}
 	
 	/**
-	 * 解析Json数据并保存
-	 * 
-	 */
-	@SuppressWarnings({ "rawtypes" })
-	private HashMap decodeJsonArray(HashMap map, JSONArray json) {
-		for(int i=0; i<json.length(); i++)
-		{
-			try {
-				Object o = json.get(i);
-				if (o instanceof JSONObject) {
-					decodeObject(map, i, (JSONObject)o);
-				} else if(o instanceof JSONArray)
-				{
-					decodeArray(map, i, (JSONArray) o);
-				}
-				else if(o instanceof Integer)
-				{
-					decodeSimple(map, i, (int)o);
-				}
-				else if (o instanceof String) {
-					decodeSimple(map, i, (String) o);
-				}
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return map;
-	}
-
-	/**
-	 * 解析JsonObject
+	 * 表结构为Object
 	 * */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private void decodeObject(HashMap parentMap, Object key, JSONObject value)
+	private void decodeJSON_Object(HashMap map, JSONObject value)
 	{
-		JSONObject jsonObj = (JSONObject) value;
-		Iterator<Object> keys = jsonObj.keys();
-		HashMap<Object, Object> selfMap = new HashMap<>();
-		parentMap.put(key, selfMap);
+		Iterator keys = value.keys();
 		while(keys.hasNext())
 		{
-			Object childKey = keys.next();
+			Object key = keys.next();
+			Object o;
 			try {
-				Object childObj = jsonObj.get((String) childKey);
-				if(childObj instanceof JSONObject)
+				o = value.get(key.toString());
+				String keyType = "";
+				HashMap subKeyMap = null;
+				if(o instanceof Number)
 				{
-					decodeObject(selfMap, childKey, (JSONObject)childObj);
+					keyType = JSONConst.TYPE_NUMER;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+					put(map, key, o);
+					col++;
 				}
-				else if(childObj instanceof JSONArray)
+				else if(o instanceof String)
 				{
-					decodeArray(selfMap, childKey, (JSONArray)childObj);
+					keyType = JSONConst.TYPE_STRING;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+					decodeString(map, key, o);
+					col++;
 				}
-				if(childObj instanceof Integer)
+				else if(o instanceof JSONArray)
 				{
-					decodeSimple(selfMap, childKey, (int)childObj);
+					ArrayList childList = new ArrayList<>();
+					put(map, key, childList);
+					keyType = JSONConst.TYPE_ARRAY;
+					subKeyMap = new HashMap<>();
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+					decodeArray(childList, (JSONArray) o, keyVo);
+					col++;
 				}
-				else if(childObj instanceof String)
+				else if(o instanceof JSONObject)
 				{
-					decodeSimple(selfMap, childKey, (String)childObj);
+					HashMap childMap = new HashMap();
+					put(map, key, childMap);
+					decodeRow(childMap, (JSONObject) o);
+				}
+				indexList.add(key);
+				row++;
+				keys.remove();
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	/**
+	 * 表结构为Array
+	 * */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void decodeJSON_Array(ArrayList list, JSONArray value)
+	{
+		int len = value.length();
+		for(int i=0; i<len; i++)
+		{
+			Object o;
+			try {
+				o = value.get(i);
+				String keyType = "";
+				HashMap subKeyMap = null;
+				if(o instanceof Number)
+				{
+					keyType = JSONConst.TYPE_NUMER;
+					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					attKeyMap.put(i, keyVo);
+					put(list, i, o);
+					col++;
+				}
+				else if(o instanceof String)
+				{
+					keyType = JSONConst.TYPE_STRING;
+					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					attKeyMap.put(i, keyVo);
+					decodeString(list, i, o);
+					col++;
+				}
+				else if(o instanceof JSONArray)
+				{
+					ArrayList childList = new ArrayList<>();
+					put(list, i, childList);
+					keyType = JSONConst.TYPE_ARRAY;
+					subKeyMap = new HashMap<>();
+					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					attKeyMap.put(i, keyVo);
+					decodeArray(childList, (JSONArray) o, keyVo);
+					col++;
+				}
+				else if(o instanceof JSONObject)
+				{
+					HashMap childMap = new HashMap();
+					put(list, i, childMap);
+					decodeRow(childMap, (JSONObject) o);
+				}
+				indexList.add(i);
+				row++;
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	/**
+	 * 解析Object类型
+	 * */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void decodeRow(HashMap map, JSONObject value)
+	{
+		Iterator keys = value.keys();
+		while(keys.hasNext())
+		{
+			Object key = keys.next();
+			Object o;
+			try {
+				o = value.get(key.toString());
+				String keyType = "";
+				HashMap subKeyMap = null;
+				if(o instanceof Number)
+				{
+					put(map, key, o);
+					keyType = JSONConst.TYPE_NUMER;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+				}
+				else if(o instanceof String)
+				{
+					decodeString(map, key, o);
+					keyType = JSONConst.TYPE_STRING;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+				}
+				else if(o instanceof JSONArray)
+				{
+					ArrayList childList = new ArrayList<>();
+					put(map, key, childList);
+					keyType = JSONConst.TYPE_ARRAY;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+					decodeArray(childList, (JSONArray) o, keyVo);
+				}
+				else if(o instanceof JSONObject)
+				{
+					HashMap childMap = new HashMap();
+					subKeyMap = new HashMap<>();
+					put(map, key, childMap);
+					keyType = JSONConst.TYPE_OBJECT;
+					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					attKeyMap.put(key, keyVo);
+					decodeObject(childMap, (JSONObject) o, keyVo);
+				}
+				col++;
+				keys.remove();
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	/**
+	 * 解析Object类型
+	 * */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void decodeObject(HashMap map, JSONObject value, KeyVo keyVo)
+	{
+		Iterator keys = value.keys();
+		while(keys.hasNext())
+		{
+			Object key = keys.next();
+			Object o;
+			try {
+				o = value.get(key.toString());
+				String keyType = "";
+				HashMap subKeyMap = null;
+				if(o instanceof Number)
+				{
+					put(map, key, o);
+					keyType = JSONConst.TYPE_NUMER;
+					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					keyVo.subKeyMap.put(key, subKeyVo);
+				}
+				else if(o instanceof String)
+				{
+					decodeString(map, key, o);
+					keyType = JSONConst.TYPE_STRING;
+					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					keyVo.subKeyMap.put(key, subKeyVo);
+				}
+				else if(o instanceof JSONArray)
+				{
+					ArrayList childList = new ArrayList<>();
+					keyType = JSONConst.TYPE_ARRAY;
+					decodeArray(childList, (JSONArray) o, keyVo);
+					put(map, key, childList);
+					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					keyVo.subKeyMap.put(key, subKeyVo);
+				}
+				else if(o instanceof JSONObject)
+				{
+					HashMap childMap = new HashMap();
+					keyType = JSONConst.TYPE_NUMER;
+					decodeObject(childMap, (JSONObject) o, keyVo);
+					put(map, key, childMap);
+					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					keyVo.subKeyMap.put(key, subKeyVo);
 				}
 				keys.remove();
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	/**
+	 * 解析array类型
+	 * */
+	@SuppressWarnings("rawtypes")
+	private void decodeArray(ArrayList list, JSONArray value, KeyVo keyVo)
+	{
+		int len = value.length();
+		for(int i=0; i<len; i++)
+		{
+			Object o;
+			try {
+				o = value.get(i);
+				if(o instanceof Number)
+				{
+					put(list, i, o);
+				}
+				else if(o instanceof String)
+				{
+					decodeString(list, i, o);
+				}
+				else if(o instanceof JSONArray)
+				{
+					ArrayList childList = new ArrayList<>();
+					decodeArray(childList, (JSONArray) o, keyVo);
+					put(list, i, childList);
+				}
+				else if(o instanceof JSONObject)
+				{
+					HashMap childMap = new HashMap();
+					decodeObject(childMap, (JSONObject) o, keyVo);
+					put(list, i, childMap);
+				}
+			} catch (JSONException e) {
 				e.printStackTrace();
 			}
 		}
 	}
 
 	/**
-	 * 解析JsonArray
-	 * 
-	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private void decodeArray(HashMap parentMap, Object key, JSONArray jsonArray) {
-		Object[] childArray = new Object[jsonArray.length()];
-		parentMap.put(key, childArray);
-		for(int i=0; i<jsonArray.length(); i++)
+	 * 根据key和value put到容器中
+	 * */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private void put(Object content, Object key, Object value)
+	{
+		if(content instanceof HashMap)
 		{
-			try {
-				Object childObj = jsonArray.get(i);
-				if(childObj instanceof JSONObject)
-				{
-					HashMap map = new HashMap<>();
-					decodeObject(map, i, (JSONObject) childObj);
-					childArray[i] = map;
-				}
-				else if(childObj instanceof JSONArray)
-				{
-					childArray[i] = itratorArry((JSONArray) childObj);
-				}
-				else 
-				if(childObj instanceof Integer)
-				{
-					childArray[i] = childObj;
-				}
-				else if(childObj instanceof String)
-				{
-					childArray[i] = childObj;
-				}
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			((HashMap) content).put(key, value);
 		}
-	}
-	
-	@SuppressWarnings({ "rawtypes" })
-	private Object[] itratorArry(JSONArray jsonArray) {
-		Object[] childArray = new Object[jsonArray.length()];
-		for(int i=0; i<jsonArray.length(); i++)
+		else if(content instanceof ArrayList)
 		{
-			try {
-				Object childObj = jsonArray.get(i);
-				if(childObj instanceof JSONObject)
-				{
-					HashMap map = new HashMap<>();
-					decodeObject(map, i, (JSONObject) childObj);
-					childArray[i] = map;
-				}
-				else if(childObj instanceof JSONArray)
-				{
-					childArray[i] = itratorArry((JSONArray) childObj);
-				}
-				else 
-				if(childObj instanceof Integer)
-				{
-					childArray[i] = childObj;
-				}
-				else if(childObj instanceof String)
-				{
-					childArray[i] = childObj;
-				}
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			((ArrayList) content).add((int) key, value);
 		}
-		return childArray;
-	}
-	
-	/**
-	 * 解析简单数据类型
-	 * 
-	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private void decodeSimple(HashMap parentMap, Object key, Object value) {
-		parentMap.put(key, value);
 	}
 
+	/**
+	 * 解析字符串数据类型
+	 * 
+	 */
+	private void decodeString(Object content, Object key, Object value) {
+		String str = value.toString();
+		if(str.startsWith("\"")==true && str.endsWith("\"")==true)
+		{
+			put(content, key, value);
+		}
+		else
+		{
+			put(content, key, "\""+value+"\"");
+		}
+	}
+	
 	/**
 	 * 读取json文件
 	 * 
 	 */
 	private void readJsonFile(File file) {
 		BufferedReader reader = null;
-		dataStr = "";
+		jsonStr = "";
 		try {
-			reader = new BufferedReader(new FileReader(file));
+			reader = new BufferedReader(new UnicodeReader(new FileInputStream(file), Charset.defaultCharset().name()));
 			String tempString = null;
 			// 一次读入一行，直到读入null为文件结束
 			while ((tempString = reader.readLine()) != null) {
-				tempString = clearSingleDoc(tempString);
-				tempString = clearMultiDoc(tempString);
-				dataStr = dataStr.concat(tempString);
+				tempString = checkAndReplaceSingleLine(tempString);
+				tempString = checkAndReplaceMultiLine(tempString);
+				jsonStr = jsonStr.concat(tempString);
 			}
 			reader.close();
 		} catch (IOException e) {
+			LogUtil.error("readJsonFile  "+file.getName()+"  读取失败");
 			e.printStackTrace();
 		} finally {
 			if (reader != null) {
@@ -282,39 +434,68 @@ public class JSONParser implements IParser {
 			}
 		}
 	}
-	
-	private String clearSingleDoc(String str)
-	{
-		int start = str.indexOf("//");
-		if(start > -1)
+
+	/**
+	 * 去除注释多行注释
+	 * */
+	private String checkAndReplaceMultiLine(String str) {
+		int start = 0;
+		int end = 1;
+		while(start > -1 && end > -1 && start < end)
 		{
-			str = str.substring(0, start);
+			start = str.indexOf("/*");
+			end = str.indexOf("*/");
+			if(start > -1 && end > -1 && start<end)
+			{
+				str = str.substring(0, start)+str.substring(end+2);
+			}
 		}
 		return str;
 	}
-	
-	private String clearMultiDoc(String str)
-	{
-		int start = str.indexOf("/*");
-		int end = str.indexOf("*/");
-		while(start > -1 && end > -1 && start < end)
+
+	/**
+	 * 去除单行注释
+	 * */
+	private String checkAndReplaceSingleLine(String str) {
+		int start = str.indexOf("//");
+		while(start > -1)
 		{
-			str = str.substring(0, start) + str.substring(end+2);
-			start = str.indexOf("/*");
-			end = str.indexOf("*/");
+			if(start>=5 && str.substring(start-5, start).equals("http:") == true)
+			{
+				start = str.indexOf("//", start+1);
+			}
+			else
+			{
+				str = str.substring(0, start);
+				break;
+			}
 		}
 		return str;
 	}
 
 	@Override
 	public HashMap<String, Serializable> getData(File file) {
-		// TODO Auto-generated method stub
 		parse(file);
 		String fileName = file.getName();
 		fileName = fileName.substring(0, fileName.lastIndexOf("."));
 		data.put("name", file.getParent() + "\\" + fileName);
 		data.put("sheetName", fileName);
-		data.put("data", jsonData);
+		data.put("row", row);
+		data.put("col", col);
+		data.put("cols", attKeyMap);
+		data.put("rows", indexList);
+		if(objectJson != null)
+		{
+			data.put("data", objectJson);
+		}
+		else if(arrayJson != null)
+		{
+			data.put("data", arrayJson);
+		}
+		else
+		{
+			return null;
+		}
 		return data;
 	}
 
