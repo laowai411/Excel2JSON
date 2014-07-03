@@ -127,11 +127,10 @@ public class JSONParser implements IParser {
 			try {
 				o = value.get(key.toString());
 				String keyType = "";
-				HashMap subKeyMap = null;
 				if(o instanceof Number)
 				{
 					keyType = JSONConst.TYPE_NUMER;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
 					put(map, key, o);
 					col++;
@@ -139,7 +138,7 @@ public class JSONParser implements IParser {
 				else if(o instanceof String)
 				{
 					keyType = JSONConst.TYPE_STRING;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
 					decodeString(map, key, o);
 					col++;
@@ -149,8 +148,7 @@ public class JSONParser implements IParser {
 					ArrayList childList = new ArrayList<>();
 					put(map, key, childList);
 					keyType = JSONConst.TYPE_ARRAY;
-					subKeyMap = new HashMap<>();
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
 					decodeArray(childList, (JSONArray) o, keyVo);
 					col++;
@@ -163,7 +161,6 @@ public class JSONParser implements IParser {
 				}
 				indexList.add(key);
 				row++;
-				keys.remove();
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -183,11 +180,10 @@ public class JSONParser implements IParser {
 			try {
 				o = value.get(i);
 				String keyType = "";
-				HashMap subKeyMap = null;
 				if(o instanceof Number)
 				{
 					keyType = JSONConst.TYPE_NUMER;
-					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(i)!=null?attKeyMap.get(i):KeyVo.createKeyVo(i, keyType));
 					attKeyMap.put(i, keyVo);
 					put(list, i, o);
 					col++;
@@ -195,7 +191,7 @@ public class JSONParser implements IParser {
 				else if(o instanceof String)
 				{
 					keyType = JSONConst.TYPE_STRING;
-					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(i)!=null?attKeyMap.get(i):KeyVo.createKeyVo(i, keyType));
 					attKeyMap.put(i, keyVo);
 					decodeString(list, i, o);
 					col++;
@@ -205,8 +201,7 @@ public class JSONParser implements IParser {
 					ArrayList childList = new ArrayList<>();
 					put(list, i, childList);
 					keyType = JSONConst.TYPE_ARRAY;
-					subKeyMap = new HashMap<>();
-					KeyVo keyVo = KeyVo.createKeyVo(i, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(i)!=null?attKeyMap.get(i):KeyVo.createKeyVo(i, keyType));
 					attKeyMap.put(i, keyVo);
 					decodeArray(childList, (JSONArray) o, keyVo);
 					col++;
@@ -239,42 +234,39 @@ public class JSONParser implements IParser {
 			try {
 				o = value.get(key.toString());
 				String keyType = "";
-				HashMap subKeyMap = null;
 				if(o instanceof Number)
 				{
-					put(map, key, o);
 					keyType = JSONConst.TYPE_NUMER;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
+					put(map, key, o);
 				}
 				else if(o instanceof String)
 				{
-					decodeString(map, key, o);
 					keyType = JSONConst.TYPE_STRING;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
+					decodeString(map, key, o);
 				}
 				else if(o instanceof JSONArray)
 				{
+					keyType = JSONConst.TYPE_ARRAY;
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
+					attKeyMap.put(key, keyVo);
 					ArrayList childList = new ArrayList<>();
 					put(map, key, childList);
-					keyType = JSONConst.TYPE_ARRAY;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
-					attKeyMap.put(key, keyVo);
 					decodeArray(childList, (JSONArray) o, keyVo);
 				}
 				else if(o instanceof JSONObject)
 				{
-					HashMap childMap = new HashMap();
-					subKeyMap = new HashMap<>();
-					put(map, key, childMap);
 					keyType = JSONConst.TYPE_OBJECT;
-					KeyVo keyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
+					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
+					HashMap childMap = new HashMap();
+					put(map, key, childMap);
 					decodeObject(childMap, (JSONObject) o, keyVo);
 				}
 				col++;
-				keys.remove();
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -284,7 +276,7 @@ public class JSONParser implements IParser {
 	/**
 	 * 解析Object类型
 	 * */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes" })
 	private void decodeObject(HashMap map, JSONObject value, KeyVo keyVo)
 	{
 		Iterator keys = value.keys();
@@ -295,40 +287,38 @@ public class JSONParser implements IParser {
 			try {
 				o = value.get(key.toString());
 				String keyType = "";
-				HashMap subKeyMap = null;
 				if(o instanceof Number)
 				{
-					put(map, key, o);
 					keyType = JSONConst.TYPE_NUMER;
-					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
-					keyVo.subKeyMap.put(key, subKeyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
+					keyVo.putSubKey(key, subKeyVo);
+					put(map, key, o);
 				}
 				else if(o instanceof String)
 				{
-					decodeString(map, key, o);
 					keyType = JSONConst.TYPE_STRING;
-					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
-					keyVo.subKeyMap.put(key, subKeyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
+					keyVo.putSubKey(key, subKeyVo);
+					decodeString(map, key, o);
 				}
 				else if(o instanceof JSONArray)
 				{
-					ArrayList childList = new ArrayList<>();
 					keyType = JSONConst.TYPE_ARRAY;
-					decodeArray(childList, (JSONArray) o, keyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
+					keyVo.putSubKey(key, subKeyVo);
+					ArrayList childList = new ArrayList<>();
+					decodeArray(childList, (JSONArray) o, subKeyVo);
 					put(map, key, childList);
-					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
-					keyVo.subKeyMap.put(key, subKeyVo);
 				}
 				else if(o instanceof JSONObject)
 				{
-					HashMap childMap = new HashMap();
 					keyType = JSONConst.TYPE_NUMER;
-					decodeObject(childMap, (JSONObject) o, keyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
+					keyVo.putSubKey(key, subKeyVo);
+					HashMap childMap = new HashMap();
+					decodeObject(childMap, (JSONObject) o, subKeyVo);
 					put(map, key, childMap);
-					KeyVo subKeyVo = KeyVo.createKeyVo(key, keyType, subKeyMap);
-					keyVo.subKeyMap.put(key, subKeyVo);
 				}
-				keys.remove();
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -338,7 +328,7 @@ public class JSONParser implements IParser {
 	/**
 	 * 解析array类型
 	 * */
-	@SuppressWarnings("rawtypes")
+	@SuppressWarnings({ "rawtypes" })
 	private void decodeArray(ArrayList list, JSONArray value, KeyVo keyVo)
 	{
 		int len = value.length();
@@ -347,6 +337,7 @@ public class JSONParser implements IParser {
 			Object o;
 			try {
 				o = value.get(i);
+				String keyType = "";
 				if(o instanceof Number)
 				{
 					put(list, i, o);
@@ -357,14 +348,20 @@ public class JSONParser implements IParser {
 				}
 				else if(o instanceof JSONArray)
 				{
+					keyType = JSONConst.TYPE_ARRAY;
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(0):KeyVo.createKeyVo(0, keyType));
+					keyVo.putSubKey(0, subKeyVo);
 					ArrayList childList = new ArrayList<>();
-					decodeArray(childList, (JSONArray) o, keyVo);
+					decodeArray(childList, (JSONArray) o, subKeyVo);
 					put(list, i, childList);
 				}
 				else if(o instanceof JSONObject)
 				{
+					keyType = JSONConst.TYPE_OBJECT;
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(0):KeyVo.createKeyVo(0, keyType));
+					keyVo.putSubKey(0, subKeyVo);
 					HashMap childMap = new HashMap();
-					decodeObject(childMap, (JSONObject) o, keyVo);
+					decodeObject(childMap, (JSONObject) o, subKeyVo);
 					put(list, i, childMap);
 				}
 			} catch (JSONException e) {
@@ -391,17 +388,17 @@ public class JSONParser implements IParser {
 
 	/**
 	 * 解析字符串数据类型
-	 * 
 	 */
 	private void decodeString(Object content, Object key, Object value) {
 		String str = value.toString();
+		str = str.trim();
 		if(str.startsWith("\"")==true && str.endsWith("\"")==true)
 		{
-			put(content, key, value);
+			put(content, key, str);
 		}
 		else
 		{
-			put(content, key, "\""+value+"\"");
+			put(content, key, "\""+str+"\"");
 		}
 	}
 	
