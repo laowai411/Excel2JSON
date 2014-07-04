@@ -481,11 +481,11 @@ public class JSONParser implements IParser {
 		data.put("col", col);
 		data.put("cols", attKeyMap);
 		data.put("rows", indexList);
-		if(objectJson != null)
+		if(objectJson.size()>0)
 		{
 			data.put("data", objectJson);
 		}
-		else if(arrayJson != null)
+		else if(arrayJson.size()>0)
 		{
 			data.put("data", arrayJson);
 		}

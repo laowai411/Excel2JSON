@@ -413,7 +413,7 @@ public class ExcelCreater implements ICreater {
 				if (str.length() < 4) {
 					str = ",";
 				} else {
-					str = str.substring(0, str.length() - 2);
+					str = str.substring(0, str.length() - 1);
 				}
 			} else if (value instanceof HashMap) {
 				for (int subColIndex = 0; subColIndex < len; subColIndex++) {

@@ -1,0 +1,122 @@
+{
+	"128":{
+		"shareType": 128,
+		"enterNum": 300,
+		"mission": 0,
+		"modeSelect": 0,
+		"effLevel": 32,
+		"copyList": [
+		    {
+			"copyName": "桃花坞",
+			"copyId": [
+			    430
+			],
+			"type": [
+			    541134850
+			],
+			"copyBg": "skin/ui/copyBg/taohuawu.jpg",
+			"copyOpenLevel": 32,
+			"copyPassId": 0,
+			"copyOpenPower": 0,
+			"openLimit": "开启条件：<font color='#ff0000'>32级</font>",
+			"power": 0,
+			"locateX": 1400,
+			"locateY": 790
+		    },
+		    {
+			"copyName": "情人谷",
+			"copyId": [
+			    431
+			],
+			"type": [
+			    541134850
+			],
+			"copyBg": "skin/ui/copyBg/qingrengu.jpg",
+			"copyOpenLevel": 32,
+			"copyPassId": 0,
+			"copyOpenPower": 40000,
+			"openLimit": "开启条件：<font color='#ff0000'>战斗力大于40000</font>",
+			"power": 0,
+			"locateX": 1400,
+			"locateY": 790
+		    },
+		    {
+			"copyName": "水月天",
+			"copyId": [
+			    432
+			],
+			"type": [
+			    541134850
+			],
+			"copyBg": "skin/ui/copyBg/shuiyuetian.jpg",
+			"copyOpenLevel": 32,
+			"copyPassId": 0,
+			"copyOpenPower": 85000,
+			"openLimit": "开启条件：<font color='#ff0000'>战斗力大于85000</font>",
+			"power": 0,
+			"locateX": 1400,
+			"locateY": 790
+		    }
+		]
+    },
+    "129": {
+        "shareType": 128,
+        "enterNum": 300,
+        "mission": 0,
+        "modeSelect": 0,
+        "effLevel": 32,
+        "copyList": [
+            {
+                "copyName": "桃花坞",
+                "copyId": [
+                    430
+                ],
+                "type": [
+                    541134850
+                ],
+                "copyBg": "skin/ui/copyBg/taohuawu.jpg",
+                "copyOpenLevel": 32,
+                "copyPassId": 0,
+				"copyOpenPower": 0,
+                "openLimit": "开启条件：<font color='#ff0000'>32级</font>",
+                "power": 0,
+                "locateX": 1400,
+                "locateY": 790
+            },
+            {
+                "copyName": "情人谷",
+                "copyId": [
+                    431
+                ],
+                "type": [
+                    541134850
+                ],
+                "copyBg": "skin/ui/copyBg/qingrengu.jpg",
+                "copyOpenLevel": 32,
+                "copyPassId": 0,
+		"copyOpenPower": 40000,
+                "openLimit": "开启条件：<font color='#ff0000'>战斗力大于40000</font>",
+                "power": 0,
+                "locateX": 1400,
+                "locateY": 790
+            },
+	    {
+                "copyName": "水月天",
+                "copyId": [
+                    432
+                ],
+                "type": [
+                    541134850
+                ],
+                "copyBg": "skin/ui/copyBg/shuiyuetian.jpg",
+                "copyOpenLevel": 32,
+                "copyPassId": 0,
+		"copyOpenPower": 85000,
+                "openLimit": "开启条件：<font color='#ff0000'>战斗力大于85000</font>",
+                "power": 0,
+                "locateX": 1400,
+                "locateY": 790
+            }
+        ]
+    }
+}
