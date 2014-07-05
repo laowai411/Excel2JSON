@@ -126,18 +126,20 @@ public class ExcelCreater implements ICreater {
 	}
 
 	/**
-	 * 写某一分页的头信息
+	 * 创建分页并写入字段名和类型
 	 * */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void writeHeadAndCreateSubSheet(KeyVo arrRoot, HashMap keyMap, int sheetIndex) {
-		Sheet s = book.getSheet(sheetIndex);
+		Sheet sheet = book.getSheet(sheetIndex);
 		Iterator keys = keyMap.keySet().iterator();
 		int keyIndex = 0;
 		while (keys.hasNext()) {
 			// 写入字段名
 			Object key = keys.next();
 			String keyName = key.toString();
-			Cell label = s.getCell(keyIndex + ExcelConst.CONTENT_START.x + 1,
+			System.out.print("keyName = ");
+			System.out.println(keyName);
+			Cell label = sheet.getCell(keyIndex + ExcelConst.CONTENT_START.x + 1,
 					ExcelConst.HEAD_END_ROW_INDEX);
 			if (label == null) {
 				label = new Label(keyIndex + ExcelConst.CONTENT_START.x + 1,
@@ -160,9 +162,9 @@ public class ExcelCreater implements ICreater {
 				KeyVo keyVo = (KeyVo) keyMap.get(key);
 				Label keyTypeLabel = new Label(label.getColumn(),
 						label.getRow() - 1, keyVo.keyType);
-				((WritableSheet) s).addCell(keyTypeLabel);
+				((WritableSheet) sheet).addCell(keyTypeLabel);
 				// 字段名
-				((WritableSheet) s).addCell((WritableCell) label);
+				((WritableSheet) sheet).addCell((WritableCell) label);
 				Sheet subSheet = book.getSheet(keyName);
 				int tempSheetIndex = book.getNumberOfSheets() - 1;
 				if (keyVo.keyType.equals(JSONConst.TYPE_OBJECT) == true) {
@@ -201,6 +203,7 @@ public class ExcelCreater implements ICreater {
 									keyVo.subKeyMap,
 									tempSheetIndex);
 						}
+						arrRoot = null;
 					}
 				}
 			} catch (RowsExceededException e) {
