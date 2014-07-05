@@ -308,10 +308,10 @@ public class ExcelCreater implements ICreater {
 	 * */
 	@SuppressWarnings("rawtypes")
 	private int writeHashMap(int colIndex, int rowIndex, Object parentKey,
-			HashMap cellValue, int sheetIndex) {
+			HashMap cellValue, int parentSheetIndex) {
 		int subSheetIndex = -1;
 		Sheet subSheet = null;
-		if (parentKey.toString() == null
+		if (parentKey == null
 				|| parentKey.toString().equals("") == true) {
 			subSheetIndex = 0;
 			subSheet = book.getSheet(0);
@@ -348,8 +348,9 @@ public class ExcelCreater implements ICreater {
 						(ArrayList) value, subSheetIndex);
 				writeString(subColIndex, subRowIndex, key, str, subSheetIndex);
 			} else if (value instanceof HashMap) {
-				writeHashMap(subColIndex, subRowIndex, key, (HashMap) value,
+				int subIndex = writeHashMap(subColIndex, subRowIndex, key, (HashMap) value,
 						subSheetIndex);
+				writeNumber(subColIndex, subRowIndex, key, subIndex, subSheetIndex);
 				continue;
 			}
 			subColIndex++;
@@ -368,25 +369,14 @@ public class ExcelCreater implements ICreater {
 		if (parentKey.toString() == null
 				|| parentKey.toString().equals("") == true) {
 			subSheetIndex = 0;
-			subSheet = book.getSheet(0);
 		} else if (parentKey instanceof Number) {
 			subSheetIndex = 0;
-			subSheet = book.getSheet(0);
 		} else {
 			subSheet = book.getSheet(parentKey.toString());
 			if (subSheet != null) {
 				subSheetIndex = sheets.indexOf(subSheet);
 			}
 		}
-		// if (subSheetIndex < 0 || subSheet == null) {
-		// JOptionPane.showMessageDialog(null,
-		// "找不到Sheet   name=" + parentKey.toString() + "   index="
-		// + subSheetIndex);
-		// return;
-		// }
-		// int subRowIndex = subSheet.getRows() - (ExcelConst.CONTENT_START.y);
-		// 子表索引
-		// writeString(0, subRowIndex, "", subRowIndex, subSheetIndex);
 		int len = cellValue.size();
 		String str = "";
 		if (len > 0) {
