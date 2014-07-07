@@ -25,7 +25,7 @@ public class ParserUtil {
 	 */
 	private static HashMap<String, IParser> parserMap = new HashMap<>();
 	/**
-	 * listToFile存储
+	 * creater存储
 	 * 
 	 */
 	private static HashMap<String, ICreater> toFileList = new HashMap<>();
@@ -36,11 +36,13 @@ public class ParserUtil {
 	@SuppressWarnings("rawtypes")
 	private static ArrayList waittingList;
 
+	/**
+	 * 要删除的文件(无用的excel)
+	 * */
 	@SuppressWarnings("rawtypes")
 	private static ArrayList delList;
 	/**
 	 * 剩余文件数量
-	 * 
 	 */
 	private static int oddFileCount;
 
@@ -104,6 +106,11 @@ public class ParserUtil {
 					parseFile();
 				}
 			}, 0, 500);
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "转换结束!");
+			Global.setWindowEnable(true);
 		}
 	}
 

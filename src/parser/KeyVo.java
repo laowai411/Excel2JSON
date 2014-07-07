@@ -8,6 +8,8 @@ import java.util.HashMap;
  * */
 public class KeyVo {
 
+	public static final String SPECIAL_KEY = "2014-07_special_key";
+	
 	public String key;
 	
 	public String keyType;
@@ -15,20 +17,18 @@ public class KeyVo {
 	@SuppressWarnings("rawtypes")
 	public HashMap subKeyMap = new HashMap<>();
 	
-	@SuppressWarnings("rawtypes")
 	public static KeyVo createKeyVo(Object key, String keyType)
 	{
 		KeyVo keyVo = new KeyVo();
 		keyVo.key = key.toString();
 		keyVo.keyType = keyType;
-//		keyVo.subKeyMap = subKeyMap;
 		return keyVo;
 	}
 	
 	/**
 	 * 放入一个子类型KeyVo
 	 * */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void putSubKey(Object key, KeyVo subKeyVo)
 	{
 		if(this.subKeyMap != null && subKeyVo != null)

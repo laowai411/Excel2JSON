@@ -30,6 +30,7 @@ public class Global {
 	 * */
 	public static boolean isParsing;
 
+	@SuppressWarnings("rawtypes")
 	private static HashMap buttonMap = new HashMap<>();
 
 	@SuppressWarnings("unchecked")

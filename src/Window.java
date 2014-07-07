@@ -265,7 +265,7 @@ public class Window extends javax.swing.JFrame {
      * */
     private void saveConfig()
     {
-    	if(Global.IS_DEBUG == true)
+    	if(Global.IS_DEBUG)
     	{
     		File file = new File(Window.class.getResource("").getPath()+Global.config_path);
     		if(file.exists() == false)

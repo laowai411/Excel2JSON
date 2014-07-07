@@ -27,6 +27,7 @@ import parser.KeyVo;
 
 import common.ExcelConst;
 import common.JSONConst;
+import common.LogUtil;
 
 import etc.ConfigManager;
 
@@ -58,7 +59,7 @@ public class ExcelCreater implements ICreater {
 	private int row;
 	private Object sheetData;
 
-	private Workbook _templateBook = null;
+	private static Workbook _templateBook = null;
 
 	@SuppressWarnings({ "rawtypes", "unused" })
 	public void writeFile(IParser parser, File srcFile) {
@@ -108,11 +109,11 @@ public class ExcelCreater implements ICreater {
 
 			if (sheetData instanceof HashMap) {
 				// 写入配置信息(是否输出,配置表名...等等)
-				writeConfig(sheetName, JSONConst.TYPE_OBJECT);
+				writeConfig(sheetName + ".json", JSONConst.TYPE_OBJECT);
 				writeByHashMap((HashMap) sheetData);
 			} else if (sheetData instanceof ArrayList) {
 				// 写入配置信息(是否输出,配置表名...等等)
-				writeConfig(sheetName, JSONConst.TYPE_OBJECT);
+				writeConfig(sheetName + ".json", JSONConst.TYPE_ARRAY);
 				writeByArray((ArrayList) sheetData);
 			}
 			// 删除模版Sheet页
@@ -129,7 +130,8 @@ public class ExcelCreater implements ICreater {
 	 * 创建分页并写入字段名和类型
 	 * */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private void writeHeadAndCreateSubSheet(KeyVo arrRoot, HashMap keyMap, int sheetIndex) {
+	private void writeHeadAndCreateSubSheet(KeyVo arrRoot, HashMap keyMap,
+			int sheetIndex) {
 		Sheet sheet = book.getSheet(sheetIndex);
 		Iterator keys = keyMap.keySet().iterator();
 		int keyIndex = 0;
@@ -137,20 +139,16 @@ public class ExcelCreater implements ICreater {
 			// 写入字段名
 			Object key = keys.next();
 			String keyName = key.toString();
-			System.out.print("keyName = ");
-			System.out.println(keyName);
-			Cell label = sheet.getCell(keyIndex + ExcelConst.CONTENT_START.x + 1,
-					ExcelConst.HEAD_END_ROW_INDEX);
+			Cell label = sheet.getCell(keyIndex + ExcelConst.CONTENT_START.x + 1, ExcelConst.ATT_KEY_INDEX);
 			if (label == null) {
 				label = new Label(keyIndex + ExcelConst.CONTENT_START.x + 1,
-						ExcelConst.HEAD_END_ROW_INDEX, keyName.toString());
+						ExcelConst.ATT_KEY_INDEX, keyName.toString());
 			} else {
 				Label tempLabel = new Label(keyIndex
 						+ ExcelConst.CONTENT_START.x + 1,
-						ExcelConst.HEAD_END_ROW_INDEX, keyName.toString());
+						ExcelConst.ATT_KEY_INDEX, keyName.toString());
 				if (label.getCellFeatures() != null) {
-					tempLabel.setCellFeatures((WritableCellFeatures) label
-							.getCellFeatures());
+					tempLabel.setCellFeatures((WritableCellFeatures) label.getCellFeatures());
 				}
 				if (label.getCellFormat() != null) {
 					tempLabel.setCellFormat(label.getCellFormat());
@@ -170,27 +168,32 @@ public class ExcelCreater implements ICreater {
 				if (keyVo.keyType.equals(JSONConst.TYPE_OBJECT) == true) {
 					if (keyVo.subKeyMap != null && keyVo.subKeyMap.size() > 0) {
 						if (subSheet == null) {
-							if(arrRoot != null)
-							{
+							if (keyName.equals(KeyVo.SPECIAL_KEY) == true
+									&& arrRoot != null) {
 								keyName = arrRoot.key;
 							}
-							book.copySheet(tempSheetIndex, keyName, 
+							book.copySheet(tempSheetIndex, keyName,
 									tempSheetIndex);
 							subSheet = book.getSheet(tempSheetIndex);
 							sheets.add(tempSheetIndex, subSheet);
-							writeHeadAndCreateSubSheet(arrRoot, keyVo.subKeyMap,
-									tempSheetIndex);
-							//在父表写入引用关系
-							for(int i=0; i<book.getNumberOfSheets(); i++)
-							{
+							writeHeadAndCreateSubSheet(arrRoot,
+									keyVo.subKeyMap, tempSheetIndex);
+							// 在父表写入引用关系
+							for (int i = 0; i < book.getNumberOfSheets(); i++) {
 								Sheet parentSheet = book.getSheet(i);
 								label = parentSheet.findCell(keyName);
-								if(label != null)
-								{
-									Label linkCell = new Label(label.getColumn(), ExcelConst.LINK_EXCEL_ROW_INDEX, file.getName());
-									((WritableSheet) parentSheet).addCell(linkCell);
-									linkCell = new Label(label.getColumn(), ExcelConst.LINK_SHEET_ROW_INDEX, tempSheetIndex+"");
-									((WritableSheet) parentSheet).addCell(linkCell);
+								if (label != null) {
+									Label linkCell = new Label(
+											label.getColumn(),
+											ExcelConst.LINK_EXCEL_ROW_INDEX,
+											file.getName());
+									((WritableSheet) parentSheet)
+											.addCell(linkCell);
+									linkCell = new Label(label.getColumn(),
+											ExcelConst.LINK_SHEET_ROW_INDEX,
+											tempSheetIndex + "");
+									((WritableSheet) parentSheet)
+											.addCell(linkCell);
 								}
 							}
 						}
@@ -200,8 +203,7 @@ public class ExcelCreater implements ICreater {
 						arrRoot = keyVo;
 						if (subSheet == null) {
 							writeHeadAndCreateSubSheet(arrRoot,
-									keyVo.subKeyMap,
-									tempSheetIndex);
+									keyVo.subKeyMap, tempSheetIndex);
 						}
 						arrRoot = null;
 					}
@@ -297,8 +299,10 @@ public class ExcelCreater implements ICreater {
 				// 写入主表引用
 				Sheet sheet = book.getSheet(sheetIndex);
 				if (sheet == null) {
-					JOptionPane.showMessageDialog(null, "找不到index为"
-							+ sheetIndex + "的Sheet!");
+					// JOptionPane.showMessageDialog(null, "找不到index为"
+					// + sheetIndex + "的Sheet!");
+					LogUtil.error(file.getName() + "  找不到index为" + sheetIndex
+							+ "的Sheet!");
 					return;
 				}
 			}
@@ -314,8 +318,7 @@ public class ExcelCreater implements ICreater {
 			HashMap cellValue, int parentSheetIndex) {
 		int subSheetIndex = -1;
 		Sheet subSheet = null;
-		if (parentKey == null
-				|| parentKey.toString().equals("") == true) {
+		if (parentKey == null || parentKey.toString().equals("") == true) {
 			subSheetIndex = 0;
 			subSheet = book.getSheet(0);
 		} else if (parentKey instanceof Number) {
@@ -328,9 +331,11 @@ public class ExcelCreater implements ICreater {
 			}
 		}
 		if (subSheetIndex < 0 || subSheet == null) {
-			JOptionPane.showMessageDialog(null,
-					"找不到Sheet   name=" + parentKey.toString() + "   index="
-							+ subSheetIndex);
+			// JOptionPane.showMessageDialog(null,
+			// "找不到Sheet   name=" + parentKey.toString() + "   index="
+			// + subSheetIndex);
+			LogUtil.error(file.getName() + " 找不到Sheet   name="
+					+ parentKey.toString() + "   index=" + subSheetIndex);
 			return -1;
 		}
 		Iterator keys = cellValue.keySet().iterator();
@@ -351,9 +356,10 @@ public class ExcelCreater implements ICreater {
 						(ArrayList) value, subSheetIndex);
 				writeString(subColIndex, subRowIndex, key, str, subSheetIndex);
 			} else if (value instanceof HashMap) {
-				int subIndex = writeHashMap(subColIndex, subRowIndex, key, (HashMap) value,
+				int subIndex = writeHashMap(subColIndex, subRowIndex, key,
+						(HashMap) value, subSheetIndex);
+				writeNumber(subColIndex, subRowIndex, key, subIndex,
 						subSheetIndex);
-				writeNumber(subColIndex, subRowIndex, key, subIndex, subSheetIndex);
 				continue;
 			}
 			subColIndex++;
@@ -372,8 +378,8 @@ public class ExcelCreater implements ICreater {
 		if (parentKey.toString() == null
 				|| parentKey.toString().equals("") == true) {
 			subSheetIndex = 0;
-		} else if (parentKey instanceof Number) {
-			subSheetIndex = 0;
+		} else if (parentKey.toString().equals(KeyVo.SPECIAL_KEY) == true) {
+			subSheetIndex = sheetIndex;
 		} else {
 			subSheet = book.getSheet(parentKey.toString());
 			if (subSheet != null) {
@@ -501,6 +507,7 @@ public class ExcelCreater implements ICreater {
 			Sheet sheet = (Sheet) sheets.get(i);
 			jsonName = i == 0 ? jsonName : "";
 			int outFlag = i == 0 ? 1 : 0;
+			//子分页类型应是在主分页中的类型
 			jsonType = i == 0 ? jsonType : JSONConst.TYPE_OBJECT;
 			try {
 				Label label = new Label(ExcelConst.CLIENT_CONFIG_NAME.x,
@@ -516,11 +523,14 @@ public class ExcelCreater implements ICreater {
 						- ExcelConst.CLIENT_PARAM_OUT_COL_INDEX;
 				// 字段是否输出
 				for (int c = 0; c < maxCol; c++) {
-					Cell keyLabel = sheet.getCell(c + ExcelConst.CLIENT_PARAM_OUT_COL_INDEX, ExcelConst.CONTENT_START.y-1);
-					if(keyLabel != null && ((keyLabel instanceof EmptyCell)==false || keyLabel.getType() != CellType.EMPTY))
-					{
-						label = new Label(
-								c + ExcelConst.CLIENT_PARAM_OUT_COL_INDEX,
+					Cell keyLabel = sheet.getCell(c
+							+ ExcelConst.CLIENT_PARAM_OUT_COL_INDEX,
+							ExcelConst.CONTENT_START.y - 1);
+					if (keyLabel != null
+							&& ((keyLabel instanceof EmptyCell) == false || keyLabel
+									.getType() != CellType.EMPTY)) {
+						label = new Label(c
+								+ ExcelConst.CLIENT_PARAM_OUT_COL_INDEX,
 								ExcelConst.CLIENT_PARAM_OUT_ROW_INDEX, "1");
 						((WritableSheet) sheet).addCell(label);
 					}
@@ -545,12 +555,10 @@ public class ExcelCreater implements ICreater {
 	public void initTemplateBook() {
 		if (_templateBook == null) {
 			try {
-				_templateBook = Workbook.getWorkbook(new File(ConfigManager
-						.excelTemplatePath()));
+				_templateBook = Workbook.getWorkbook(new File(ConfigManager.excelTemplatePath()));
 			} catch (BiffException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
-				e.printStackTrace();
 			}
 		}
 	}

@@ -4,87 +4,144 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-
+import common.ExcelConst;
+import common.ExtensionConst;
 import common.LogUtil;
 
 public class ExcelParser implements IParser {
-
+	
 	/**
-	 * 3维数组 [ sheetIndex:[ colIndex[ rowIndex string ] ] ]
-	 * 
-	 */
-	@SuppressWarnings("rawtypes")
-	private ArrayList gSheetValueList;
-	/**
-	 * 列数
+	 * 当前要生成json的Excel文件
 	 * */
-	private int col;
+	private File gExcel;
 
 	/**
-	 * 行数
-	 * */
-	private int row;
-
-	/**
-	 * sheet的数据
+	 * 用于转换json的数据
 	 * */
 	@SuppressWarnings("rawtypes")
-	private HashMap data;
-
+	private HashMap data = new HashMap<>();
+	
+	/**
+	 * 解析Excel得到的数据,包含了关联表的数据
+	 * */
+	@SuppressWarnings({ "rawtypes" })
+	private HashMap gExcelData;
+	
+	@SuppressWarnings("rawtypes")
 	public ExcelParser() {
-		gSheetValueList = new ArrayList<>();
+		gExcelData = new HashMap();
 	}
 
 	/**
 	 * 解析Excel文件
 	 * 
 	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void parse(File file) {
+		gExcel = file;
+		parseExcel(file);
+	}
+	
+	/**
+	 * 解析一个Excel文件, 及其关联的Excel
+	 * */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void parseExcel(File file)
+	{
 		Workbook book = null;
 		try {
 			book = Workbook.getWorkbook(file);
 		} catch (BiffException | IOException e) {
-			// e.printStackTrace();
 			return;
 		}
 
 		Sheet sheet = null;
-		//只把第一个sheet解析
-		for (int i = 0; i < 1; i++) {
+		ArrayList sheetList = new ArrayList<>();
+		for (int i = 0; i < book.getNumberOfSheets(); i++) {
 			try {
 				sheet = book.getSheet(i);
 			} catch (NullPointerException nullE) {
 				// sheet数据不正确
 				LogUtil.error(file.getName().substring(0, file.getName().lastIndexOf("."))+"  sheet数据不正确!!");
-				return;
+				continue;
 			}
 			
-			ArrayList valueList = new ArrayList<>();
-			gSheetValueList.add(i, valueList);
-			if (sheet != null) {
-				file.getName().substring(0, file.getName().lastIndexOf("."));
-				col = sheet.getColumns();
-				for (int colIndex = 0; colIndex < col; colIndex++) {
-					ArrayList cellList = new ArrayList<>();
-					valueList.add(colIndex, cellList);
-					row = sheet.getRows();
-					for (int rowIndex = 0; rowIndex < row; rowIndex++) {
-						if (sheet.getRow(rowIndex) != null
-								&& sheet.getColumn(colIndex) != null) {
-							Cell c = sheet.getCell(colIndex, rowIndex);
-							if (c != null) {
-								cellList.add(rowIndex, c);
+			ExcelSheetVo sheetVo = new ExcelSheetVo();
+			sheetVo.sheetData = new ArrayList<>();
+			sheetVo.path = file.getParent();
+			sheetList.add(i, sheetVo);
+			sheetVo.sheetName = sheet.getName();
+			parseSheet(sheet, sheetVo);
+		}
+		gExcelData.put(file.getName(), sheetList);
+		book.close();
+	}
+	
+	/**
+	 * 解析一个Sheet
+	 * */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void parseSheet(Sheet sheet, ExcelSheetVo sheetVo)
+	{
+		if (sheet != null) {
+			parseLinkExcel(sheet);
+			int col = sheet.getColumns();
+			sheetVo.col = col;
+			for (int colIndex = 0; colIndex < col; colIndex++) {
+				ArrayList cellList = new ArrayList<>();
+				sheetVo.sheetData.add(colIndex, cellList);
+				int row = sheet.getRows();
+				sheetVo.row = sheetVo.row>row?sheetVo.row:row;
+				for (int rowIndex = 0; rowIndex < row; rowIndex++) {
+					if (sheet.getRow(rowIndex) != null
+							&& sheet.getColumn(colIndex) != null) {
+						Cell cell = sheet.getCell(colIndex, rowIndex);
+						if (cell != null) {
+							if(colIndex == ExcelConst.CLIENT_OUT_FLAG.x && rowIndex == ExcelConst.CLIENT_OUT_FLAG.y)
+							{
+								if(cell.getContents() != null && cell.getContents().equals("1")==true)
+								{
+									cell = sheet.getCell(ExcelConst.CLIENT_CONFIG_NAME.x, ExcelConst.CLIENT_CONFIG_NAME.y);
+									if(cell.getContents() !=null && cell.getContents().equals("")==false)
+									{
+										sheetVo.jsonName = cell.getContents();
+									}
+								}
 							}
+							cellList.add(rowIndex, cell.getContents());
 						}
 					}
 				}
-				book.close();
+			}
+		}
+	}
+	
+	/**
+	 * 解析关联的excel
+	 * */
+	private void parseLinkExcel(Sheet sheet)
+	{
+		for(int i=ExcelConst.LINK_EXCEL_COL_INDEX; i<sheet.getColumns(); i++)
+		{
+			Cell cell = sheet.getCell(i, ExcelConst.LINK_EXCEL_ROW_INDEX);
+			if(cell != null && cell.getContents()!=null && cell.getContents().equals("")==false)
+			{
+				String excelName = cell.getContents();
+				if(excelName.equals(gExcel.getName())==false)
+				{
+					cell = sheet.getCell(i, ExcelConst.LINK_EXCEL_ROW_INDEX);
+					if(cell != null && cell.getContents()!=null && cell.getContents().equals("")==false)
+					{
+						File file = new File(gExcel.getAbsolutePath()+excelName);
+						if(file.exists()==true && ExtensionConst.get_isExcel(file)==true)
+						{
+							parseExcel(file);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -95,22 +152,14 @@ public class ExcelParser implements IParser {
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public HashMap getData(File file) {
-		if(gSheetValueList != null)
-		{
-			gSheetValueList.clear();
-		}
-		else
-		{
-			gSheetValueList = new ArrayList<>();
-		}
+		gExcelData.clear();
+		data.clear();
 		parse(file);
-		data = new HashMap();
 		String fileName = file.getName();
 		fileName = fileName.substring(0, fileName.lastIndexOf("."));
-		data.put("name", file.getParent() + "\\" + fileName);
-		data.put("data", gSheetValueList);
-		data.put("col", col);
-		data.put("row", row);
+		data.put("excelData", gExcelData);
+		data.put("excelName", file.getName());
+		file = null;
 		return data;
 	}
 

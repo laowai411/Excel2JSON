@@ -64,9 +64,13 @@ public class ExcelConst {
 	 * */
 	public static final int LINK_SHEET_ROW_INDEX = 8;
 	/**
-	 * Excel头信息结束行的索引
+	 * 数据类型在Excel中的行索引
 	 * */
-	public static final int HEAD_END_ROW_INDEX = 10;
+	public static final int ATT_KEY_TYPE_INDEX = 9;
+	/**
+	 * 字段名的行索引
+	 * */
+	public static final int ATT_KEY_INDEX = 10;
 	/**
 	 * 内容起始格子
 	 * */

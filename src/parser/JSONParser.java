@@ -312,7 +312,7 @@ public class JSONParser implements IParser {
 				}
 				else if(o instanceof JSONObject)
 				{
-					keyType = JSONConst.TYPE_NUMER;
+					keyType = JSONConst.TYPE_OBJECT;
 					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					keyVo.putSubKey(key, subKeyVo);
 					HashMap childMap = new HashMap();
@@ -349,8 +349,8 @@ public class JSONParser implements IParser {
 				else if(o instanceof JSONArray)
 				{
 					keyType = JSONConst.TYPE_ARRAY;
-					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(0):KeyVo.createKeyVo(0, keyType));
-					keyVo.putSubKey(0, subKeyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(KeyVo.SPECIAL_KEY):KeyVo.createKeyVo(KeyVo.SPECIAL_KEY, keyType));
+					keyVo.putSubKey(KeyVo.SPECIAL_KEY, subKeyVo);
 					ArrayList childList = new ArrayList<>();
 					decodeArray(childList, (JSONArray) o, subKeyVo);
 					put(list, i, childList);
@@ -358,8 +358,8 @@ public class JSONParser implements IParser {
 				else if(o instanceof JSONObject)
 				{
 					keyType = JSONConst.TYPE_OBJECT;
-					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(0):KeyVo.createKeyVo(0, keyType));
-					keyVo.putSubKey(0, subKeyVo);
+					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(KeyVo.SPECIAL_KEY):KeyVo.createKeyVo(KeyVo.SPECIAL_KEY, keyType));
+					keyVo.putSubKey(KeyVo.SPECIAL_KEY, subKeyVo);
 					HashMap childMap = new HashMap();
 					decodeObject(childMap, (JSONObject) o, subKeyVo);
 					put(list, i, childMap);
