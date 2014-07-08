@@ -14,9 +14,9 @@ public class Global {
 	public static final boolean IS_DEBUG = true;
 
 	
-	public static final String readMe_path = "\\etc\\readMe.txt";
+	public static final String readMe_path = "etc/readMe.txt";
 
-	public static final String config_path = "\\etc\\config.json";
+	public static final String config_path = "etc/config.json";
 	
 
 	public static final int delay = 500;
@@ -47,7 +47,7 @@ public class Global {
 	 * */
 	public static String getRunPath()
 	{
-		return mainClass.getResource("").getPath();
+		return mainClass.getResource("").getPath().substring(1);
 	}
 
 	@SuppressWarnings("rawtypes")

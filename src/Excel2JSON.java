@@ -268,7 +268,7 @@ public class Excel2JSON extends javax.swing.JFrame {
     {
     	if(Global.IS_DEBUG)
     	{
-    		File file = new File(Excel2JSON.class.getResource("").getPath()+Global.config_path);
+    		File file = new File(Global.getRunPath()+Global.config_path);
     		if(file.exists() == false)
     		{
     			try {
@@ -300,7 +300,7 @@ public class Excel2JSON extends javax.swing.JFrame {
      * */
     private void readConfig()
     {
-    	File file = new File(Excel2JSON.class.getResource("").getPath()+Global.config_path);
+    	File file = new File(Global.getRunPath()+Global.config_path);
     	if(file.exists() == false)
     	{
     		return;
@@ -365,26 +365,24 @@ public class Excel2JSON extends javax.swing.JFrame {
      * */
     private void onClickHelpHandler(java.awt.event.MouseEvent evt) {
     	try {
-    		Desktop.getDesktop().open(new File(Excel2JSON.class.getResource("").getPath()+Global.readMe_path));
+    		Desktop.getDesktop().open(new File(Global.getRunPath()+Global.readMe_path));
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Excel2JSON.class.getResource("").getPath()+Global.readMe_path);
+			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Global.getRunPath()+Global.readMe_path);
 		}
     }
 
     private void onClickWatchJSONHandler(java.awt.event.MouseEvent evt) {                                         
         try {
-    		 Desktop.getDesktop().open(new File(Excel2JSON.class.getResource("").getPath()+"etc/test.json"));
+        	Runtime.getRuntime().exec(ConfigManager.cmdOpenTemplateDir());
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Excel2JSON.class.getResource("").getPath()+"etc/test.json");
 		}
        
     }
 
     private void onClickWatchExcelHandler(java.awt.event.MouseEvent evt) {                                          
          try {
-    		 Desktop.getDesktop().open(new File(ConfigManager.excelTemplatePath()));
+        	 Runtime.getRuntime().exec(ConfigManager.cmdOpenTemplateDir());
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+ConfigManager.excelTemplatePath());
 		}
     }
 

@@ -26,7 +26,7 @@ public class LogUtil {
 	@SuppressWarnings({ "deprecation" })
 	public static void log(String str)
 	{
-		File file = new File(LogUtil.class.getResource("").getPath()+"\\log.txt");
+		File file = new File(Global.getRunPath()+"etc/log.txt");
 		if (file.exists() == false) {
 			try {
 				file.createNewFile();
@@ -51,7 +51,7 @@ public class LogUtil {
 	@SuppressWarnings({ "deprecation" })
 	public static void error(String str)
 	{
-		File file = new File(LogUtil.class.getResource("").getPath()+"\\error.txt");
+		File file = new File(Global.getRunPath()+"etc/error.txt");
 		if (file.exists() == false) {
 			try {
 				file.createNewFile();
