@@ -1,7 +1,4 @@
-Excel2JSON
-==========
-
-Excel和json文件互转
+JSON→Excel
 	.JSON结构一级属性类型必须相同
 		{
 			"0":{},
