@@ -79,11 +79,23 @@ public class JSONCreater implements ICreater {
 	 * .数组需要检测其中是否是对象,如果是则循环递进,关联子表索引替代
 	 * .对象则用关联子表的索引替代
 	 * */
+	@SuppressWarnings("rawtypes")
 	private String getJSONStr(ExcelSheetVo sheet)
 	{
-		String str = "{";
-		str += getContentStr(sheet);
-		str = str.substring(0, str.length()-1)+"\n}";
+		String type = (String) ((ArrayList)sheet.sheetData.get(ExcelConst.CLIENT_CONFIG_TYPE.x)).get(ExcelConst.CLIENT_CONFIG_TYPE.y);
+		String str = "";
+		if(type.equals(JSONConst.TYPE_ARRAY)==true)
+		{
+			str += "[";
+			str += getContentStr(sheet);
+			str = str.substring(0, str.length()-1)+"\n]";
+		}
+		else if(type.equals(JSONConst.TYPE_OBJECT)==true)
+		{
+			str += "{";
+			str += getContentStr(sheet);
+			str = str.substring(0, str.length()-1)+"\n}";
+		}
 		return str;
 	}
 	
@@ -100,11 +112,16 @@ public class JSONCreater implements ICreater {
 				continue;
 			}
 			String id = (String) ((ArrayList)sheet.sheetData.get(ExcelConst.CONTENT_START.x)).get(rowIndex);
-			if(id.equals("")==false)
+			String type = (String) ((ArrayList)sheet.sheetData.get(ExcelConst.CLIENT_CONFIG_TYPE.x)).get(ExcelConst.CLIENT_CONFIG_TYPE.y);
+			if(type.equals(JSONConst.TYPE_OBJECT)==true)
 			{
 				id = "\""+id+"\":{";
 			}
-			str = str.concat("\n\t"+id+tempStr.substring(0, tempStr.length()-1)).concat("},");
+			else if(type.equals(JSONConst.TYPE_ARRAY)==true)
+			{
+				id = "{";
+			}
+			str = str.concat("\n\t"+id+tempStr).concat("},");
 		}
 		str = str.substring(0, str.length()-1).concat("\n}");
 		return str;
@@ -117,7 +134,7 @@ public class JSONCreater implements ICreater {
 		for(int colIndex=ExcelConst.CONTENT_START.x; colIndex<sheet.col; colIndex++)
 		{
 			String outFlag = (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(ExcelConst.CLIENT_PARAM_OUT_ROW_INDEX);
-			if(outFlag.equals("0")==true)
+			if(outFlag.equals("1")==false)
 			{
 				continue;
 			}
@@ -138,14 +155,13 @@ public class JSONCreater implements ICreater {
 			{
 				str += reaplaceObject(sheet, colIndex, rowIndex)+",";
 			}
-			else if(attKeyType.equals(JSONConst.TYPE_NUMER)==true || attKeyType.equals(JSONConst.TYPE_STRING))
+			else if(attKeyType.equals(JSONConst.TYPE_NUMER)==true || attKeyType.equals(JSONConst.TYPE_STRING)==true)
 			{
 				str += "\""+attKey+"\":"+cellStr+",";
 			}
 			else if(attKey.equals("")==true)
 			{
 				//不处理
-				System.out.println("不处理  keyType "+attKeyType+"  key "+attKey);
 			}
 		}
 		if(str.endsWith(",")==true)
@@ -180,9 +196,11 @@ public class JSONCreater implements ICreater {
 			if(linkSheet != null)
 			{
 				String type =  (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(ExcelConst.ATT_KEY_TYPE_INDEX);
-				str +="\""+linkSheet.sheetName+"\":{";
+				String attName = (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(ExcelConst.ATT_KEY_INDEX);
+				str +="\""+attName+"\":{";
 				for(int rowInd=ExcelConst.CONTENT_START.y; rowInd<linkSheet.row; rowInd++)
 				{
+					boolean hasFind = false;
 					if(((ArrayList)linkSheet.sheetData.get(ExcelConst.CONTENT_START.x)).get(rowInd).equals(value) == true)
 					{
 						for(int colInd=ExcelConst.CONTENT_START.x; colInd<linkSheet.col; colInd++)
@@ -190,8 +208,14 @@ public class JSONCreater implements ICreater {
 							if(((ArrayList)linkSheet.sheetData.get(colInd)).get(rowInd).equals(value)==true)
 							{
 								str += getRowStr(linkSheet, rowInd, type)+",";
+								hasFind = true;
+								break;
 							}
 						}
+					}
+					if(hasFind == true)
+					{
+						break;
 					}
 				}
 			}
@@ -211,27 +235,31 @@ public class JSONCreater implements ICreater {
 	{
 		ArrayList colList = (ArrayList) sheet.sheetData.get(colIndex);
 		String value = (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(rowIndex);
+		String[] idList = value.split(",");
 		String linkExcelName = (String) colList.get(ExcelConst.LINK_EXCEL_ROW_INDEX);
 		String str = "";
 		String linkExcelIndex = (String) colList.get(ExcelConst.LINK_SHEET_ROW_INDEX);
+		String attName = (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(ExcelConst.ATT_KEY_INDEX);
 		if(excelData.get(linkExcelName) != null && ((ArrayList)excelData.get(linkExcelName)).size()>0)
 		{
 			ExcelSheetVo linkSheet = (ExcelSheetVo) ((ArrayList)excelData.get(linkExcelName)).get(Integer.parseInt(linkExcelIndex));
 			if(linkSheet != null)
 			{
-				if(value.equals("e"))
-				{
-					System.out.println(value);
-				}
 				String type =  (String) ((ArrayList)sheet.sheetData.get(colIndex)).get(ExcelConst.ATT_KEY_TYPE_INDEX);
-				str +="\""+linkSheet.sheetName+"\":[";
-				for(int rowInd=ExcelConst.CONTENT_START.y; rowInd<linkSheet.row; rowInd++)
+				str +="\""+attName+"\":[";
+				int len = idList.length;
+				for(int i=0; i<len; i++)
 				{
-					if(((ArrayList)linkSheet.sheetData.get(ExcelConst.CONTENT_START.x)).get(rowInd).equals(value) == true)
+					for(int rowInd=ExcelConst.CONTENT_START.y; rowInd<linkSheet.row; rowInd++)
 					{
-						for(int colInd=ExcelConst.CONTENT_START.x; colInd<linkSheet.col; colInd++)
+						String id = (String) ((ArrayList)linkSheet.sheetData.get(ExcelConst.CONTENT_START.x)).get(rowInd);
+						if(idList[i].equals(id) == true)
 						{
-							if(((ArrayList)linkSheet.sheetData.get(colInd)).get(rowInd).equals(value)==true)
+							if(type.equals(JSONConst.TYPE_ARRAY)==true)
+							{
+								str += "{"+getRowStr(linkSheet, rowInd, type)+"},";
+							}
+							else
 							{
 								str += getRowStr(linkSheet, rowInd, type)+",";
 							}
@@ -239,10 +267,14 @@ public class JSONCreater implements ICreater {
 					}
 				}
 			}
-			if(str.equals("")==false)
-			{
-				str = str.substring(0, str.length()-1).concat("]");
-			}
+		}
+		else
+		{
+			str +="\""+attName+"\":["+value+",";
+		}
+		if(str.equals("")==false)
+		{
+			str = str.substring(0, str.length()-1).concat("]");
 		}
 		return str;
 	}
