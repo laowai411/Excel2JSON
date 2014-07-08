@@ -23,12 +23,14 @@ public class ParserUtil {
 	 * 解析器存储
 	 * 
 	 */
-	private static HashMap<String, IParser> parserMap = new HashMap<>();
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private static HashMap<String, IParser> parserMap = new HashMap();
 	/**
 	 * creater存储
 	 * 
 	 */
-	private static HashMap<String, ICreater> toFileList = new HashMap<>();
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private static HashMap<String, ICreater> toFileList = new HashMap();
 	/**
 	 * 等待解析的文件列表
 	 * 

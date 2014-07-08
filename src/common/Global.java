@@ -29,9 +29,29 @@ public class Global {
 	 * 是否正在转换
 	 * */
 	public static boolean isParsing;
+	
+	/**
+	 * 程序运行路径
+	 * */
+	@SuppressWarnings("rawtypes")
+	private static Class mainClass;
+	
+	@SuppressWarnings("rawtypes")
+	public static void setRunPath(Class root)
+	{
+		mainClass = root;
+	}
+	
+	/**
+	 * 返回程序当前运行目录
+	 * */
+	public static String getRunPath()
+	{
+		return mainClass.getResource("").getPath();
+	}
 
 	@SuppressWarnings("rawtypes")
-	private static HashMap buttonMap = new HashMap<>();
+	private static HashMap buttonMap = new HashMap();
 
 	@SuppressWarnings("unchecked")
 	public static void registerJButton(JButton btn) {

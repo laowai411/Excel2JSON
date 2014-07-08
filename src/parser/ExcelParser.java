@@ -23,7 +23,7 @@ public class ExcelParser implements IParser {
 	 * 用于转换json的数据
 	 * */
 	@SuppressWarnings("rawtypes")
-	private HashMap data = new HashMap<>();
+	private HashMap data = new HashMap();
 	
 	/**
 	 * 解析Excel得到的数据,包含了关联表的数据
@@ -54,12 +54,15 @@ public class ExcelParser implements IParser {
 		Workbook book = null;
 		try {
 			book = Workbook.getWorkbook(file);
-		} catch (BiffException | IOException e) {
+		} catch (BiffException e) {
+			return;
+		}catch(IOException e)
+		{
 			return;
 		}
 
 		Sheet sheet = null;
-		ArrayList sheetList = new ArrayList<>();
+		ArrayList sheetList = new ArrayList();
 		for (int i = 0; i < book.getNumberOfSheets(); i++) {
 			try {
 				sheet = book.getSheet(i);
@@ -70,7 +73,7 @@ public class ExcelParser implements IParser {
 			}
 			
 			ExcelSheetVo sheetVo = new ExcelSheetVo();
-			sheetVo.sheetData = new ArrayList<>();
+			sheetVo.sheetData = new ArrayList();
 			sheetVo.path = file.getParent();
 			sheetList.add(i, sheetVo);
 			sheetVo.sheetName = sheet.getName();
@@ -91,7 +94,7 @@ public class ExcelParser implements IParser {
 			int col = sheet.getColumns();
 			sheetVo.col = col;
 			for (int colIndex = 0; colIndex < col; colIndex++) {
-				ArrayList cellList = new ArrayList<>();
+				ArrayList cellList = new ArrayList();
 				sheetVo.sheetData.add(colIndex, cellList);
 				int row = sheet.getRows();
 				sheetVo.row = sheetVo.row>row?sheetVo.row:row;

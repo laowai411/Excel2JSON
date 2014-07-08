@@ -15,7 +15,7 @@ public class KeyVo {
 	public String keyType;
 	
 	@SuppressWarnings("rawtypes")
-	public HashMap subKeyMap = new HashMap<>();
+	public HashMap subKeyMap = new HashMap();
 	
 	public static KeyVo createKeyVo(Object key, String keyType)
 	{

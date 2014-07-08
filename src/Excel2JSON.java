@@ -28,7 +28,7 @@ import etc.ConfigManager;
  * @author AngryPotato
  */
 @SuppressWarnings("serial")
-public class Window extends javax.swing.JFrame {
+public class Excel2JSON extends javax.swing.JFrame {
 
     /**
      * 文件选择窗口
@@ -44,7 +44,8 @@ public class Window extends javax.swing.JFrame {
     /**
      * Creates new form Window
      */
-    public Window() {
+    public Excel2JSON() {
+    	Global.setRunPath(Excel2JSON.class);
         initComponents();
         setTitle("Excel2JSON");
         readConfig();
@@ -267,7 +268,7 @@ public class Window extends javax.swing.JFrame {
     {
     	if(Global.IS_DEBUG)
     	{
-    		File file = new File(Window.class.getResource("").getPath()+Global.config_path);
+    		File file = new File(Excel2JSON.class.getResource("").getPath()+Global.config_path);
     		if(file.exists() == false)
     		{
     			try {
@@ -299,7 +300,7 @@ public class Window extends javax.swing.JFrame {
      * */
     private void readConfig()
     {
-    	File file = new File(Window.class.getResource("").getPath()+Global.config_path);
+    	File file = new File(Excel2JSON.class.getResource("").getPath()+Global.config_path);
     	if(file.exists() == false)
     	{
     		return;
@@ -364,17 +365,17 @@ public class Window extends javax.swing.JFrame {
      * */
     private void onClickHelpHandler(java.awt.event.MouseEvent evt) {
     	try {
-    		Desktop.getDesktop().open(new File(Window.class.getResource("").getPath()+Global.readMe_path));
+    		Desktop.getDesktop().open(new File(Excel2JSON.class.getResource("").getPath()+Global.readMe_path));
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Window.class.getResource("").getPath()+Global.readMe_path);
+			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Excel2JSON.class.getResource("").getPath()+Global.readMe_path);
 		}
     }
 
     private void onClickWatchJSONHandler(java.awt.event.MouseEvent evt) {                                         
         try {
-    		 Desktop.getDesktop().open(new File(Window.class.getResource("").getPath()+"etc/test.json"));
+    		 Desktop.getDesktop().open(new File(Excel2JSON.class.getResource("").getPath()+"etc/test.json"));
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Window.class.getResource("").getPath()+"etc/test.json");
+			JOptionPane.showMessageDialog(null, "无法自动打开,请手动打开\n"+Excel2JSON.class.getResource("").getPath()+"etc/test.json");
 		}
        
     }
@@ -404,20 +405,20 @@ public class Window extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Window.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Excel2JSON.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Window.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Excel2JSON.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Window.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Excel2JSON.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Window.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Excel2JSON.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Window().setVisible(true);
+                new Excel2JSON().setVisible(true);
             }
         });
     }

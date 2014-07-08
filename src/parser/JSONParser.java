@@ -37,19 +37,20 @@ public class JSONParser implements IParser {
 	 * 
 	 */
 	@SuppressWarnings("rawtypes")
-	private HashMap objectJson = new HashMap<>();;
+	private HashMap objectJson = new HashMap();;
 	
 	/**
 	 * array形式的json数据
 	 * */
 	@SuppressWarnings("rawtypes")
-	private ArrayList arrayJson = new ArrayList<>();;
+	private ArrayList arrayJson = new ArrayList();;
 	
 	/**
 	 * 包含了excel名字,sheet名字和json数据
 	 * 
 	 */
-	private HashMap<String, Serializable> data = new HashMap<>();;
+	@SuppressWarnings("rawtypes")
+	private HashMap data = new HashMap();;
 	
 	/**
 	 * 行数
@@ -65,12 +66,13 @@ public class JSONParser implements IParser {
 	 * 属性名
 	 * */
 	@SuppressWarnings("rawtypes")
-	private HashMap attKeyMap = new HashMap<>();;
+	private HashMap attKeyMap = new HashMap();;
 	
 	/**
 	 * 条目索引
 	 * */
-	private ArrayList<Object> indexList = new ArrayList<>();;
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private ArrayList<Object> indexList = new ArrayList();;
 	
 	@Override
 	public void parse(File file) {
@@ -102,7 +104,7 @@ public class JSONParser implements IParser {
 		} catch (JSONException ex) {
 			try {
 				JSONArray jsonArray = new JSONArray(jsonStr);
-				arrayJson = new ArrayList<>();
+				arrayJson = new ArrayList();
 				decodeJSON_Array(arrayJson, jsonArray);
 			} catch (JSONException e) {
 				LogUtil.error(file.getName()+"  "+ex.getMessage());
@@ -145,7 +147,7 @@ public class JSONParser implements IParser {
 				}
 				else if(o instanceof JSONArray)
 				{
-					ArrayList childList = new ArrayList<>();
+					ArrayList childList = new ArrayList();
 					put(map, key, childList);
 					keyType = JSONConst.TYPE_ARRAY;
 					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
@@ -198,7 +200,7 @@ public class JSONParser implements IParser {
 				}
 				else if(o instanceof JSONArray)
 				{
-					ArrayList childList = new ArrayList<>();
+					ArrayList childList = new ArrayList();
 					put(list, i, childList);
 					keyType = JSONConst.TYPE_ARRAY;
 					KeyVo keyVo = (KeyVo) (attKeyMap.get(i)!=null?attKeyMap.get(i):KeyVo.createKeyVo(i, keyType));
@@ -253,7 +255,7 @@ public class JSONParser implements IParser {
 					keyType = JSONConst.TYPE_ARRAY;
 					KeyVo keyVo = (KeyVo) (attKeyMap.get(key)!=null?attKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					attKeyMap.put(key, keyVo);
-					ArrayList childList = new ArrayList<>();
+					ArrayList childList = new ArrayList();
 					put(map, key, childList);
 					decodeArray(childList, (JSONArray) o, keyVo);
 				}
@@ -306,7 +308,7 @@ public class JSONParser implements IParser {
 					keyType = JSONConst.TYPE_ARRAY;
 					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.get(key)!=null)?keyVo.subKeyMap.get(key):KeyVo.createKeyVo(key, keyType));
 					keyVo.putSubKey(key, subKeyVo);
-					ArrayList childList = new ArrayList<>();
+					ArrayList childList = new ArrayList();
 					decodeArray(childList, (JSONArray) o, subKeyVo);
 					put(map, key, childList);
 				}
@@ -351,7 +353,7 @@ public class JSONParser implements IParser {
 					keyType = JSONConst.TYPE_ARRAY;
 					KeyVo subKeyVo = (KeyVo) ((keyVo.subKeyMap!=null && keyVo.subKeyMap.size()>0)?keyVo.subKeyMap.get(KeyVo.SPECIAL_KEY):KeyVo.createKeyVo(KeyVo.SPECIAL_KEY, keyType));
 					keyVo.putSubKey(KeyVo.SPECIAL_KEY, subKeyVo);
-					ArrayList childList = new ArrayList<>();
+					ArrayList childList = new ArrayList();
 					decodeArray(childList, (JSONArray) o, subKeyVo);
 					put(list, i, childList);
 				}
@@ -382,7 +384,8 @@ public class JSONParser implements IParser {
 		}
 		else if(content instanceof ArrayList)
 		{
-			((ArrayList) content).add((int) key, value);
+//			((ArrayList) content).add((int) key, value);
+			((ArrayList) content).add(Integer.parseInt(key.toString()), value);
 		}
 	}
 
@@ -470,6 +473,7 @@ public class JSONParser implements IParser {
 		return str;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public HashMap<String, Serializable> getData(File file) {
 		parse(file);

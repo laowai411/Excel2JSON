@@ -68,9 +68,9 @@ public class ExcelCreater implements ICreater {
 		if (data == null) {
 			return;
 		}
-		sheets = new ArrayList<>();
-		row = (int) data.get("row");
-		col = (int) data.get("col");
+		sheets = new ArrayList();
+		row = Integer.parseInt(data.get("row").toString());
+		col = Integer.parseInt(data.get("col").toString());
 		String name = (String) data.get("name");
 		attKeyMap = (HashMap) data.get("cols");
 		ArrayList indexList = (ArrayList) data.get("rows");
@@ -99,7 +99,7 @@ public class ExcelCreater implements ICreater {
 	private void createSheet(String sheetName) {
 		try {
 			book = Workbook.createWorkbook(file, _templateBook);
-			sheets = new ArrayList<>();
+			sheets = new ArrayList();
 			book.copySheet(0, "template", 1);
 			WritableSheet sheet = book.getSheet(0);
 			sheets.add(0, sheet);
@@ -571,7 +571,7 @@ public class ExcelCreater implements ICreater {
 		if (data instanceof HashMap) {
 			return ((HashMap) data).get(key);
 		} else if (data instanceof ArrayList) {
-			return ((ArrayList) data).get((int) key);
+			return ((ArrayList) data).get(Integer.parseInt(key.toString()));
 		}
 		return null;
 	}
