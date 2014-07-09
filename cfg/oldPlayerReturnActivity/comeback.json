@@ -1,9 +1,0 @@
-﻿{
-     "comeBackBag":538379146,//礼包
-     "maxBagCount":5,//最多能领取的礼包
-	 "returnRatio":5,//返利比例 百分比
-	 "maxReturnCount":10000,//最多能领取的返利
-	 "offlineDay":7,//老玩家条件 离线天数
-	 "levelLimit":45,//老玩家条件 等级限制
-	 "powerLimit":15000//老玩家条件 战斗力限制
-}
